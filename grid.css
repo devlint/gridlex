@@ -12,14 +12,14 @@ html, body{
 .grid{
     display: flex;
     flex: 0 1 auto;
-    flex-direction: grid;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     margin: -1em 0 1em -1em;
 }
     /* Reverse order */
     .grid.reverse{
-        flex-direction: grid-reverse;
+        flex-direction: row-reverse;
     }
 
 /* COL */
@@ -30,6 +30,10 @@ html, body{
 }
     .col + .col{
         border-left: 0;
+    }
+
+    .col .grid{
+        margin-bottom: 0;
     }
 
     /* COL SIZING */
@@ -95,12 +99,19 @@ html, body{
     margin: auto;
     resize: horizontal;
 }
+section{
+    margin: 2em 0 4em;
+}
 .demo{
     width: 100%;
     background: rgba(147,128,108,.1);
     text-align: center;
 }
-.demo::before{
+.demo p{
+    margin: 0;
+    line-height: 2.5;
+}
+/*.demo::before{
     content: '\00a0';
     display: block;
     margin-bottom: 1em;
@@ -113,4 +124,4 @@ html, body{
     margin-top: 1em;
     height: 0;
     visibility: hidden;
-}
+}*/
