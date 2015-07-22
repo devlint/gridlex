@@ -1,352 +1,602 @@
 <!doctype html>
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if !IE]><!-->
 <html>
+<!--<![endif]-->
+
 <head>
     <meta charset="UTF-8">
     <title>Gridlex</title>
     <link rel="stylesheet" href="grid.css">
 </head>
+
 <body>
 
-<div class="demopage">
-    <h1>Features of a Flexbox Grid System</h1>
+    <div class="demoPage">
+        <h1>Features of a Flexbox Grid System</h1>
 
-    <section>
-        <h2>Basic Grids</h2>
+        <section>
+            <h2>Basic Grids</h2>
 
-        <p>There is no size on cell : the number determines the width</p>
+            <p>We could not add size on cells: in flexbox model, the number determines the width (size = row/cells).</p>
+            <div class="grid autoWidth">
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid autoWidth">
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid autoWidth">
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="demo">
+                        <p>auto</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>1/1</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>1/2</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/2</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>1/3</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/3</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/3</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>1/4</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/4</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/4</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/4</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>1/5</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/5</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/5</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/5</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/5</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-        </div>
-    </section>
+        </section>
+        <section>
+            <h2>Individual Sizing</h2>
 
-    <section>
-        <h2>Individual Sizing</h2>
+            <div class="grid">
+                <div class="col col-1-1">
+                    <div class="demo">
+                        <p>1/1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>1/2</p>
+                    </div>
+                </div>
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>1/2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>1/3</p>
+                    </div>
+                </div>
+                <div class="col col-2-3">
+                    <div class="demo">
+                        <p>2/3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col col-1-4">
+                    <div class="demo">
+                        <p>1/4</p>
+                    </div>
+                </div>
+                <div class="col col-3-4">
+                    <div class="demo">
+                        <p>3/4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col col-2-5">
+                    <div class="demo">
+                        <p>2/5</p>
+                    </div>
+                </div>
+                <div class="col col-3-5">
+                    <div class="demo">
+                        <p>3/5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col col-1-6">
+                    <div class="demo">
+                        <p>1/6</p>
+                    </div>
+                </div>
+                <div class="col col-5-6">
+                    <div class="demo">
+                        <p>5/6</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="grid">
-            <div class="col col-1-1">
-                <div class="demo"><p>1/1</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col col-1-2">
-                <div class="demo"><p>1/2</p></div>
-            </div>
-            <div class="col col-1-2">
-                <div class="demo"><p>1/2</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col col-1-3">
-                <div class="demo"><p>1/3</p></div>
-            </div>
-            <div class="col col-2-3">
-                <div class="demo"><p>2/3</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col col-1-4">
-                <div class="demo"><p>1/4</p></div>
-            </div>
-            <div class="col col-3-4">
-                <div class="demo"><p>3/4</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col col-1-5">
-                <div class="demo"><p>1/5</p></div>
-            </div>
-            <div class="col col-4-5">
-                <div class="demo"><p>4/5</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col col-1-6">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-            <div class="col col-5-6">
-                <div class="demo"><p>5/6</p></div>
-            </div>
-        </div>
-    </section>
+        <section>
+            <h2>Combination with individual Sizing</h2>
 
-    <section>
-        <h2>Combination with individual Sizing</h2>
+            <div class="grid">
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>1/2</p>
+                    </div>
+                </div>
+                <div class="col col-1-4">
+                    <div class="demo">
+                        <p>1/4</p>
+                    </div>
+                </div>
+                <div class="col col-1-4">
+                    <div class="demo">
+                        <p>1/4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>1/3</p>
+                    </div>
+                </div>
+                <div class="col col-1-6">
+                    <div class="demo">
+                        <p>1/6</p>
+                    </div>
+                </div>
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>1/2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="grid">
-            <div class="col col-1-2">
-                <div class="demo"><p>1/2</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>auto</p></div>
-            </div>
-            <div class="col col-1-4">
-                <div class="demo"><p>1/4</p></div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col col-1-3">
-                <div class="demo"><p>1/3</p></div>
-            </div>
-            <div class="col col-1-6">
-                <div class="demo"><p>1/6</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>auto</p></div>
-            </div>
-        </div>
-    </section>
+        <section>
+            <h2>Inception</h2>
 
+            <div class="grid">
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>1/2</p>
+                    </div>
+                </div>
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>We can add <code>.noGutter</code> too:</p>
 
-    <section>
-        <h2>Inception</h2>
-
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>auto</p></div>
-            </div>
-            <div class="col">
-                <div class="demo">
-                    <p>auto</p>
-
-                    <div class="grid">
-                        <div class="col col-1-3">
-                            <div class="demo"><p>1/3</p></div>
-                        </div>
-                        <div class="col col-2-3">
-                            <div class="demo"><p>2/3</p>
-                            <div class="grid">
-                                <div class="col col-1-2">
-                                    <div class="demo"><p>1/2</p></div>
+                        <div class="grid noGutter">
+                            <div class="col col-1-3">
+                                <div class="demo">
+                                    <p>1/3</p>
                                 </div>
-                                <div class="col">
-                                    <div class="demo"><p>auto</p></div>
-                                </div></div>
+                            </div>
+                            <div class="col col-2-3">
+                                <div class="demo">
+                                    <p>2/3</p>
+                                    <div class="grid noGutter">
+                                        <div class="col col-1-2">
+                                            <div class="demo">
+                                                <p>1/2</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-1-2">
+                                            <div class="demo">
+                                                <p>1/2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid noGutter">
+                                        <div class="col col-1-3">
+                                            <div class="demo">
+                                                <p>1/3</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-1-3">
+                                            <div class="demo">
+                                                <p>1/3</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-1-3">
+                                            <div class="demo">
+                                                <p>1/3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Horizontal alignment</h2>
+        <section>
+            <h2>Horizontal alignment</h2>
 
-        <div class="grid left">
-            <div class="col col-1-3">
-                <div class="demo"><p>row > col left align (1/3)</p></div>
+            <div class="grid">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>row > col left align (default)</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="grid center">
-            <div class="col col-1-2 col-center">
-                <div class="demo"><p>row > col center align (1/2)</p></div>
+            <div class="grid alignCenter">
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>row > col center align</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="grid right">
-            <div class="col col-1-3">
-                <div class="demo"><p>row > col right align (1/3)</p></div>
+            <div class="grid alignRight">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>row > col right align</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Vertical alignment</h2>
+        <section>
+            <h2>Vertical alignment (no fallback for IE9)</h2>
 
-        <div class="grid top">
-            <div class="col">
-                <div class="demo"><p>Vertical align top</p></div>
+            <div class="grid">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>Vertical align top (default)</p>
+                    </div>
+                </div>
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                    </div>
+                </div>
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>...</p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <div class="demo"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id
-                    labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p></div>
+            <div class="grid alignMiddle">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>Vertical align middle</p>
+                    </div>
+                </div>
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                    </div>
+                </div>
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>...</p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
+            <div class="grid alignBottom">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>Vertical align bottom</p>
+                    </div>
+                </div>
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                    </div>
+                </div>
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>...</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="grid middle">
-            <div class="col">
-                <div class="demo"><p>Vertical align middle</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id
-                    labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-        </div>
-        <div class="grid bottom">
-            <div class="col">
-                <div class="demo"><p>Vertical align bottom</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id
-                    labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>...</p></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h1>Reverse & order</h1>
+        <section>
+            <h2>Reverse, order and other things (no fallback for IE9)</h2>
 
-        <h2>Normal flow</h2>
-        <div class="grid">
-            <div class="col">
-                <div class="demo"><p>A</p></div>
+            <h3>Normal flow</h3>
+            <div class="grid">
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>A</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>B</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>C</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>D</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>E</p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <div class="demo"><p>B</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>C</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>D</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>E</p></div>
-            </div>
-        </div>
 
-        <h2>Reverse flow</h2>
-        <div class="grid reverse">
-            <div class="col">
-                <div class="demo"><p>A</p></div>
+            <h3>Reverse flow</h3>
+            <div class="grid orderReverse">
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>A</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>B</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>C</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>D</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>E</p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <div class="demo"><p>B</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>C</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>D</p></div>
-            </div>
-            <div class="col">
-                <div class="demo"><p>E</p></div>
-            </div>
-        </div>
 
-        <h2>Normal flow with ordering (first / last)</h2>
-        <div class="grid">
-            <div class="col last">
-                <div class="demo"><p>A (last)</p></div>
+            <h3>Normal flow with ordering (first / last)</h3>
+            <div class="grid">
+                <div class="col col-1-5 orderLast">
+                    <div class="demo">
+                        <p>A (last)</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>B</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>C</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>D</p>
+                    </div>
+                </div>
+                <div class="col col-1-5 orderFirst">
+                    <div class="demo">
+                        <p>E (first)</p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <div class="demo"><p>B</p></div>
+
+            <h3>No gutter? Equal-height?</h3>
+            <div class="grid noGutter equalHeight">
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5<br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas laboriosam inventore minima facere possimus quisquam.</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <div class="demo"><p>C</p></div>
+        </section>
+
+        <section>
+            <h2>Sometimes you want to do crazy things...</h2>
+            <h3>Horizontal distribution</h3>
+            <div class="grid spaceBetween">
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <div class="demo"><p>D</p></div>
+            <div class="grid spaceAround">
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
             </div>
-            <div class="col first">
-                <div class="demo"><p>E (first)</p></div>
+            <div class="grid alignCenter">
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-</div>
+
+            <h3>Columns</h3>
+            <p>
+                <button onclick="toggleView()">Change row distib. to column distrib. (and vice-versa)</button>
+            </p>
+            <script>
+                function toggleView() {
+                    var oGrid = document.querySelector('#view');
+                    oGrid.classList.toggle("orderColumn");
+                }
+            </script>
+            <div id="view" class="grid">
+                <div class="col col-1-3">
+                    <div class="demo">
+                        <p>1/3</p>
+                    </div>
+                </div>
+                <div class="col col-1-6">
+                    <div class="demo">
+                        <p>1/6</p>
+                    </div>
+                </div>
+                <div class="col col-1-2">
+                    <div class="demo">
+                        <p>1/2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="doc">
+        <h2>Grid &amp; classNames</h2>
+        <pre><code>
+.grid
+    .orderReverse
+    .orderColumn
+    .spaceBetween
+    .spaceAround
+    .noGutter
+    .equalHeight
+    .autoWidth
+        </code></pre>
+        <h2>Cells &amp; classNames</h2>
+        <pre><code>
+
+.col
+    .col-1-1
+    .col-1-2
+    .col-1-3
+    .col-2-3
+    .col-1-4
+    .col-3-4
+    .col-1-5
+    .col-2-5
+    .col-3-5
+    .col-4-5
+    .col-1-6
+    .col-5-6
+    
+    .alignCenter
+    .alignRight
+    .alignMiddle
+    .alignBottom
+    
+    .orderFirst
+    .orderLast
+            </code></pre>
+        </section>
+    </div>
 
 </body>
+
 </html>
