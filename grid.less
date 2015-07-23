@@ -1,23 +1,5 @@
-/* Base
+/* Grid System
    ========================================================================== */
-html {
-  font-size: 62.5%;
-}
-body{
-  margin:0;
-  /* set body font-size in em (1.5rem equiv "15px") */
-  font-size: 1.5rem;
-  /*20px line-height for 15px font-size */
-  line-height: (20/15);
-  font-family: Arial, sans-serif;
-}
-
-
-/* Box sizing enabled
-   ========================================================================== */
-*{ box-sizing: border-box; }
-*::after,
-*::before { box-sizing: border-box;}
 
 /* GRID */
 .grid{
@@ -52,20 +34,6 @@ body{
     &.autoWidth > .col{
         flex: 1 1 0%; /* autoWidth */
     }
-    
-    
-    /* IE9 */
-    .ie9 &{
-        ._clearer();
-        &.autoWidth{
-            display: table;
-            width: 100%;
-            & > .col{
-                display: table-cell;
-                float: none;
-            }
-        }
-    }
 }
 
 /* COL */
@@ -75,10 +43,6 @@ body{
     margin: 0;
     & .grid{
         margin-bottom: 0;
-    }
-    /* IE9 */
-    .ie9 &{
-        float: left;
     }
 }
 
@@ -120,19 +84,51 @@ body{
     width: 83.333%;
 }
 
+/* OFFSET SIZE */ 
+.off-1-2{
+    margin-left: 50%;
+}
+.off-1-3{
+    margin-left: 33.333%;
+}
+.off-2-3{
+    margin-left: 66.666%;
+}
+.off-1-4{
+    margin-left: 25%;
+}
+.off-3-4{
+    margin-left: 75%;
+}
+.off-1-5{
+    margin-left: 20%;
+}
+.off-2-5{
+    margin-left: 40%;
+}
+.off-3-5{
+    margin-left: 60%;
+}
+.off-4-5{
+    margin-left: 80%;
+}
+.off-1-6{
+    margin-left: 16.666%;
+}
+.off-5-6{
+    margin-left: 83.333%;
+}
+
+
+/* HELPERS
+   ========================================================================== */
+
 /* Horizontal aligment */
 .alignCenter{ 
     justify-content: center;
-    .ie9 & > .col{
-        float: none;
-        margin: auto;
-    }
 }
 .alignRight{
     justify-content: flex-end;
-    .ie9 & > .col{
-        float: right;
-    }
 }
 
 /* Vertical aligment */
@@ -149,40 +145,4 @@ body{
 }
 .orderLast{
     order: 1;
-    .ie9 &{float: right;}
-}
-
-
-
-
-
-
-
-/******
-* DEMO
-*******/
-.demoPage{
-    max-width: 70em;
-    margin: 0 auto;
-    h1{font-size: 2.2rem;}
-    h2{font-size: 1.8rem;}
-    h3{font-size: 1.5rem;}
-}
-section{
-    margin: 2em 0 4em;
-}
-.demo{
-    width: 100%;
-    background: rgba(147,128,108,.1);
-    text-align: center;
-}
-.demo p{
-    margin: 0;
-    padding: 1em;
-}
-.demoPage .noGutter > .col{
-    border-left: 1px solid rgba(147,128,108,.5);
-    &:first-child{
-        border: 0;
-    }
 }

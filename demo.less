@@ -1,0 +1,53 @@
+/******
+* DEMO
+*******/
+
+/* Base
+   ========================================================================== */
+html {
+  font-size: 62.5%;
+}
+body{
+  margin:0;
+  /* set body font-size in em (1.5rem equiv "15px") */
+  font-size: 1.5rem;
+  /*20px line-height for 15px font-size */
+  line-height: (20/15);
+  font-family: Arial, sans-serif;
+}
+
+
+/* Box sizing enabled
+   ========================================================================== */
+*{ box-sizing: border-box; }
+*::after,
+*::before { box-sizing: border-box;}
+.demoPage{
+    max-width: 70em;
+    margin: 0 auto;
+    h1{font-size: 2.2rem;}
+    h2{font-size: 1.8rem;}
+    h3{font-size: 1.5rem;}
+}
+section{
+    margin: 2em 0 4em;
+}
+.demo{
+    width: 100%;
+    background: rgba(147,128,108,.2);
+    text-align: center;
+}
+.demo p{
+    margin: 0;
+    padding: 1em;
+}
+.demo img{
+    display: block;
+    width: 100%;
+}
+.demoPage .noGutter > .col{
+    border-left: 1px solid rgba(147,128,108,.5);
+    &:first-child{
+        border: 0;
+    }
+}
