@@ -122,17 +122,17 @@
 .grid {
   /* Vertical aligment */
 }
-.grid .alignCenter {
+.grid.alignCenter {
   justify-content: center;
 }
-.grid .alignRight {
+.grid.alignRight {
   justify-content: flex-end;
   margin-left: auto;
 }
-.grid .alignMiddle {
+.grid.alignMiddle {
   align-items: center;
 }
-.grid .alignBottom {
+.grid.alignBottom {
   align-items: flex-end;
 }
 /* ON CELL */

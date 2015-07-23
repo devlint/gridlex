@@ -112,3 +112,12 @@ section {
   background: rgba(255, 255, 255, 0.1);
   font-style: italic;
 }
+.demoPage .banner {
+  height: 400px;
+  background: #E7E7E7;
+  text-align: center;
+}
+.demoPage .banner .banner_title,
+.demoPage .banner .banner_sub {
+  margin: 0;
+}
