@@ -1,0 +1,48 @@
+/* FALLBACK FOR NON-SUPPORTING 'FLEX' BROWSERS */
+
+
+/* Clearer
+   ========================================================================== */
+._clearer(){
+  &:after,
+  &:before {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/* GRID
+   ========================================================================== */
+.grid{
+    ._clearer();
+    &.autoWidth{
+        display: table;
+        width: 100%;
+        & > .col{
+            display: table-cell;
+            float: none;
+        }
+    }
+}
+
+.col{
+    float: left;
+}
+
+/* Horizontal aligment */
+.alignCenter > .col{
+    float: none;
+    margin: auto;
+}
+.alignRight > .col{
+    float: right;
+}
+
+/* CELL ORDER */
+.orderLast{
+    float: right;
+}

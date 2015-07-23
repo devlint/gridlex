@@ -12,18 +12,6 @@ body{
   font-family: Arial, sans-serif;
 }
 
-/* Clearer
-   ========================================================================== */
-._clearer(){
-  &:after,
-  &:before {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-  }
-  &:after {
-    clear: both;
-  }
-}
 
 /* Box sizing enabled
    ========================================================================== */
@@ -32,7 +20,6 @@ body{
 *::before { box-sizing: border-box;}
 
 /* GRID */
-
 .grid{
     display: flex;
     flex: 0 1 auto;
@@ -86,10 +73,6 @@ body{
     flex: 0 0 auto;
     padding: 1em 0 0 1em;
     margin: 0;
-    & + .col{
-        border-left: 0;
-    }
-
     & .grid{
         margin-bottom: 0;
     }
