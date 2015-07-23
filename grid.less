@@ -122,27 +122,38 @@
 
 /* HELPERS
    ========================================================================== */
-
+/* ON GRID */
 /* Horizontal aligment */
-.alignCenter{ 
-    justify-content: center;
-}
-.alignRight{
-    justify-content: flex-end;
+.grid{
+    .alignCenter{ 
+        justify-content: center;
+    }
+    .alignRight{
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    /* Vertical aligment */
+    .alignMiddle{
+        align-items: center;
+    }
+    .alignBottom{
+        align-items: flex-end;
+    }
 }
 
-/* Vertical aligment */
-.alignMiddle{
-    align-items: center;
-}
-.alignBottom{
-    align-items: flex-end;
-}
-
-/* CELL ORDER */
-.orderFirst{
-    order: -1;
-}
-.orderLast{
-    order: 1;
+/* ON CELL */
+.col{
+    .selfCenter{
+        align-self: center;
+    }
+    .selfRight{
+        margin-left: auto;
+    }
+    .orderFirst{
+        order: -1;
+    }
+    .orderLast{
+        order: 1;
+    }
 }

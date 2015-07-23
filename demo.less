@@ -51,3 +51,54 @@ section{
         border: 0;
     }
 }
+.demoPage nav{
+    background: rgba(147,128,108,.2);
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        position: relative;
+        &:hover .subNav{
+            display: block;
+        }
+    }
+    a, button{
+        display: block;
+        border: 0;
+        padding: 1em 2em;
+        background: rgba(255,255,255,.3);
+        color: rgba(147,128,108,1);
+        text-decoration: none;
+        &:hover{
+            background: rgba(147,128,108,1);
+            color: rgb(255,255,255);
+        }
+    }
+    .logo{
+        font-weight: 700;
+        background: rgba(147,128,108,1);
+        color: rgb(255,255,255);
+    }
+    .subNav{
+        display: none;
+        position: absolute;
+        a{
+            background: rgb(255,255,255);
+            white-space: nowrap;
+            &:hover{
+                background: rgba(147,128,108,1);
+                color: rgb(255,255,255);
+            }
+        }
+    }
+    [type="search"]{
+        display: block;
+        padding: 1em 2em;
+        height: 100%;
+        border: 0;
+        background: rgba(255,255,255,.1);
+        font-style: italic;
+    }
+}

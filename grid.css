@@ -117,24 +117,34 @@
 }
 /* HELPERS
    ========================================================================== */
+/* ON GRID */
 /* Horizontal aligment */
-.alignCenter {
+.grid {
+  /* Vertical aligment */
+}
+.grid .alignCenter {
   justify-content: center;
 }
-.alignRight {
+.grid .alignRight {
   justify-content: flex-end;
+  margin-left: auto;
 }
-/* Vertical aligment */
-.alignMiddle {
+.grid .alignMiddle {
   align-items: center;
 }
-.alignBottom {
+.grid .alignBottom {
   align-items: flex-end;
 }
-/* CELL ORDER */
-.orderFirst {
+/* ON CELL */
+.col .selfCenter {
+  align-self: center;
+}
+.col .selfRight {
+  margin-left: auto;
+}
+.col .orderFirst {
   order: -1;
 }
-.orderLast {
+.col .orderLast {
   order: 1;
 }

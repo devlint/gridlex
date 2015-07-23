@@ -59,3 +59,56 @@ section {
 .demoPage .noGutter > .col:first-child {
   border: 0;
 }
+.demoPage nav {
+  background: rgba(147, 128, 108, 0.2);
+}
+.demoPage nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.demoPage nav li {
+  position: relative;
+}
+.demoPage nav li:hover .subNav {
+  display: block;
+}
+.demoPage nav a,
+.demoPage nav button {
+  display: block;
+  border: 0;
+  padding: 1em 2em;
+  background: rgba(255, 255, 255, 0.3);
+  color: #93806c;
+  text-decoration: none;
+}
+.demoPage nav a:hover,
+.demoPage nav button:hover {
+  background: #93806c;
+  color: #ffffff;
+}
+.demoPage nav .logo {
+  font-weight: 700;
+  background: #93806c;
+  color: #ffffff;
+}
+.demoPage nav .subNav {
+  display: none;
+  position: absolute;
+}
+.demoPage nav .subNav a {
+  background: #ffffff;
+  white-space: nowrap;
+}
+.demoPage nav .subNav a:hover {
+  background: #93806c;
+  color: #ffffff;
+}
+.demoPage nav [type="search"] {
+  display: block;
+  padding: 1em 2em;
+  height: 100%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.1);
+  font-style: italic;
+}

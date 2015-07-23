@@ -72,7 +72,7 @@
         </section>
         <section>
             <h2>Individual Sizing</h2>
-
+            <p>But to maintain strongly customize grid, you should prefer specify the grid rythm:</p>
             <div class="grid">
                 <div class="col col-1-1">
                     <div class="demo">
@@ -626,6 +626,7 @@
     .noGutter
     .equalHeight
     .autoWidth
+    .alignRight
         </code></pre>
         <h2>Cells &amp; classNames</h2>
         <pre><code>
@@ -668,6 +669,37 @@
         </section>
         
         <section>
+            <h2>Nav example</h2>
+            <nav class="grid noGutter" role="navigation">
+                <span class="col"><a href="#_" class="logo">&infin;</a></span>
+                <ul class="grid noGutter">
+                    <li class="col">
+                        <a href="#_">item 1</a>
+                        <ul class="subNav">
+                            <li><a href="#_">sub item 1</a></li>
+                            <li><a href="#_">sub item 2</a></li>
+                            <li><a href="#_">sub item 3</a></li>
+                            <li><a href="#_">sub item 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="col"><a href="#_">item 2</a></li>
+                    <li class="col"><a href="#_">item 3</a></li>
+                </ul>
+                <ul class="grid noGutter alignRight">
+                    <li class="col"><a href="#_" class="col">FR</a>
+                        <ul class="subNav">
+                            <li><a href="#_">US</a></li>
+                            <li><a href="#_">DE</a></li>
+                            <li><a href="#_">JP</a></li>
+                            <li><a href="#_">CN</a></li>
+                        </ul>
+                    </li>
+                    <li class="col grid">
+                        <input type="search" placeholder="Search...">
+                        <button>ok</button>
+                    </li>
+                </ul>
+            </nav>
             <h2>Gallery example</h2>
             <div class="grid">
                 <div class="col col-1-3">
