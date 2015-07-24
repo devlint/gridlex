@@ -14,6 +14,10 @@
     "flexbox",
     "less"
   ],
+  "main": [
+    "less/grid.less",
+    "less/grid-noflex.less"
+  ],
   "license": "MIT",
   "ignore": [
     "node_modules"
