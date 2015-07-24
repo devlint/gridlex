@@ -11,8 +11,71 @@
 <body>
 
     <div class="demoPage">
+       
+       <div class="bs-callout">TODO <br>
+           <ul>
+               <li>Add grunt + less + autoprefixr</li>
+               <li>Media-queries to do (with class ?)</li>
+               <li>Tests done : IE9 (fallback float+table) - IE10 (prefix) - IE11 - Chrome (last) - Firefox (last)</li>
+               <li>Tests not done : Safari - Safari iOS - Android (diff. version) - Windows Phone/Windows Mobile</li>
+           </ul>
+       </div>
+       
+       
         <h1>Features of a Flexbox Grid System</h1>
 
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>CSS Media Query</th>
+                        <th>Applies</th>
+                        <th>Classname</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i>None</i></td>
+                        <td><i>None</i></td>
+                        <td><i>Always</i></td>
+                        <td><code>.col-*</code></td>
+                    </tr>
+
+
+                    <tr>
+                        <td><b><code>sm</code></b></td>
+                        <td><code>@media screen and (min-width: 35.5em)</code></td>
+                        <td>≥ <b>568px</b></td>
+                        <td><code>.col-<b>sm</b>-*</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><b><code>md</code></b></td>
+                        <td><code>@media screen and (min-width: 48em)</code></td>
+                        <td>≥ <b>768px</b></td>
+                        <td><code>.col-<b>md</b>-*</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><b><code>lg</code></b></td>
+                        <td><code>@media screen and (min-width: 64em)</code></td>
+                        <td>≥ <b>1024px</b></td>
+                        <td><code>.col-<b>lg</b>-*</code></td>
+                    </tr>
+
+                    <tr>
+                        <td><b><code>xl</code></b></td>
+                        <td><code>@media screen and (min-width: 80em)</code></td>
+                        <td>≥ <b>1280px</b></td>
+                        <td><code>.col-<b>xl</b>-*</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+       
+       
         <section>
             <h2>Basic Grids</h2>
 
@@ -686,7 +749,7 @@
                     <li class="col"><a href="#_">item 3</a></li>
                 </ul>
                 <ul class="grid noGutter alignRight">
-                    <li class="col"><a href="#_" class="col">FR</a>
+                    <li class="col"><a href="#_">FR</a>
                         <ul class="subNav">
                             <li><a href="#_">US</a></li>
                             <li><a href="#_">DE</a></li>

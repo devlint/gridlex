@@ -24,6 +24,8 @@ body {
 *::before {
   box-sizing: border-box;
 }
+/* Demo specific css
+   ========================================================================== */
 .demoPage {
   max-width: 70em;
   margin: 0 auto;
@@ -40,6 +42,24 @@ body {
 section {
   margin: 2em 0 4em;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  border: 1px solid rgba(147, 128, 108, 0.5);
+  padding: .5em;
+}
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-color: #d9534f;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+/**/
 .demo {
   width: 100%;
   background: rgba(147, 128, 108, 0.2);
@@ -53,28 +73,28 @@ section {
   display: block;
   width: 100%;
 }
-.demoPage .noGutter > .col {
+.noGutter > .col {
   border-left: 1px solid rgba(147, 128, 108, 0.5);
 }
-.demoPage .noGutter > .col:first-child {
+.noGutter > .col:first-child {
   border: 0;
 }
-.demoPage nav {
+nav {
   background: rgba(147, 128, 108, 0.2);
 }
-.demoPage nav ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.demoPage nav li {
+nav li {
   position: relative;
 }
-.demoPage nav li:hover .subNav {
+nav li:hover .subNav {
   display: block;
 }
-.demoPage nav a,
-.demoPage nav button {
+nav a,
+nav button {
   display: block;
   border: 0;
   padding: 1em 2em;
@@ -82,42 +102,41 @@ section {
   color: #93806c;
   text-decoration: none;
 }
-.demoPage nav a:hover,
-.demoPage nav button:hover {
+nav a:hover,
+nav button:hover {
   background: #93806c;
   color: #ffffff;
 }
-.demoPage nav .logo {
+nav .logo {
   font-weight: 700;
   background: #93806c;
   color: #ffffff;
 }
-.demoPage nav .subNav {
+nav .subNav {
   display: none;
   position: absolute;
 }
-.demoPage nav .subNav a {
+nav .subNav a {
   background: #ffffff;
   white-space: nowrap;
 }
-.demoPage nav .subNav a:hover {
+nav .subNav a:hover {
   background: #93806c;
   color: #ffffff;
 }
-.demoPage nav [type="search"] {
+nav [type="search"] {
   display: block;
   padding: 1em 2em;
-  height: 100%;
   border: 0;
   background: rgba(255, 255, 255, 0.1);
   font-style: italic;
 }
-.demoPage .banner {
+.banner {
   height: 400px;
   background: #E7E7E7;
   text-align: center;
 }
-.demoPage .banner .banner_title,
-.demoPage .banner .banner_sub {
+.banner .banner_title,
+.banner .banner_sub {
   margin: 0;
 }
