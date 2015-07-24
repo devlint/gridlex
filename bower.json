@@ -2,6 +2,10 @@
   "name": "gridlex",
   "version": "0.0.1",
   "description": "simple grid base on flex",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:devlint/gridlex.git"
+  },
   "author": [
     "C2iS - front-end team"
   ],
