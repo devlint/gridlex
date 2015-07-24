@@ -14,12 +14,12 @@ module.exports = function(grunt) {
     less: {
       less: {
         options: {
-          paths: ["less"]
+          paths: ["src"]
         },
         files: {
-          "css/grid.css": "less/grid.less",
-          "css/grid-noflex.css": "less/grid-noflex.less",
-          "css/demo.css": "less/demo.less"
+          "gridlex.css": "src/gridlex.less",
+          "gridlex-noflex.css": "src/gridlex-noflex.less",
+          "example/css/demo.css": "example/less/demo.less"
         }
       }
     },
@@ -33,9 +33,8 @@ module.exports = function(grunt) {
       },
       css: {
         files: {
-          "css/grid.css": "css/grid.css",
-          "css/grid-noflex.css": "css/grid-noflex.css",
-          "css/demo.css": "css/demo.css"
+          "gridlex.css": "gridlex.css",
+          "gridlex-noflex.css": "gridlex-noflex.css"
         }
       }
     },
