@@ -1,6 +1,17 @@
 {
   "name": "gridlex",
   "version": "0.0.1",
-  "dependencies": {
-  }
+  "description": "simple grid base on flex",
+  "author": [
+    "C2iS - front-end team"
+  ],
+  "keywords": [
+    "grid",
+    "flexbox",
+    "less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules"
+  ]
 }

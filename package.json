@@ -1,7 +1,6 @@
 {
   "name": "gridlex",
-  "title": "Gridlex - simple grid base on flex",
-  "description": "",
+  "description": "simple grid base on flex",
   "url": "https://github.com/devlint/gridlex",
   "author": "C2iS - front-end team",
   "version": "0.0.1",
