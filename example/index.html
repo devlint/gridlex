@@ -14,58 +14,6 @@
         <h1>Features of a Flexbox Grid System</h1>
 
         <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Key</th>
-                        <th>CSS Media Query</th>
-                        <th>Applies</th>
-                        <th>Classname</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><i>None</i></td>
-                        <td><i>None</i></td>
-                        <td><i>Always</i></td>
-                        <td><code>.col-*</code></td>
-                    </tr>
-
-
-                    <tr>
-                        <td><b><code>sm</code></b></td>
-                        <td><code>@media screen and (min-width: 35.5em)</code></td>
-                        <td>≥ <b>568px</b></td>
-                        <td><code>.col-<b>sm</b>-*</code></td>
-                    </tr>
-
-                    <tr>
-                        <td><b><code>md</code></b></td>
-                        <td><code>@media screen and (min-width: 48em)</code></td>
-                        <td>≥ <b>768px</b></td>
-                        <td><code>.col-<b>md</b>-*</code></td>
-                    </tr>
-
-                    <tr>
-                        <td><b><code>lg</code></b></td>
-                        <td><code>@media screen and (min-width: 64em)</code></td>
-                        <td>≥ <b>1024px</b></td>
-                        <td><code>.col-<b>lg</b>-*</code></td>
-                    </tr>
-
-                    <tr>
-                        <td><b><code>xl</code></b></td>
-                        <td><code>@media screen and (min-width: 80em)</code></td>
-                        <td>≥ <b>1280px</b></td>
-                        <td><code>.col-<b>xl</b>-*</code></td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </section>
-       
-       
-        <section>
             <h2>Basic Grids</h2>
 
             <p>We could not add size on cells: in flexbox model, the number determines the width (size = row/cells).</p>
@@ -735,6 +683,61 @@
     .orderFirst
     .orderLast
             </code></pre>
+        </section>
+
+        <section>
+            <h2>Gridlex and media-queries</h2>
+            <div class="bs-callout">
+                <h3>This is not yet implemented:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>CSS Media Query</th>
+                            <th>Applies</th>
+                            <th>Classname</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i>None</i></td>
+                            <td><i>None</i></td>
+                            <td><i>Always</i></td>
+                            <td><code>.col-*</code></td>
+                        </tr>
+
+
+                        <tr>
+                            <td><b><code>sm</code></b></td>
+                            <td><code>@media screen and (min-width: 35.5em)</code></td>
+                            <td>≥ <b>568px</b></td>
+                            <td><code>.col-<b>sm</b>-*</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><b><code>md</code></b></td>
+                            <td><code>@media screen and (min-width: 48em)</code></td>
+                            <td>≥ <b>768px</b></td>
+                            <td><code>.col-<b>md</b>-*</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><b><code>lg</code></b></td>
+                            <td><code>@media screen and (min-width: 64em)</code></td>
+                            <td>≥ <b>1024px</b></td>
+                            <td><code>.col-<b>lg</b>-*</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><b><code>xl</code></b></td>
+                            <td><code>@media screen and (min-width: 80em)</code></td>
+                            <td>≥ <b>1280px</b></td>
+                            <td><code>.col-<b>xl</b>-*</code></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
         </section>
         
         <section>
