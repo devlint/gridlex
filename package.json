@@ -1,9 +1,9 @@
 {
   "name": "gridlex",
-  "description": "Simple grid base on css flexbox properties",
+  "description": "Simple grid based on css flexbox properties",
   "url": "https://github.com/devlint/gridlex",
   "author": "C2iS - front-end team",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:devlint/gridlex.git"
