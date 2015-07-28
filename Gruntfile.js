@@ -14,12 +14,13 @@ module.exports = function(grunt) {
     less: {
       less: {
         options: {
-          paths: ["src"]
+          paths: ["src"],
+          strictMath: true
         },
         files: {
-          "gridlex.css": "src/gridlex.less",
-          "gridlex-noflex.css": "src/gridlex-noflex.less",
-          "example/css/demo.css": "example/less/demo.less"
+          "dist/gridlex.css": "src/gridlex.less",
+          "dist/gridlex-noflex.css": "src/gridlex-noflex.less",
+          "example/css/demo.css": "example/less/demo.less" // example only
         }
       }
     },
@@ -33,8 +34,8 @@ module.exports = function(grunt) {
       },
       css: {
         files: {
-          "gridlex.css": "gridlex.css",
-          "gridlex-noflex.css": "gridlex-noflex.css"
+          "dist/gridlex.css": "dist/gridlex.css",
+          "dist/gridlex-noflex.css": "dist/gridlex-noflex.css"
         }
       }
     },
@@ -48,7 +49,7 @@ module.exports = function(grunt) {
         //, livereload: true
       },
       less: {
-        files: 'less/**/*.less',
+        files: 'src/**/*.less',
         tasks: ['mincss']
       }
     }
@@ -59,6 +60,6 @@ module.exports = function(grunt) {
   /* GRUNT TASKS
   ================================================================= */
   grunt.registerTask('default', ['mincss']);
-  grunt.registerTask('mincss', ['less', 'autoprefixer']);
+  grunt.registerTask('mincss', ['less'/*, 'autoprefixer'*/]);
 
 };

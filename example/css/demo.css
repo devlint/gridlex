@@ -72,10 +72,10 @@ table th {
   display: block;
   width: 100%;
 }
-.noGutter > .col {
+.noGutter > [class*='col-'] {
   border-left: 1px solid rgba(147, 128, 108, 0.5);
 }
-.noGutter > .col:first-child {
+.noGutter > [class*='col-']:first-child {
   border: 0;
 }
 nav {
@@ -138,4 +138,7 @@ nav [type="search"] {
 .banner .banner_title,
 .banner .banner_sub {
   margin: 0;
+}
+.gallery {
+  background: rgba(102, 51, 153, 0.5);
 }

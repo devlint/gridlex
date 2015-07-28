@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Gridlex</title>
     <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <!--[if IE 9]><link rel="stylesheet" href="css/grid-noflex.css"><![endif]-->
+    <link rel="stylesheet" href="../dist/gridlex.css">
+    <!--[if IE 9]><link rel="stylesheet" href="../dist/gridlex-noflex.css"><![endif]-->
 </head>
 
 <body>
@@ -80,190 +80,207 @@
             <h2>Basic Grids</h2>
 
             <p>We could not add size on cells: in flexbox model, the number determines the width (size = row/cells).</p>
-            <div class="grid autoWidth">
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
+            <div class="grid">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="grid autoWidth">
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
+            <div class="grid">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="demo">
+                            <p>auto</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="grid autoWidth">
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="demo">
-                        <p>auto</p>
-                    </div>
-                </div>
-            </div>
-
         </section>
+
         <section>
             <h2>Individual Sizing</h2>
             <p>But to maintain strongly customize grid, you should prefer specify the grid rythm:</p>
             <div class="grid">
-                <div class="col col-1-1">
-                    <div class="demo">
-                        <p>1/1</p>
+                <div class="row">
+                    <div class="col-1-1">
+                        <div class="demo">
+                            <p>1/1</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="grid">
-                <div class="col col-1-2">
-                    <div class="demo">
-                        <p>1/2</p>
+                <div class="row">
+                    <div class="col-1-2">
+                        <div class="demo">
+                            <p>1/2</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-2">
-                    <div class="demo">
-                        <p>1/2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid">
-                <div class="col col-1-3">
-                    <div class="demo">
-                        <p>1/3</p>
-                    </div>
-                </div>
-                <div class="col col-2-3">
-                    <div class="demo">
-                        <p>2/3</p>
+                    <div class="col-1-2">
+                        <div class="demo">
+                            <p>1/2</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="grid">
-                <div class="col col-1-4">
-                    <div class="demo">
-                        <p>1/4</p>
+                <div class="row">
+                    <div class="col-1-3">
+                        <div class="demo">
+                            <p>1/3</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-3-4">
-                    <div class="demo">
-                        <p>3/4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid">
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
-                    </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
-                    </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
-                    </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
-                    </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
+                    <div class="col-2-3">
+                        <div class="demo">
+                            <p>2/3</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="grid">
-                <div class="col col-2-5">
-                    <div class="demo">
-                        <p>2/5</p>
+                <div class="row">
+                    <div class="col-1-4">
+                        <div class="demo">
+                            <p>1/4</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-3-5">
-                    <div class="demo">
-                        <p>3/5</p>
+                    <div class="col-3-4">
+                        <div class="demo">
+                            <p>3/4</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="grid">
-                <div class="col col-1-6">
-                    <div class="demo">
-                        <p>1/6</p>
+                <div class="row">
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <p>1/5</p>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <p>1/5</p>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <p>1/5</p>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <p>1/5</p>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <p>1/5</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col col-5-6">
-                    <div class="demo">
-                        <p>5/6</p>
+            </div>
+            <div class="grid">
+                <div class="row">
+                    <div class="col-2-5">
+                        <div class="demo">
+                            <p>2/5</p>
+                        </div>
+                    </div>
+                    <div class="col-3-5">
+                        <div class="demo">
+                            <p>3/5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="row">
+                    <div class="col-1-6">
+                        <div class="demo">
+                            <p>1/6</p>
+                        </div>
+                    </div>
+                    <div class="col-5-6">
+                        <div class="demo">
+                            <p>5/6</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="grid">
             <h2>Combination with individual Sizing</h2>
-
-            <div class="grid">
-                <div class="col col-1-2">
+            <div class="row">
+                <div class="col-1-2">
                     <div class="demo">
                         <p>1/2</p>
                     </div>
                 </div>
-                <div class="col col-1-4">
+                <div class="col-1-4">
                     <div class="demo">
                         <p>1/4</p>
                     </div>
                 </div>
-                <div class="col col-1-4">
+                <div class="col-1-4">
                     <div class="demo">
                         <p>1/4</p>
                     </div>
                 </div>
             </div>
-            <div class="grid">
-                <div class="col col-1-3">
+            <div class="row">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>1/3</p>
                     </div>
                 </div>
-                <div class="col col-1-6">
+                <div class="col-1-6">
                     <div class="demo">
                         <p>1/6</p>
                     </div>
                 </div>
-                <div class="col col-1-2">
+                <div class="col-1-2">
                     <div class="demo">
                         <p>1/2</p>
                     </div>
@@ -271,52 +288,52 @@
             </div>
         </section>
         
-        <section>
+        <section class="grid">
             <h2>Inception</h2>
 
-            <div class="grid">
-                <div class="col col-1-2">
+            <div class="row">
+                <div class="col-1-2">
                     <div class="demo">
                         <p>1/2</p>
                     </div>
                 </div>
-                <div class="col col-1-2">
+                <div class="col-1-2">
                     <div class="demo">
                         <p>We can add <code>.noGutter</code> too:</p>
 
-                        <div class="grid noGutter">
-                            <div class="col col-1-3">
+                        <div class="row noGutter">
+                            <div class="col-1-3">
                                 <div class="demo">
                                     <p>1/3</p>
                                 </div>
                             </div>
-                            <div class="col col-2-3">
+                            <div class="col-2-3">
                                 <div class="demo">
                                     <p>2/3</p>
-                                    <div class="grid noGutter">
-                                        <div class="col col-1-2">
+                                    <div class="row noGutter">
+                                        <div class="col-1-2">
                                             <div class="demo">
                                                 <p>1/2</p>
                                             </div>
                                         </div>
-                                        <div class="col col-1-2">
+                                        <div class="col-1-2">
                                             <div class="demo">
                                                 <p>1/2</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid noGutter">
-                                        <div class="col col-1-3">
+                                    <div class="row noGutter">
+                                        <div class="col-1-3">
                                             <div class="demo">
                                                 <p>1/3</p>
                                             </div>
                                         </div>
-                                        <div class="col col-1-3">
+                                        <div class="col-1-3">
                                             <div class="demo">
                                                 <p>1/3</p>
                                             </div>
                                         </div>
-                                        <div class="col col-1-3">
+                                        <div class="col-1-3">
                                             <div class="demo">
                                                 <p>1/3</p>
                                             </div>
@@ -330,25 +347,25 @@
             </div>
         </section>
 
-        <section>
+        <section class="grid">
             <h2>Horizontal alignment</h2>
 
-            <div class="grid">
-                <div class="col col-1-3">
+            <div class="row">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>row > col left align (default)</p>
                     </div>
                 </div>
             </div>
-            <div class="grid alignCenter">
-                <div class="col col-1-2">
+            <div class="row alignCenter">
+                <div class="col-1-2">
                     <div class="demo">
-                        <p>row > col center align</p>
+                        <p>row > center align</p>
                     </div>
                 </div>
             </div>
-            <div class="grid alignRight">
-                <div class="col col-1-3">
+            <div class="row alignRight">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>row > col right align</p>
                     </div>
@@ -359,52 +376,52 @@
         <section>
             <h2>Vertical alignment (no fallback for IE9)</h2>
 
-            <div class="grid">
-                <div class="col col-1-3">
+            <div class="row">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>Vertical align top (default)</p>
                     </div>
                 </div>
-                <div class="col col-1-3">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
                     </div>
                 </div>
-                <div class="col col-1-3">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>...</p>
                     </div>
                 </div>
             </div>
-            <div class="grid alignMiddle">
-                <div class="col col-1-3">
+            <div class="row alignMiddle">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>Vertical align middle</p>
                     </div>
                 </div>
-                <div class="col col-1-3">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
                     </div>
                 </div>
-                <div class="col col-1-3">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>...</p>
                     </div>
                 </div>
             </div>
-            <div class="grid alignBottom">
-                <div class="col col-1-3">
+            <div class="row alignBottom">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>Vertical align bottom</p>
                     </div>
                 </div>
-                <div class="col col-1-3">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
                     </div>
                 </div>
-                <div class="col col-1-3">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>...</p>
                     </div>
@@ -416,28 +433,28 @@
             <h2>Reverse, order and other things (no fallback for IE9)</h2>
 
             <h3>Normal flow</h3>
-            <div class="grid">
-                <div class="col col-1-5">
+            <div class="row">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>A</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>B</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>C</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>D</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>E</p>
                     </div>
@@ -445,28 +462,28 @@
             </div>
 
             <h3>Reverse flow</h3>
-            <div class="grid orderReverse">
-                <div class="col col-1-5">
+            <div class="row orderReverse">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>A</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>B</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>C</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>D</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>E</p>
                     </div>
@@ -474,28 +491,28 @@
             </div>
 
             <h3>Normal flow with ordering (first / last)</h3>
-            <div class="grid">
-                <div class="col col-1-5 orderLast">
+            <div class="row">
+                <div class="col-1-5 orderLast">
                     <div class="demo">
                         <p>A (last)</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>B</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>C</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>D</p>
                     </div>
                 </div>
-                <div class="col col-1-5 orderFirst">
+                <div class="col-1-5 orderFirst">
                     <div class="demo">
                         <p>E (first)</p>
                     </div>
@@ -503,29 +520,29 @@
             </div>
 
             <h3>No gutter? Equal-height?</h3>
-            <div class="grid noGutter equalHeight">
-                <div class="col col-1-5">
+            <div class="row noGutter equalHeight">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5<br>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas laboriosam inventore minima facere possimus quisquam.</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
@@ -536,52 +553,52 @@
         <section>
             <h2>Sometimes you want to do crazy things...</h2>
             <h3>Horizontal distribution</h3>
-            <div class="grid spaceBetween">
-                <div class="col col-1-5">
+            <div class="row spaceBetween">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid spaceAround">
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
-                    </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <p>1/5</p>
-                    </div>
-                </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
             </div>
-            <div class="grid alignCenter">
-                <div class="col col-1-5">
+            <div class="row spaceAround">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
                 </div>
-                <div class="col col-1-5">
+                <div class="col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row alignCenter">
+                <div class="col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col-1-5">
+                    <div class="demo">
+                        <p>1/5</p>
+                    </div>
+                </div>
+                <div class="col-1-5">
                     <div class="demo">
                         <p>1/5</p>
                     </div>
@@ -589,59 +606,59 @@
             </div>
             
             <h3>offset</h3>
-            <div class="grid">
-                <div class="col col-1-2 off-1-2">
+            <div class="row">
+                <div class="col-1-2 off-1-2">
                     <div class="demo">
                         <p>1/2 (offset 1/2)</p>
                     </div>
                 </div>
             </div>
-            <div class="grid">
-                <div class="col col-1-3">
+            <div class="row">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>1/3</p>
                     </div>
                 </div>
-                <div class="col col-1-3 off-1-3">
+                <div class="col-1-3 off-1-3">
                     <div class="demo">
                         <p>1/3 (offset 1/3)</p>
                     </div>
                 </div>
             </div>
-            <div class="grid">
-                <div class="col col-4-5 off-1-5">
+            <div class="row">
+                <div class="col-4-5 off-1-5">
                     <div class="demo">
                         <p>4/5 (offset 1/5)</p>
                     </div>
                 </div>
             </div>
-            <div class="grid">
-                <div class="col col-1-6 off-1-6">
+            <div class="row">
+                <div class="col-1-6 off-1-6">
                     <div class="demo">
                         <p>1/6 (offset 1/6)</p>
                     </div>
                 </div>
-                <div class="col col-1-6 off-1-6">
+                <div class="col-1-6 off-1-6">
                     <div class="demo">
                         <p>1/6 (offset 1/6)</p>
                     </div>
                 </div>
-                <div class="col col-1-6 off-1-6">
+                <div class="col-1-6 off-1-6">
                     <div class="demo">
                         <p>1/6 (offset 1/6)</p>
                     </div>
                 </div>
-                <div class="col col-1-6">
+                <div class="col-1-6">
                     <div class="demo">
                         <p>1/6</p>
                     </div>
                 </div>
-                <div class="col col-1-6 off-1-6">
+                <div class="col-1-6 off-1-6">
                     <div class="demo">
                         <p>1/6 (offset 1/6)</p>
                     </div>
                 </div>
-                <div class="col col-1-6 off-1-6">
+                <div class="col-1-6 off-1-6">
                     <div class="demo">
                         <p>1/6 (offset 1/6)</p>
                     </div>
@@ -658,18 +675,18 @@
                     oGrid.classList.toggle("orderColumn");
                 }
             </script>
-            <div id="view" class="grid">
-                <div class="col col-1-3">
+            <div id="view" class="row">
+                <div class="col-1-3">
                     <div class="demo">
                         <p>1/3</p>
                     </div>
                 </div>
-                <div class="col col-1-6">
+                <div class="col-1-6">
                     <div class="demo">
                         <p>1/6</p>
                     </div>
                 </div>
-                <div class="col col-1-2">
+                <div class="col-1-2">
                     <div class="demo">
                         <p>1/2</p>
                     </div>
@@ -733,10 +750,10 @@
         
         <section>
             <h2>Nav example</h2>
-            <nav class="grid noGutter" role="navigation">
-                <span class="col"><a href="#_" class="logo">&infin;</a></span>
-                <ul class="grid noGutter">
-                    <li class="col">
+            <nav class="row noGutter" role="navigation">
+                <span><a href="#_" class="logo">&infin;</a></span>
+                <ul class="row noGutter">
+                    <li class="col-auto">
                         <a href="#_">item 1</a>
                         <ul class="subNav">
                             <li><a href="#_">sub item 1</a></li>
@@ -745,11 +762,11 @@
                             <li><a href="#_">sub item 4</a></li>
                         </ul>
                     </li>
-                    <li class="col"><a href="#_">item 2</a></li>
-                    <li class="col"><a href="#_">item 3</a></li>
+                    <li class="col-auto"><a href="#_">item 2</a></li>
+                    <li class="col-auto"><a href="#_">item 3</a></li>
                 </ul>
-                <ul class="grid noGutter alignRight">
-                    <li class="col"><a href="#_">FR</a>
+                <ul class="row noGutter alignRight">
+                    <li><a href="#_">FR</a>
                         <ul class="subNav">
                             <li><a href="#_">US</a></li>
                             <li><a href="#_">DE</a></li>
@@ -757,116 +774,116 @@
                             <li><a href="#_">CN</a></li>
                         </ul>
                     </li>
-                    <li class="col grid">
+                    <li class="row noGutter">
                         <input type="search" placeholder="Search...">
                         <button>ok</button>
                     </li>
                 </ul>
             </nav>
             <h2>Banner example</h2>
-            <div class="banner grid noGutter alignCenter alignMiddle">
+            <div class="banner row noGutter alignCenter alignMiddle">
                <div class="banner_content ">
                     <h2 class="banner_title">My Title</h2>
                     <small class="banner_sub">Lorem ipsum dolor sit amet.</small>
                 </div>
             </div>
             <h2>Gallery example</h2>
-            <div class="grid">
-                <div class="col col-1-3">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+            <div class="grid gallery">
+                <div class="row">
+                    <div class="col-1-3">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-3">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-3">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-3">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-3">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-4">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-4">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-4">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-4">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-4">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-4">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-4">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-4">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-5">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-5">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-6">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-6">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-6">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-6">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-6">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-6">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-6">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-6">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-6">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-6">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
-                </div>
-                <div class="col col-1-6">
-                    <div class="demo">
-                        <img src="https://placeimg.com/200/200/nature/grayscale">
+                    <div class="col-1-6">
+                        <div class="demo">
+                            <img src="https://placeimg.com/200/200/nature/grayscale">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
     </div>
-
 </body>
-
 </html>

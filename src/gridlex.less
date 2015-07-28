@@ -3,6 +3,9 @@
 
 /* GRID */
 .grid{
+    overflow: hidden;
+}
+.row{
     display: flex;
     flex: 0 1 auto;
     flex-flow: row wrap;    
@@ -24,28 +27,24 @@
     }
     &.noGutter{
         margin: 0;
-        > .col{
-            padding: 0; 
+        > [class*='col-']{
+            padding: 0;
         }
     }
-    &.equalHeight > .col{
+    &.equalHeight > [class*='col-']{
         display: flex;
-    }
-    &.autoWidth > .col{
-        flex: 1 1 0%; /* autoWidth */
     }
 }
 
 /* COL */
-.col{
+[class*='col-']{
     flex: 0 0 auto;
     padding: 1em 0 0 1em;
     margin: 0;
-    & .grid{
-        margin-bottom: 0;
-    }
 }
-
+.col-auto{
+    flex: 1 1 0%; /* autoWidth */
+}
 /* COL SIZE */
 .col-1-1{
     width: 100%;
@@ -54,10 +53,10 @@
     width: 50%;
 }
 .col-1-3{
-    width: 33.333%;
+    width: calc(100%/3); //33,333%
 }
 .col-2-3{
-    width: 66.666%;
+    width: calc(100%/1.5); //66.666%
 }
 .col-1-4{
     width: 25%;
@@ -78,7 +77,7 @@
     width: 80%;
 }
 .col-1-6{
-    width: 16.666%;
+    width: calc(100%/6); //16.666%;
 }
 .col-5-6{
     width: 83.333%;
@@ -124,7 +123,7 @@
    ========================================================================== */
 /* ON GRID */
 /* Horizontal aligment */
-.grid{
+.row{
     &.alignCenter{ 
         justify-content: center;
     }
@@ -143,7 +142,7 @@
 }
 
 /* ON CELL */
-.col{
+[class*='col-']{
     &.selfCenter{
         align-self: center;
     }
