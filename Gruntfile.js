@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         files: {
           "dist/gridlex.css": "src/gridlex.less",
           "dist/gridlex-noflex.css": "src/gridlex-noflex.less",
-          "example/css/demo.css": "example/less/demo.less" // example only
+          "dist/demo/demo.css": "dist/demo/demo.less" // example only
         }
       }
     },
@@ -60,6 +60,6 @@ module.exports = function(grunt) {
   /* GRUNT TASKS
   ================================================================= */
   grunt.registerTask('default', ['mincss']);
-  grunt.registerTask('mincss', ['less'/*, 'autoprefixer'*/]);
+  grunt.registerTask('mincss', ['less', 'autoprefixer']);
 
 };
