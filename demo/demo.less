@@ -1,0 +1,136 @@
+/******
+* DEMO
+*******/
+
+/* Base
+   ========================================================================== */
+html {
+  font-size: 62.5%;
+}
+body{
+  margin:0;
+  /* set body font-size in em (1.5rem equiv "15px") */
+  font-size: 1.5rem;
+  /*20px line-height for 15px font-size */
+  line-height: (20/15);
+  font-family: Arial, sans-serif;
+}
+
+
+/* Box sizing enabled
+   ========================================================================== */
+*{ box-sizing: border-box; }
+*::after,
+*::before { box-sizing: border-box;}
+
+/* Demo specific css
+   ========================================================================== */
+.demoPage{
+    max-width: 70em;
+    margin: 0 auto;
+    h1{font-size: 2.2rem;}
+    h2{font-size: 1.8rem;}
+    h3{font-size: 1.5rem;}
+}
+section{
+    margin: 2em 0 4em;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    td, th{
+      border: 1px solid rgba(147, 128, 108, 0.5);
+        padding: .5em;
+    }
+}
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-color: #d9534f;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+/**/
+.demo{
+    width: 100%;
+    background: rgba(147,128,108,.2);
+    text-align: center;
+}
+.demo p{
+    margin: 0;
+    padding: 1em;
+}
+.demo img{
+    display: block;
+    width: 100%;
+}
+.noGutter > [class*='col-']{
+    border-left: 1px solid rgba(147,128,108,.5);
+    &:first-child{
+        border: 0;
+    }
+}
+nav{
+    background: rgba(147,128,108,.2);
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        position: relative;
+        &:hover .subNav{
+            display: block;
+        }
+    }
+    a, button{
+        display: block;
+        border: 0;
+        padding: 1em 2em;
+        background: rgba(255,255,255,.3);
+        color: rgba(147,128,108,1);
+        text-decoration: none;
+        &:hover{
+            background: rgba(147,128,108,1);
+            color: rgb(255,255,255);
+        }
+    }
+    .logo{
+        font-weight: 700;
+        background: rgba(147,128,108,1);
+        color: rgb(255,255,255);
+    }
+    .subNav{
+        display: none;
+        position: absolute;
+        a{
+            background: rgb(255,255,255);
+            white-space: nowrap;
+            &:hover{
+                background: rgba(147,128,108,1);
+                color: rgb(255,255,255);
+            }
+        }
+    }
+    [type="search"]{
+        display: block;
+        padding: 1em 2em;
+        border: 0;
+        background: rgba(255,255,255,.1);
+        font-style: italic;
+    }
+}
+.banner{
+    height: 400px;
+    background: #E7E7E7;
+    text-align: center;
+    .banner_title, .banner_sub{
+        margin: 0;
+        
+    }
+}
+.gallery{
+    background: rgba(102, 51, 153, 0.5);
+}
