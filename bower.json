@@ -21,7 +21,7 @@
     "dist/gridlex.css",
     "dist/gridlex-noflex.css"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "ignore": [
     "node_modules"
   ]
