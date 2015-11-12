@@ -1,6 +1,6 @@
 # gridlex
 ## Simple grid based on css flexbox properties
-v. 1.0.0
+v. 1.0.1
 
 
 

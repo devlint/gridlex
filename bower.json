@@ -1,6 +1,6 @@
 {
   "name": "gridlex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple grid based on flex",
   "repository": {
     "type": "git",
