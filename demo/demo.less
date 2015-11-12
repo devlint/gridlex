@@ -7,130 +7,227 @@
 html {
   font-size: 62.5%;
 }
-body{
-  margin:0;
+
+body {
+  margin: 0;
   /* set body font-size in em (1.5rem equiv "15px") */
   font-size: 1.5rem;
   /*20px line-height for 15px font-size */
   line-height: (20/15);
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
 }
-
 
 /* Box sizing enabled
    ========================================================================== */
-*{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 *::after,
-*::before { box-sizing: border-box;}
+*::before {
+  box-sizing: border-box;
+}
 
 /* Demo specific css
    ========================================================================== */
-.demoPage{
-    max-width: 70em;
-    margin: 0 auto;
-    h1{font-size: 2.2rem;}
-    h2{font-size: 1.8rem;}
-    h3{font-size: 1.5rem;}
+h1 {
+  font-size: 5rem;
 }
-section{
-    margin: 2em 0 4em;
+h2 {
+  font-size: 1.8rem;
 }
-table{
-    width: 100%;
-    border-collapse: collapse;
-    td, th{
-      border: 1px solid rgba(147, 128, 108, 0.5);
-        padding: .5em;
-    }
+h3 {
+  font-size: 1.5rem;
 }
-.bs-callout {
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #eee;
-    border-left-color: #d9534f;
-    border-left-width: 5px;
-    border-radius: 3px;
+.demoPage {
+  max-width: 70em;
+  margin: 0 auto;
 }
 
+.header {
+  background: steelblue;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  h1 {
+	display: inline-block;
+	border-bottom: 10px solid #fff;
+	border-top: 10px solid #fff;
+	border-radius: 18px;
+	padding: .8rem 2.6rem;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+  }
+  p {
+	color: rgba(255, 255, 255, 0.7);
+	margin: 0 auto;
+  }
+}
+
+section {
+  margin: 2em 0 4em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  td, th {
+	border: 1px solid rgba(147, 128, 108, 0.5);
+	padding: .5em;
+  }
+}
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-color: #d9534f;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+pre {
+    overflow-x: auto;
+    padding: 1.25em;
+    border: 1px solid #e6e6e6;
+    border-left-width: 5px;
+    margin: 1.6em 0;
+    font-size: .875em;
+    background: #fcfcfc;
+    white-space: pre;
+    word-wrap: normal;
+}
 /**/
-.demo{
-    width: 100%;
-    background: rgba(147,128,108,.2);
-    text-align: center;
+.demo {
+  width: 100%;
+  background: rgba(147, 128, 108, .2);
+  text-align: center;
 }
-.demo p{
+
+.demo p {
+  margin: 0;
+  padding: 1em;
+}
+.demo-explain {
+  margin: 0;
+  padding: 0;
+}
+
+.demo img {
+  display: block;
+  width: 100%;
+}
+
+.separator {
+  margin: 5rem auto;
+  height: 30px;
+  width: 30px;
+  background-color: steelblue;
+  background-image: linear-gradient(to top, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px);
+  background-size: 100% 50%, 50% 50%, 100%, 100%;
+  background-position: 0% 0%, 0% 100%, 0% 0%;
+  background-repeat: repeat-y, repeat-x;
+  &.white{
     margin: 0;
-    padding: 1em;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    background-image: linear-gradient(to top, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px);
+  }
 }
-.demo img{
-    display: block;
-    width: 100%;
+
+.noGutter.withBorder {
+  border: 1px solid rgba(147, 128, 108, 0.5);
+  > .row > [class*='col-'] {
+	border: 1px solid rgba(147, 128, 108, .5);
+  }
 }
-.noGutter > [class*='col-']{
-    border-left: 1px solid rgba(147,128,108,.5);
-    &:first-child{
-        border: 0;
-    }
+
+// NAV EXAMPLE
+nav {
+  background: rgba(147, 128, 108, .2);
+  ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  li {
+	position: relative;
+	&:hover .subNav {
+	  display: block;
+	}
+  }
+  a, button {
+	display: block;
+	border: 0;
+	padding: 1em 2em;
+	background: rgba(255, 255, 255, .3);
+	color: rgba(147, 128, 108, 1);
+	text-decoration: none;
+	&:hover {
+	  background: rgba(147, 128, 108, 1);
+	  color: rgb(255, 255, 255);
+	}
+  }
+  .logo {
+	font-weight: 700;
+	background: rgba(147, 128, 108, 1);
+	color: rgb(255, 255, 255);
+  }
+  .subNav {
+	display: none;
+	position: absolute;
+	a {
+	  background: rgb(255, 255, 255);
+	  white-space: nowrap;
+	  &:hover {
+		background: rgba(147, 128, 108, 1);
+		color: rgb(255, 255, 255);
+	  }
+	}
+  }
+  [type="search"] {
+	display: block;
+	padding: 1em 2em;
+	border: 0;
+	background: rgba(255, 255, 255, .1);
+	font-style: italic;
+  }
 }
-nav{
-    background: rgba(147,128,108,.2);
-    ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    li{
-        position: relative;
-        &:hover .subNav{
-            display: block;
-        }
-    }
-    a, button{
-        display: block;
-        border: 0;
-        padding: 1em 2em;
-        background: rgba(255,255,255,.3);
-        color: rgba(147,128,108,1);
-        text-decoration: none;
-        &:hover{
-            background: rgba(147,128,108,1);
-            color: rgb(255,255,255);
-        }
-    }
-    .logo{
-        font-weight: 700;
-        background: rgba(147,128,108,1);
-        color: rgb(255,255,255);
-    }
-    .subNav{
-        display: none;
-        position: absolute;
-        a{
-            background: rgb(255,255,255);
-            white-space: nowrap;
-            &:hover{
-                background: rgba(147,128,108,1);
-                color: rgb(255,255,255);
-            }
-        }
-    }
-    [type="search"]{
-        display: block;
-        padding: 1em 2em;
-        border: 0;
-        background: rgba(255,255,255,.1);
-        font-style: italic;
-    }
+
+// LAYOUT EXAMPLE
+.layout{
+  .row div{
+    padding: 1rem;
+  }
+  header{
+    background: #F39C12;
+  }
+  aside{
+    background: #3498db;
+  }
+  main{
+    background: #95a5a6;
+  }
+  footer{
+    background: #2ecc71;
+  }
 }
-.banner{
-    height: 400px;
-    background: #E7E7E7;
-    text-align: center;
-    .banner_title, .banner_sub{
-        margin: 0;
-        
-    }
+
+// BANNER EXAMPLE
+.banner {
+  height: 400px;
+  background: #E7E7E7;
+  text-align: center;
+  .banner_title, .banner_sub {
+	margin: 0;
+
+  }
 }
-.gallery{
-    background: rgba(102, 51, 153, 0.5);
+
+// GALLERY EXAMPLE
+.gallery {
+  background: rgba(102, 51, 153, 0.5);
 }
