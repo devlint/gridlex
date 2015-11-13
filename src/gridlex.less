@@ -10,11 +10,11 @@
 @gutter:    .5rem;
 
 // Breakpoints for @media-queries:
-@xs:        ~"screen and (max-width: 35.5em)";
+@xs:        ~"screen and (max-width: 35.5em)"; // up to 568px
 @sm:        ~"screen and (min-width: 35.5em) and (max-width: 48em)"; // from 568px to 768px
 @md:        ~"screen and (min-width: 48em) and (max-width: 64em)"; // from 768px to 1024px
 @lg:        ~"screen and (min-width: 64em) and (max-width: 80em)"; // from 1024px to 1280px
-@xl:        ~"screen and (min-width: 80em)"; // up to 1280px
+@xl:        ~"screen and (min-width: 80em)"; // from 1280px
 
 
 /************************
@@ -318,7 +318,7 @@
 // Application of .makeGridMedia():
 
 @media @xs{
-    /* It is not use because it's the base */
+    .makeGridMedia(xs);
 }
 @media @sm{
     .makeGridMedia(sm);
