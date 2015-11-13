@@ -31,6 +31,7 @@ h1 {
 }
 h2 {
   font-size: 1.8rem;
+  color: steelblue;
 }
 h3 {
   font-size: 1.5rem;
@@ -38,11 +39,16 @@ h3 {
 .demoPage {
   max-width: 70em;
   margin: 0 auto;
+  padding: 0 1em;
+}
+.demoPage h1 {
+  font-size: 3rem;
+  margin-bottom: 2em;
 }
 .header {
   background: steelblue;
   color: white;
-  padding: 4rem 0;
+  padding: 4em 0;
   text-align: center;
 }
 .header h1 {
@@ -52,14 +58,39 @@ h3 {
   border-radius: 18px;
   padding: .8rem 2.6rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 .header p {
   color: rgba(255, 255, 255, 0.7);
   margin: 0 auto;
 }
 section {
+  position: relative;
   margin: 2em 0 4em;
+}
+section:before {
+  content: '';
+  display: inline-flex;
+  border: 1px solid steelblue;
+  width: 100%;
+  align-items: stretch;
+  position: absolute;
+  bottom: 2rem;
+}
+section:after {
+  content: '';
+  position: relative;
+  display: block;
+  margin: 5rem auto;
+  height: 40px;
+  width: 42px;
+  border: 7px solid white;
+  border-left-width: 9px;
+  background-color: steelblue;
+  background-image: linear-gradient(to top, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px);
+  background-size: 100% 50%, 50% 50%, 100%, 100%;
+  background-position: 0% 0%, 0% 100%, 0% 0%;
+  background-repeat: repeat-y, repeat-x;
 }
 table {
   width: 100%;
@@ -70,24 +101,26 @@ table th {
   border: 1px solid rgba(147, 128, 108, 0.5);
   padding: .5em;
 }
-.bs-callout {
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid #eee;
-  border-left-color: #d9534f;
+.bs-callout,
+pre {
+  padding: 1.25em;
+  margin: 1.6em 0;
+  background: #fcfcfc;
+  border: 1px solid #e6e6e6;
   border-left-width: 5px;
   border-radius: 3px;
 }
+.bs-callout {
+  border-color: #2ecc71;
+}
 pre {
   overflow-x: auto;
-  padding: 1.25em;
-  border: 1px solid #e6e6e6;
-  border-left-width: 5px;
-  margin: 1.6em 0;
   font-size: .875em;
-  background: #fcfcfc;
   white-space: pre;
   word-wrap: normal;
+}
+pre.doc {
+  border-color: #2ecc71;
 }
 /**/
 .demo {
@@ -129,7 +162,10 @@ pre {
 .noGutter.withBorder {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
-.noGutter.withBorder > .row > [class*='col-'] {
+.noGutter.withBorder [class*='col-'] {
+  padding: 0;
+}
+.noGutter.withBorder .demo {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
 nav {
@@ -184,7 +220,7 @@ nav [type="search"] {
   background: rgba(255, 255, 255, 0.1);
   font-style: italic;
 }
-.layout .row div {
+.layout div {
   padding: 1rem;
 }
 .layout header {

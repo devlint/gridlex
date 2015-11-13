@@ -1,171 +1,334 @@
-/* Grid System
-   ========================================================================== */
+/* ==========================================================================
+    GRIDLEX
+    Just a Flexbox Grid System
+========================================================================== */
 
-/* GRID */
+/************************
+    VARIABLES
+*************************/
+// Gutter: for negative margins on grid & paddings on columns
+@gutter:    .5rem;
+
+// Breakpoints for @media-queries:
+@xs:        ~"screen and (max-width: 35.5em)";
+@sm:        ~"screen and (min-width: 35.5em) and (max-width: 48em)"; // from 568px to 768px
+@md:        ~"screen and (min-width: 48em) and (max-width: 64em)"; // from 768px to 1024px
+@lg:        ~"screen and (min-width: 64em) and (max-width: 80em)"; // from 1024px to 1280px
+@xl:        ~"screen and (min-width: 80em)"; // up to 1280px
+
+
+/************************
+    GRID
+*************************/
 .grid{
-    //overflow: hidden; /!\ ???
-}
-.row{
     display: flex;
     flex: 0 1 auto;
     flex-flow: row wrap;
-    margin: 0 -0.5rem;
-
-    /* Reverse order */
-    &.orderReverse{
-        flex-direction: row-reverse;
-    }
-    &.orderColumn{
-        flex-flow: column;
-    }
-    &.spaceBetween{
-        justify-content: space-between;
-    }
-    &.spaceAround{
-        justify-content: space-around;
-    }
-    &.equalHeight > [class*='col-']{
-        display: flex;
-    }
+    margin: 0 -@gutter;
 }
-.noGutter{
-    margin: 0;
-    > .row{
+
+/* No spacing between cols : noGutter */
+    .noGutter{
         margin: 0;
         > [class*='col-']{
             padding: 0;
         }
     }
-}
 
-/* COL */
-[class*='col-']{
-    flex: 0 0 auto;
-    padding: 0 .5rem 1rem;
-}
-.col-auto{
-    flex: 1 1 0; /* autoWidth */
-}
-/* COL SIZE */
-.col-1-1{
-    flex-basis: 100%;
-    max-width: 100%;
-}
-.col-1-2{
-    flex-basis: 50%;
-    max-width: 50%;
-}
-.col-1-3{
-    flex-basis: calc(100%/3); //33,333%
-    max-width: calc(100%/3); //33,333%
-}
-.col-2-3{
-    flex-basis: calc(100%/1.5); //66.666%
-    max-width: calc(100%/1.5); //66.666%
-}
-.col-1-4{
-    flex-basis: 25%;
-    max-width: 25%;
-}
-.col-3-4{
-    flex-basis: 75%;
-    max-width: 75%;
-}
-.col-1-5{
-    flex-basis: 20%;
-    max-width: 20%;
-}
-.col-2-5{
-    flex-basis: 40%;
-    max-width: 40%;
-}
-.col-3-5{
-    flex-basis: 60%;
-    max-width: 60%;
-}
-.col-4-5{
-    flex-basis: 80%;
-    max-width: 80%;
-}
-.col-1-6{
-    flex-basis: calc(100%/6); //16.666%
-    max-width: calc(100%/6); //16.666%
-}
-.col-5-6{
-    flex-basis: calc(100%/1.2); //83.333%
-    max-width: calc(100%/1.2); //83.333%
-}
-
-/* OFFSET SIZE */ 
-.off-1-2{
-    margin-left: 50%;
-}
-.off-1-3{
-    margin-left: calc(100%/3); //33,333%
-}
-.off-2-3{
-    margin-left: calc(100%/1.5); //66.666%
-}
-.off-1-4{
-    margin-left: 25%;
-}
-.off-3-4{
-    margin-left: 75%;
-}
-.off-1-5{
-    margin-left: 20%;
-}
-.off-2-5{
-    margin-left: 40%;
-}
-.off-3-5{
-    margin-left: 60%;
-}
-.off-4-5{
-    margin-left: 80%;
-}
-.off-1-6{
-    margin-left: calc(100%/6); //16.666%
-}
-.off-5-6{
-    margin-left: calc(100%/1.2); //83.333%
-}
-
-
-/* HELPERS
-   ========================================================================== */
-/* ON GRID */
 /* Horizontal aligment */
-.row{
-    &.alignCenter{ 
+    .alignCenter{
         justify-content: center;
     }
-    &.alignRight{
+    .alignRight{
         justify-content: flex-end;
         margin-left: auto;
     }
-
-    /* Vertical aligment */
-    &.alignMiddle{
+/* Vertical aligment */
+    .alignMiddle{
         align-items: center;
     }
-    &.alignBottom{
+    .alignBottom{
         align-items: flex-end;
     }
+
+/* Orders */
+    .orderReverse{
+        flex-direction: row-reverse;
+    }
+    .orderColumn {
+        flex-flow: column;
+    }
+
+/* Spaces */
+    .spaceBetween{
+        justify-content: space-between;
+    }
+    .spaceAround{
+        justify-content: space-around;
+    }
+
+/* Equal heights columns */
+    .equalHeight > [class*='col-']{
+        display: flex;
+    }
+
+
+
+/************************
+    COLS
+*************************/
+[class*='col-'] {
+    flex: 0 0 auto;
+    padding: 0 @gutter (@gutter*2);
 }
 
-/* ON CELL */
-[class*='col-']{
-    &.selfCenter{
+/* Cols alignments */
+    .selfCenter{
         align-self: center;
     }
-    &.selfRight{
+    .selfRight{
         margin-left: auto;
     }
-    &.orderFirst{
+    .orderFirst{
         order: -1;
     }
-    &.orderLast{
+    .orderLast{
         order: 1;
     }
+
+/* Cols sizes */
+    .col-auto{
+        flex: 1 1 0;
+    }
+    .col-1-1,
+    .col-2-2,
+    .col-3-3,
+    .col-4-4,
+    .col-5-5,
+    .col-6-6,
+    .col-7-7,
+    .col-8-8 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .col-1-2,
+    .col-2-4,
+    .col-3-6,
+    .col-4-8 {
+        flex-basis: calc(100%/2);
+        max-width: calc(100%/2);
+    }
+    .col-1-3,
+    .col-2-6 {
+        flex-basis: calc(100%/3);
+        max-width: calc(100%/3);
+    }
+    .col-1-4,
+    .col-2-8 {
+        flex-basis: calc(100%/4);
+        max-width: calc(100%/4);
+    }
+    .col-1-5 {
+        flex-basis: calc(100%/5);
+        max-width: calc(100%/5);
+    }
+    .col-1-6{
+        flex-basis: calc(100%/6);
+        max-width: calc(100%/6);
+    }
+    .col-1-7 {
+        flex-basis: calc(100%/7);
+        max-width: calc(100%/7);
+    }
+    .col-1-8 {
+        flex-basis: calc(100%/8);
+        max-width: calc(100%/8);
+    }
+    .col-2-3,
+    .col-4-6 {
+        flex-basis: calc(100%/1.49998);
+        max-width: calc(100%/1.49998);
+    }
+    .col-2-5 {
+        flex-basis: calc(100%/2.5);
+        max-width: calc(100%/2.5);
+    }
+    .col-2-7 {
+        flex-basis: calc(100%/3.5);
+        max-width: calc(100%/3.5);
+    }
+    .col-3-4,
+    .col-6-8 {
+        flex-basis: calc(100%/1.33333);
+        max-width: calc(100%/1.33333);
+    }
+    .col-3-5 {
+        flex-basis: calc(100%/1.66666);
+        max-width: calc(100%/1.66666);
+    }
+    .col-3-7 {
+        flex-basis: calc(100%/2.33333);
+        max-width: calc(100%/2.33333);
+    }
+    .col-3-8 {
+        flex-basis: calc(100%/2.66666);
+        max-width: calc(100%/2.66666);
+    }
+    .col-4-5 {
+        flex-basis: calc(100%/1.25);
+        max-width: calc(100%/1.25);
+    }
+    .col-4-7 {
+        flex-basis: calc(100%/1.75);
+        max-width: calc(100%/1.75);
+    }
+    .col-5-6{
+        flex-basis: calc(100%/1.2);
+        max-width: calc(100%/1.2);
+    }
+    .col-5-7 {
+        flex-basis: calc(100%/1.4);
+        max-width: calc(100%/1.4);
+    }
+    .col-5-8 {
+        flex-basis: calc(100%/1.6);
+        max-width: calc(100%/1.6);
+    }
+    .col-6-7 {
+        flex-basis: calc(100%/1.166666);
+        max-width: calc(100%/1.166666);
+    }
+    .col-7-8 {
+        flex-basis: calc(100%/1.143);
+        max-width: calc(100%/1.143);
+    }
+
+/* Offset sizes */
+    .off-1-2,
+    .off-2-4,
+    .off-3-6,
+    .off-4-8{
+        margin-left: calc(100%/2);
+    }
+    .off-1-3,
+    .off-2-6{
+        margin-left: calc(100%/3);
+    }
+    .off-1-4,
+    .off-2-8{
+        margin-left: calc(100%/4);
+    }
+    .off-1-5{
+        margin-left: calc(100%/5);
+    }
+    .off-1-6{
+        margin-left: calc(100%/6);
+    }
+    .off-1-7{
+        margin-left: calc(100%/7);
+    }
+    .off-1-8{
+        margin-left: calc(100%/8);
+    }
+    .off-2-3,
+    .off-4-6{
+        margin-left: calc(100%/1.5);
+    }
+    .off-2-5{
+        margin-left: calc(100%/2.5);
+    }
+    .off-2-7{
+        margin-left: calc(100%/2.5);
+    }
+    .off-3-4,
+    .off-6-8{
+        margin-left: calc(100%/1.334);
+    }
+    .off-3-5{
+        margin-left: calc(100%/1.667);
+    }
+    .off-3-7 {
+        margin-left: calc(100%/2.334);
+    }
+    .off-3-8 {
+        margin-left: calc(100%/2.667);
+    }
+    .off-4-5{
+        margin-left: calc(100%/1.25);
+    }
+    .off-4-7{
+        margin-left: calc(100%/1.25);
+    }
+    .off-5-6{
+        margin-left: calc(100%/1.2);
+    }
+    .off-5-7 {
+        margin-left: calc(100%/1.4);
+    }
+    .off-5-8 {
+        margin-left: calc(100%/1.6);
+    }
+    .off-6-7 {
+        margin-left: calc(100%/1.1667);
+    }
+    .off-7-8 {
+        margin-left: calc(100%/1.143);
+    }
+
+// Function to generate the grid @media:
+.makeGridMedia(@size) {
+    .@{size}-1-1,
+    .@{size}-2-2,
+    .@{size}-3-3,
+    .@{size}-4-4,
+    .@{size}-5-5,
+    .@{size}-6-6,
+    .@{size}-7-7,
+    .@{size}-8-8{ .col-1-1(); }
+    .@{size}-1-2,
+    .@{size}-2-4,
+    .@{size}-3-6,
+    .@{size}-4-8{ .col-2-4(); }
+    .@{size}-1-3,
+    .@{size}-2-6{ .col-1-3(); }
+    .@{size}-1-4,
+    .@{size}-2-8{ .col-1-4(); }
+    .@{size}-1-5{ .col-1-5(); }
+    .@{size}-1-6{ .col-1-6(); }
+    .@{size}-1-7{ .col-1-7(); }
+    .@{size}-1-8{ .col-1-8(); }
+    .@{size}-2-3,
+    .@{size}-4-6{ .col-2-3(); }
+    .@{size}-2-5{ .col-2-5(); }
+    .@{size}-2-7{ .col-2-7(); }
+    .@{size}-3-4,
+    .@{size}-6-8{ .col-3-4(); }
+    .@{size}-3-5{ .col-3-5(); }
+    .@{size}-3-7{ .col-3-7(); }
+    .@{size}-3-8{ .col-3-8(); }
+    .@{size}-4-5{ .col-4-5(); }
+    .@{size}-4-7{ .col-4-7(); }
+    .@{size}-5-6{ .col-5-6(); }
+    .@{size}-5-7{ .col-5-7(); }
+    .@{size}-5-8{ .col-5-8(); }
+    .@{size}-6-7{ .col-6-7(); }
+    .@{size}-7-8{ .col-7-8(); }
+}
+
+// Application of .makeGridMedia():
+
+@media @xs{
+    /* It is not use because it's the base */
+}
+@media @sm{
+    .makeGridMedia(sm);
+}
+@media @md{
+    .makeGridMedia(md);
+}
+@media @lg{
+    .makeGridMedia(lg);
+}
+@media @xl{
+    .makeGridMedia(xl);
 }

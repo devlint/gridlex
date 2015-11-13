@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       ================================================================= */
     autoprefixer: {
       options: {
-        browsers: ['last 2 version', 'Safari >= 6', 'Explorer >= 9', 'Opera >= 12', 'iOS >= 6', 'Android >= 4']
+        browsers: ['last 2 version']
       },
       css: {
         files: {
