@@ -330,7 +330,7 @@
         </div>
 
         <h2>Inception</h2>
-        <div class="grid noGutter">
+        <div class="grid">
             <div class="col-1-2"><p class="demo-explain">Just an "empty" col-1-2:</p></div>
             <div class="col-1-2"><p class="demo-explain">And more grids & cells in this col-1-2:</p></div>
             <div class="col-1-2">
@@ -338,42 +338,36 @@
                     <p>1/2</p>
                 </div>
             </div>
-            <div class="col-1-2">
-                <div class="grid">
+            <div class="col-1-2 grid">
+                <div class="col-1-3">
+                    <div class="demo">
+                        <p>1/3</p>
+                    </div>
+                </div>
+                <div class="col-2-3 grid">
+                    <div class="col-1-2">
+                        <div class="demo">
+                            <p>1/2</p>
+                        </div>
+                    </div>
+                    <div class="col-1-2">
+                        <div class="demo">
+                            <p>1/2</p>
+                        </div>
+                    </div>
                     <div class="col-1-3">
                         <div class="demo">
                             <p>1/3</p>
                         </div>
                     </div>
-                    <div class="col-2-3">
-                        <div class="grid">
-                            <div class="col-1-2">
-                                <div class="demo">
-                                    <p>1/2</p>
-                                </div>
-                            </div>
-                            <div class="col-1-2">
-                                <div class="demo">
-                                    <p>1/2</p>
-                                </div>
-                            </div>
+                    <div class="col-1-3">
+                        <div class="demo">
+                            <p>1/3</p>
                         </div>
-                        <div class="grid">
-                            <div class="col-1-3">
-                                <div class="demo">
-                                    <p>1/3</p>
-                                </div>
-                            </div>
-                            <div class="col-1-3">
-                                <div class="demo">
-                                    <p>1/3</p>
-                                </div>
-                            </div>
-                            <div class="col-1-3">
-                                <div class="demo">
-                                    <p>1/3</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="demo">
+                            <p>1/3</p>
                         </div>
                     </div>
                 </div>
@@ -383,31 +377,25 @@
     &lt;div class="col-1-2">
         [1/2]
     &lt;/div>
-    &lt;div class="col-1-2">
-        &lt;div class="grid">
+    &lt;div class="col-1-2 grid">
+        &lt;div class="col-1-3">
+            [1/3]
+        &lt;/div>
+        &lt;div class="col-2-3 grid">
+            &lt;div class="col-1-2">
+                [1/2]
+            &lt;/div>
+            &lt;div class="col-1-2">
+                [1/2]
+            &lt;/div>
+            &lt;div class="col-1-3">
+                [1-3]
+            &lt;/div>
             &lt;div class="col-1-3">
                 [1/3]
             &lt;/div>
-            &lt;div class="col-2-3">
-                &lt;div class="grid">
-                    &lt;div class="col-1-2">
-                        [1/2]
-                    &lt;/div>
-                    &lt;div class="col-1-2">
-                        [1/2]
-                    &lt;/div>
-                &lt;/div>
-                &lt;div class="grid">
-                    &lt;div class="col-1-3">
-                        [1-3]
-                    &lt;/div>
-                    &lt;div class="col-1-3">
-                        [1/3]
-                    &lt;/div>
-                    &lt;div class="col-1-3">
-                        [1/3]
-                    &lt;/div>
-                &lt;/div>
+            &lt;div class="col-1-3">
+                [1/3]
             &lt;/div>
         &lt;/div>
     &lt;/div>
