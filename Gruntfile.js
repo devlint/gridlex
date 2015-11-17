@@ -19,7 +19,6 @@ module.exports = function(grunt) {
         },
         files: {
           "dist/gridlex.css": "src/gridlex.less",
-          "dist/gridlex-noflex.css": "src/gridlex-noflex.less",
           "dist/demo/demo.css": "dist/demo/demo.less" // example only
         }
       }
@@ -35,7 +34,22 @@ module.exports = function(grunt) {
       css: {
         files: {
           "dist/gridlex.css": "dist/gridlex.css",
-          "dist/gridlex-noflex.css": "dist/gridlex-noflex.css"
+          "dist/demo/demo.css": "dist/demo/demo.css"
+        }
+      }
+    },
+
+
+    /* CSS MINIFY
+     ================================================================= */
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files:{
+            "dist/gridlex.min.css": "dist/gridlex.css"
         }
       }
     },
@@ -50,7 +64,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: 'src/**/*.less',
-        tasks: ['mincss']
+        tasks: ['compileless']
       }
     }
 
@@ -60,6 +74,6 @@ module.exports = function(grunt) {
   /* GRUNT TASKS
   ================================================================= */
   grunt.registerTask('default', ['mincss']);
-  grunt.registerTask('mincss', ['less', 'autoprefixer']);
+  grunt.registerTask('compile', ['less', 'autoprefixer', 'cssmin']);
 
 };

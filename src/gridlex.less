@@ -3,34 +3,37 @@
     Just a Flexbox Grid System
 ========================================================================== */
 
-/************************
-    VARIABLES
-*************************/
-// Gutter: for negative margins on grid & paddings on columns
-@gutter:    .5rem;
-
-// Breakpoints for @media-queries:
-@xs:        ~"screen and (max-width: 35.5em)"; // up to 568px
-@sm:        ~"screen and (min-width: 35.5em) and (max-width: 48em)"; // from 568px to 768px
-@md:        ~"screen and (min-width: 48em) and (max-width: 64em)"; // from 768px to 1024px
-@lg:        ~"screen and (min-width: 64em) and (max-width: 80em)"; // from 1024px to 1280px
-@xl:        ~"screen and (min-width: 80em)"; // from 1280px
-
+@import "gridlex-vars";
 
 /************************
     GRID
 *************************/
-.grid{
+[class*='grid']{
+    box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;
     flex-flow: row wrap;
     margin: 0 -@gutter;
 }
 
+/* GRID BY NUMBER */
+.grid-1 > [class*='col']{ flex-basis: @col-12; max-width: @col-12; }
+.grid-2 > [class*='col']{ flex-basis: @col-6; max-width: @col-6; }
+.grid-3 > [class*='col']{ flex-basis: @col-4; max-width: @col-4; }
+.grid-4 > [class*='col']{ flex-basis: @col-3; max-width: @col-3; }
+.grid-5 > [class*='col']{ flex-basis: @col-5-12; max-width: @col-5-12; }
+.grid-6 > [class*='col']{ flex-basis: @col-2; max-width: @col-2; }
+.grid-7 > [class*='col']{ flex-basis: @col-7-12; max-width: @col-7-12; }
+.grid-8 > [class*='col']{ flex-basis: @col-8-12; max-width: @col-8-12; }
+.grid-9 > [class*='col']{ flex-basis: @col-9-12; max-width: @col-9-12; }
+.grid-10 > [class*='col']{ flex-basis: @col-10-12; max-width: @col-10-12; }
+.grid-11 > [class*='col']{ flex-basis: @col-11-12; max-width: @col-11-12; }
+.grid-12 > [class*='col']{ flex-basis: @col-1; max-width: @col-1; }
+
 /* No spacing between cols : noGutter */
     .grid-noGutter{
         margin: 0;
-        > [class*='col-']{
+        > [class*='col']{
             padding: 0;
         }
     }
@@ -71,12 +74,7 @@
     }
 
 /* Equal heights columns */
-    .grid-equalHeight > [class*='col-'],
-    .grid-equalHeight > [class*='xs-'],
-    .grid-equalHeight > [class*='sm-'],
-    .grid-equalHeight > [class*='md-'],
-    .grid-equalHeight > [class*='lg-'],
-    .grid-equalHeight > [class*='xl-']{
+    .grid-equalHeight > [class*='col']{
         display: flex;
     }
 
@@ -85,23 +83,16 @@
 /************************
     COLS
 *************************/
-[class^='col'],
-[class^='xs'],
-[class^='sm'],
-[class^='md'],
-[class^='lg'],
-[class^='xl'] {
+[class*='col']{
+    box-sizing: border-box;
     flex: 0 0 auto;
     padding: 0 @gutter (@gutter*2);
 }
+.col{
+    flex: 1 1 0;
+}
 
 /* Cols alignments */
-    .col-center{
-        align-self: center;
-    }
-    .col-right{
-        margin-left: auto;
-    }
     .col-first{
         order: -1;
     }
@@ -109,152 +100,64 @@
         order: 1;
     }
 
-/* Cols sizes */
-    .col-auto{
-        flex: 1 1 0;
-    }
-    @1-1: 100%;
-    @1-2: calc(100%/2);
-    @1-3: calc(100%/3);
-    @1-4: calc(100%/4);
-    @1-5: calc(100%/5);
-    @1-6: calc(100%/6);
-    @1-7: calc(100%/7);
-    @1-8: calc(100%/8);
-    @2-3: calc(100%/1.49998);
-    @2-5: calc(100%/2.5);
-    @2-7: calc(100%/3.5);
-    @3-4: calc(100%/1.33333);
-    @3-5: calc(100%/1.66666);
-    @3-7: calc(100%/2.33333);
-    @3-8: calc(100%/2.66666);
-    @4-5: calc(100%/1.25);
-    @4-7: calc(100%/1.75);
-    @5-6: calc(100%/1.2);
-    @5-7: calc(100%/1.4);
-    @5-8: calc(100%/1.6);
-    @6-7: calc(100%/1.166666);
-    @7-8: calc(100%/1.143);
-
-
-/* GRID BY NUMBER? */
-.grid-1 > .col{ flex-basis: @1-1; max-width: @1-1; }
-.grid-2 > .col{ flex-basis: @1-2; max-width: @1-2; }
-
+/* Columns widths */
 // Function to generate the grid @media:
-.makeGrid(@size: col) {
+.makeGrid(@col, @off) {
+    [class*='grid']{
+        .@{col}-1{ flex-basis: @col-1;max-width: @col-1; }
+        .@{col}-2{ flex-basis: @col-2;max-width: @col-2; }
+        .@{col}-3{ flex-basis: @col-3;max-width: @col-3; }
+        .@{col}-4{ flex-basis: @col-4;max-width: @col-4;}
+        .@{col}-5{ flex-basis: @col-5;max-width: @col-5;}
+        .@{col}-6{ flex-basis: @col-6;max-width: @col-6;}
+        .@{col}-7{ flex-basis: @col-7;max-width: @col-7;}
+        .@{col}-8{ flex-basis: @col-8;max-width: @col-8;}
+        .@{col}-9{ flex-basis: @col-9;max-width: @col-9;}
+        .@{col}-10{ flex-basis: @col-10;max-width: @col-10;}
+        .@{col}-11{ flex-basis: @col-11;max-width: @col-11;}
+        .@{col}-12{ flex-basis: @col-12;max-width: @col-12;}
 
-    .@{size}-1-1,
-    .@{size}-2-2,
-    .@{size}-3-3,
-    .@{size}-4-4,
-    .@{size}-5-5,
-    .@{size}-6-6,
-    .@{size}-7-7,
-    .@{size}-8-8{ flex-basis: @1-1; max-width: @1-1; }
-    .@{size}-1-2,
-    .@{size}-2-4,
-    .@{size}-3-6,
-    .@{size}-4-8{ flex-basis: @1-2; max-width: @1-2; }
-    .@{size}-1-3,
-    .@{size}-2-6{ flex-basis: @1-3; max-width: @1-3; }
-    .@{size}-1-4,
-    .@{size}-2-8{ flex-basis: @1-4; max-width: @1-4; }
-    .@{size}-1-5{ flex-basis: @1-5; max-width: @1-5; }
-    .@{size}-1-6{ flex-basis: @1-6; max-width: @1-6; }
-    .@{size}-1-7{ flex-basis: @1-7; max-width: @1-7; }
-    .@{size}-1-8{ flex-basis: @1-8; max-width: @1-8; }
-    .@{size}-2-3,
-    .@{size}-4-6{ flex-basis: @2-3; max-width: @2-3; }
-    .@{size}-2-5{ flex-basis: @2-5; max-width: @2-5; }
-    .@{size}-2-7{ flex-basis: @2-7; max-width: @2-7; }
-    .@{size}-3-4,
-    .@{size}-6-8{ flex-basis: @3-4; max-width: @3-4; }
-    .@{size}-3-5{ flex-basis: @3-5; max-width: @3-5; }
-    .@{size}-3-7{ flex-basis: @3-7; max-width: @3-7; }
-    .@{size}-3-8{ flex-basis: @3-8; max-width: @3-8; }
-    .@{size}-4-5{ flex-basis: @4-5; max-width: @4-5; }
-    .@{size}-4-7{ flex-basis: @4-7; max-width: @4-7; }
-    .@{size}-5-6{ flex-basis: @5-6; max-width: @5-6; }
-    .@{size}-5-7{ flex-basis: @5-7; max-width: @5-7; }
-    .@{size}-5-8{ flex-basis: @5-8; max-width: @5-8; }
-    .@{size}-6-7{ flex-basis: @6-7; max-width: @6-7; }
-    .@{size}-7-8{ flex-basis: @7-8; max-width: @7-8; }
+        .@{off}-1-left{ margin-left: @col-1; }
+        .@{off}-2-left{ margin-left: @col-2; }
+        .@{off}-3-left{ margin-left: @col-3; }
+        .@{off}-4-left{ margin-left: @col-4; }
+        .@{off}-5-left{ margin-left: @col-5; }
+        .@{off}-6-left{ margin-left: @col-6; }
+        .@{off}-7-left{ margin-left: @col-7; }
+        .@{off}-8-left{ margin-left: @col-8; }
+        .@{off}-9-left{ margin-left: @col-9; }
+        .@{off}-10-left{ margin-left: @col-10; }
+        .@{off}-11-left{ margin-left: @col-11; }
 
-    .@{size}-1-2-pull,
-    .@{size}-2-4-pull,
-    .@{size}-3-6-pull,
-    .@{size}-4-8-pull{ margin-left: @1-2; }
-    .@{size}-1-3-pull,
-    .@{size}-2-6-pull{ margin-left: @1-3; }
-    .@{size}-1-4-pull,
-    .@{size}-2-8-pull{ margin-left: @1-4; }
-    .@{size}-1-5-pull{ margin-left: @1-5; }
-    .@{size}-1-6-pull{ margin-left: @1-6; }
-    .@{size}-1-7-pull{ margin-left: @1-7; }
-    .@{size}-1-8-pull{ margin-left: @1-8; }
-    .@{size}-2-3-pull,
-    .@{size}-4-6-pull{ margin-left: @2-3; }
-    .@{size}-2-5-pull{ margin-left: @2-5; }
-    .@{size}-2-7-pull{ margin-left: @2-7; }
-    .@{size}-3-4-pull,
-    .@{size}-6-8-pull{ margin-left: @3-4; }
-    .@{size}-3-5-pull{ margin-left: @3-5; }
-    .@{size}-3-7-pull{ margin-left: @3-7; }
-    .@{size}-3-8-pull{ margin-left: @3-8; }
-    .@{size}-4-5-pull{ margin-left: @4-5; }
-    .@{size}-4-7-pull{ margin-left: @4-7; }
-    .@{size}-5-6-pull{ margin-left: @5-6; }
-    .@{size}-5-7-pull{ margin-left: @5-7; }
-    .@{size}-5-8-pull{ margin-left: @5-8; }
-    .@{size}-6-7-pull{ margin-left: @6-7; }
-    .@{size}-7-8-pull{ margin-left: @7-8; }
-
-    .@{size}-1-2-push,
-    .@{size}-2-4-push,
-    .@{size}-3-6-push,
-    .@{size}-4-8-push{ margin-right: @1-2; }
-    .@{size}-1-3-push,
-    .@{size}-2-6-push{ margin-right: @1-3; }
-    .@{size}-1-4-push,
-    .@{size}-2-8-push{ margin-right: @1-4; }
-    .@{size}-1-5-push{ margin-right: @1-5; }
-    .@{size}-1-6-push{ margin-right: @1-6; }
-    .@{size}-1-7-push{ margin-right: @1-7; }
-    .@{size}-1-8-push{ margin-right: @1-8; }
-    .@{size}-2-3-push,
-    .@{size}-4-6-push{ margin-right: @2-3; }
-    .@{size}-2-5-push{ margin-right: @2-5; }
-    .@{size}-2-7-push{ margin-right: @2-7; }
-    .@{size}-3-4-push,
-    .@{size}-6-8-push{ margin-right: @3-4; }
-    .@{size}-3-5-push{ margin-right: @3-5; }
-    .@{size}-3-7-push{ margin-right: @3-7; }
-    .@{size}-3-8-push{ margin-right: @3-8; }
-    .@{size}-4-5-push{ margin-right: @4-5; }
-    .@{size}-4-7-push{ margin-right: @4-7; }
-    .@{size}-5-6-push{ margin-right: @5-6; }
-    .@{size}-5-7-push{ margin-right: @5-7; }
-    .@{size}-5-8-push{ margin-right: @5-8; }
-    .@{size}-6-7-push{ margin-right: @6-7; }
-    .@{size}-7-8-push{ margin-right: @7-8; }
+        .@{off}-1-right{ margin-right: @col-1; }
+        .@{off}-2-right{ margin-right: @col-2; }
+        .@{off}-3-right{ margin-right: @col-3; }
+        .@{off}-4-right{ margin-right: @col-4; }
+        .@{off}-5-right{ margin-right: @col-5; }
+        .@{off}-6-right{ margin-right: @col-6; }
+        .@{off}-7-right{ margin-right: @col-7; }
+        .@{off}-8-right{ margin-right: @col-8; }
+        .@{off}-9-right{ margin-right: @col-9; }
+        .@{off}-10-right{ margin-right: @col-10; }
+        .@{off}-11-right{ margin-right: @col-11; }
+    }
 }
 
-// Application of .makeGridMedia():
-.makeGrid();
+// Launch of .makeGrid():
+.makeGrid(col, off);
 
 @media @xs{
-    .makeGrid(xs);
+    .makeGrid(col-xs, off-xs);
 }
 @media @sm{
-    .makeGrid(sm);
+    .makeGrid(col-sm, off-sm);
 }
 @media @md{
-    .makeGrid(md);
+    .makeGrid(col-md, off-md);
 }
 @media @lg{
-    .makeGrid(lg);
+    .makeGrid(col-lg, off-lg);
 }
 @media @xl{
-    .makeGrid(xl);
+    .makeGrid(col-xl, off-xl);
 }
