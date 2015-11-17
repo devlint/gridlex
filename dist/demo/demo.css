@@ -46,10 +46,21 @@ h3 {
   margin-bottom: 2em;
 }
 .header {
-  background: steelblue;
+  position: relative;
   color: white;
   padding: 4em 0;
   text-align: center;
+}
+.header:before {
+  content: '';
+  background: steelblue;
+  position: absolute;
+  z-index: -1;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 200%;
+  transform: skewY(4deg);
 }
 .header h1 {
   display: inline-block;
@@ -58,7 +69,7 @@ h3 {
   border-radius: 18px;
   padding: .8rem 2.6rem;
   text-transform: uppercase;
-  margin-bottom: 1em;
+  margin-bottom: .3em;
 }
 .header p {
   color: rgba(255, 255, 255, 0.7);
@@ -159,13 +170,13 @@ pre.doc {
   background-color: white;
   background-image: linear-gradient(to top, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px);
 }
-.noGutter.withBorder {
+.grid-noGutter.withBorder {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
-.noGutter.withBorder [class*='col-'] {
+.grid-noGutter.withBorder [class*='col-'] {
   padding: 0;
 }
-.noGutter.withBorder .demo {
+.grid-noGutter.withBorder .demo {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
 nav {

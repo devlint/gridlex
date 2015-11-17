@@ -52,10 +52,21 @@ h3 {
 }
 
 .header {
-  background: steelblue;
+  position: relative;
   color: white;
   padding: 4em 0;
   text-align: center;
+  &:before{
+    content: '';
+    background: steelblue;
+    position: absolute;
+    z-index: -1;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 200%;
+    transform: skewY(4deg);
+  }
   h1 {
 	display: inline-block;
 	border-bottom: 10px solid #fff;
@@ -63,7 +74,7 @@ h3 {
 	border-radius: 18px;
 	padding: .8rem 2.6rem;
 	text-transform: uppercase;
-	margin-bottom: 1em;
+	margin-bottom: .3em;
   }
   p {
 	color: rgba(255, 255, 255, 0.7);
@@ -171,7 +182,7 @@ pre {
   }
 }
 
-.noGutter.withBorder {
+.grid-noGutter.withBorder {
   border: 1px solid rgba(147, 128, 108, 0.5);
   [class*='col-'] {
     padding: 0;
