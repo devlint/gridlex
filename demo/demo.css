@@ -43,7 +43,14 @@ h3 {
 }
 .demoPage h1 {
   font-size: 3rem;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.demoPage h2 {
+  margin-top: 3em;
+}
+.demoPage a {
+  color: steelblue;
 }
 .header {
   position: relative;
@@ -60,7 +67,8 @@ h3 {
   left: 0;
   right: 0;
   height: 200%;
-  transform: skewY(4deg);
+  -webkit-transform: skewY(4deg);
+          transform: skewY(4deg);
 }
 .header h1 {
   display: inline-block;
@@ -81,10 +89,14 @@ section {
 }
 section:before {
   content: '';
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   border: 1px solid steelblue;
   width: 100%;
-  align-items: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   position: absolute;
   bottom: 2rem;
 }
@@ -165,8 +177,12 @@ pre.doc {
   margin: 0;
   width: 40px;
   height: 40px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
   background-image: linear-gradient(to top, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px);
 }
@@ -178,83 +194,4 @@ pre.doc {
 }
 .grid-noGutter.withBorder .demo {
   border: 1px solid rgba(147, 128, 108, 0.5);
-}
-nav {
-  background: rgba(147, 128, 108, 0.2);
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav li {
-  position: relative;
-}
-nav li:hover .subNav {
-  display: block;
-}
-nav a,
-nav button {
-  display: block;
-  border: 0;
-  padding: 1em 2em;
-  background: rgba(255, 255, 255, 0.3);
-  color: #93806c;
-  text-decoration: none;
-}
-nav a:hover,
-nav button:hover {
-  background: #93806c;
-  color: #ffffff;
-}
-nav .logo {
-  font-weight: 700;
-  background: #93806c;
-  color: #ffffff;
-}
-nav .subNav {
-  display: none;
-  position: absolute;
-}
-nav .subNav a {
-  background: #ffffff;
-  white-space: nowrap;
-}
-nav .subNav a:hover {
-  background: #93806c;
-  color: #ffffff;
-}
-nav [type="search"] {
-  display: block;
-  padding: 1em 2em;
-  border: 0;
-  background: rgba(255, 255, 255, 0.1);
-  font-style: italic;
-}
-.layout div {
-  padding: 1rem;
-}
-.layout header {
-  background: #F39C12;
-}
-.layout aside {
-  background: #3498db;
-}
-.layout main {
-  background: #95a5a6;
-}
-.layout footer {
-  background: #2ecc71;
-}
-.banner {
-  height: 400px;
-  background: #E7E7E7;
-  text-align: center;
-}
-.banner .banner_title,
-.banner .banner_sub {
-  margin: 0;
-}
-.gallery {
-  background: rgba(102, 51, 153, 0.5);
 }
