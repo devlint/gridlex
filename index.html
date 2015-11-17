@@ -13,85 +13,19 @@
 </head>
 <body>
 <header class="header">
-    <h1>
-        <div class="separator white">&nbsp;</div>
-        Gridlex</h1>
-    <p>Just a Flexbox Grid System</p>
+    <div>
+        <h1><div class="separator white">&nbsp;</div> Gridlex</h1>
+        <p>Just a Flexbox Grid System</p>
+    </div>
 </header>
 <div class="demoPage">
     <section>
         <h2>Introduction</h2>
         <p>This is just a little 12-col based grid system working [...] </p>
+        <p>The concept is simple: you need a wrap <code>.grid</code> on a <code>div</code> to begin the grid: in it, just add your columns (<code>.col-*</code>).</p>
     </section>
     <section>
-        <h1>Composition:</h1>
-
-        <h2>Basic Grids</h2>
-
-        <p>We could not add size on cells: in flexbox model, the number determines the width (size = grid/cells).</p>
-
-        <div class="grid">
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-            <div class="col-auto">
-                <div class="demo">
-                    <p>auto</p>
-                </div>
-            </div>
-        </div>
-          
-<pre><code>&lt;div class="grid">
-    &lt;div class="col-auto">
-        &lt;div class="demo">
-            &lt;p>auto&lt;/p>
-        &lt;/div>
-    &lt;/div>
-&lt;/div></code></pre>
-
-        <h2>Individual Sizing</h2>
-        <p>But to maintain strongly customize grid, you should prefer specify the grid rythm:</p>
+        <h2>Composition:</h2>
 
         <div class="grid">
             <div class="col-1-1">
@@ -231,8 +165,73 @@
             </div>
         </div>
 
+        <p>Auto width columns, no size on cells ! <br> That's a pretty cool feature of flex: the number determines the width (size = grid/cells children).</p>
+
+        <p>So here we have a grid with one column...</p>
+        <div class="grid">
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+        </div>
+        <p>... and with two columns...</p>
+        <div class="grid">
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+        </div>
+        <p>... and with six columns:</p>
+        <div class="grid">
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+        </div>
+
+<pre><code>&lt;div class="grid">
+    &lt;div class="col-auto">
+        &lt;div class="demo">
+            &lt;p>auto&lt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
         <h2>We can have a grid without gutter too:</h2>
-        <div class="grid noGutter withBorder">
+        <div class="grid grid-noGutter withBorder">
             <div class="col-1-1">
                 <div class="demo">
                     <p>1/1</p>
@@ -289,7 +288,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid noGutter">
+<pre><code>&lt;div class="grid grid-noGutter">
     &lt;div class="col-1-1">
     [...]
     &lt;/div>
@@ -328,11 +327,29 @@
                 </div>
             </div>
         </div>
+        <p>Did I say that you can mix fixed width and auto width columns?</p>
+        <div class="grid">
+            <div class="col-auto">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div class="col-1-6">
+                <div class="demo">
+                    <p>1/6</p>
+                </div>
+            </div>
+            <div class="col-1-2">
+                <div class="demo">
+                    <p>1/2</p>
+                </div>
+            </div>
+        </div>
 
-        <h2>Inception</h2>
+        <h2>Inception (nesting)</h2>
         <div class="grid">
             <div class="col-1-2"><p class="demo-explain">Just an "empty" col-1-2:</p></div>
-            <div class="col-1-2"><p class="demo-explain">And more grids & cells in this col-1-2:</p></div>
+            <div class="col-1-2"><p class="demo-explain">Each column can become a grid (<code>.col-1-2.grid</code>)</p></div>
             <div class="col-1-2">
                 <div class="demo">
                     <p>1/2</p>
@@ -409,17 +426,29 @@
                 </div>
             </div>
         </div>
-        <div class="grid alignCenter">
+        <div class="grid grid-center">
             <div class="col-1-2">
                 <div class="demo">
                     <p>grid > center align</p>
                 </div>
             </div>
         </div>
-        <div class="grid alignRight">
+        <div class="grid grid-right">
             <div class="col-1-3">
                 <div class="demo">
                     <p>grid > col right align</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="col-1-4">
+                <div class="demo">
+                    <p>1/4</p>
+                </div>
+            </div>
+            <div class="col-1-4 col-right">
+                <div class="demo">
+                    <p>1/4 (self align to right)</p>
                 </div>
             </div>
         </div>
@@ -447,7 +476,7 @@
         </div>
 
         <h2>Vertical alignment middle (no fallback for IE9)</h2>
-        <div class="grid alignMiddle">
+        <div class="grid grid-middle">
             <div class="col-1-3">
                 <div class="demo">
                     <p>Vertical align middle</p>
@@ -466,7 +495,7 @@
         </div>
 
         <h2>Vertical alignment bottom (no fallback for IE9)</h2>
-        <div class="grid alignBottom">
+        <div class="grid grid-bottom">
             <div class="col-1-3">
                 <div class="demo">
                     <p>Vertical align bottom</p>
@@ -519,7 +548,7 @@
         </div>
 
         <h3>Reverse flow</h3>
-        <div class="grid orderReverse">
+        <div class="grid grid-everse">
             <div class="col-1-5">
                 <div class="demo">
                     <p>A</p>
@@ -549,7 +578,7 @@
 
         <h3>Normal flow with ordering (first / last)</h3>
         <div class="grid">
-            <div class="col-1-5 orderLast">
+            <div class="col-1-5 col-last">
                 <div class="demo">
                     <p>A (last)</p>
                 </div>
@@ -569,7 +598,7 @@
                     <p>D</p>
                 </div>
             </div>
-            <div class="col-1-5 orderFirst">
+            <div class="col-1-5 col-first">
                 <div class="demo">
                     <p>E (first)</p>
                 </div>
@@ -577,7 +606,7 @@
         </div>
 
         <h3>No gutter? Equal-height?</h3>
-        <div class="grid noGutter equalHeight withBorder">
+        <div class="grid grid-noGutter grid-equalHeight withBorder">
             <div class="col-auto">
                 <div class="demo">
                     <p>1/4</p>
@@ -602,10 +631,10 @@
     </section>
 
     <section>
-        <h2>Sometimes you want to do crazy things...</h2>
-        <h3>Horizontal distribution (spaceBetween)</h3>
+        <h2>Distribution</h2>
+        <h3>Horizontal distribution (grid-spaceBetween)</h3>
         <p>If you add <code>spaceBetween</code> className, the distribution will have no margin around first and last elements :</p>
-        <div class="grid spaceBetween">
+        <div class="grid grid-spaceBetween">
             <div class="col-1-5">
                 <div class="demo">
                     <p>1/5</p>
@@ -624,8 +653,8 @@
         </div>
 
         <h3>Horizontal distribution (spaceAround)</h3>
-        <p>If you add <code>spaceAround</code> className, the distribution will have margins around first and last elements :</p>
-        <div class="grid spaceAround">
+        <p>If you add <code>grid-spaceAround</code> className, the distribution will have margins around first and last elements :</p>
+        <div class="grid grid-spaceAround">
             <div class="col-1-5">
                 <div class="demo">
                     <p>1/5</p>
@@ -643,8 +672,8 @@
             </div>
         </div>
 
-        <h3>Horizontal distribution (width spaceBetween alignCenter)</h3>
-        <div class="grid alignCenter">
+        <h3>Horizontal distribution (width grid-center)</h3>
+        <div class="grid grid-center">
             <div class="col-1-5">
                 <div class="demo">
                     <p>1/5</p>
@@ -661,10 +690,13 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <h3>offset: because sometimes you need to offset some colums</h3>
+    <section>
+        <h2>Offset: push a col from left or from right</h2>
+        <h3>You can use -pull or -push suffix for that:</h3>
         <div class="grid">
-            <div class="col-1-2 off-1-2">
+            <div class="col-1-2 col-1-2-pull">
                 <div class="demo">
                     <p>1/2 (offset 1/2 on left of this column)</p>
                 </div>
@@ -676,31 +708,31 @@
                     <p>1/3</p>
                 </div>
             </div>
-            <div class="col-1-3 off-1-3">
+            <div class="col-1-3 col-1-3-pull">
                 <div class="demo">
                     <p>1/3 (offset 1/3 on left of this column)</p>
                 </div>
             </div>
         </div>
         <div class="grid">
-            <div class="col-4-5 off-1-5">
+            <div class="col-4-5 col-1-5-pull">
                 <div class="demo">
                     <p>4/5 (offset 1/5 on left of this column)</p>
                 </div>
             </div>
         </div>
-        <div class="grid">
-            <div class="col-1-6 off-1-6">
+        <div class="grid equalHeight">
+            <div class="col-1-6 col-1-6-pull col-1-6-push">
                 <div class="demo">
-                    <p>1/6 (offset 1/6 on left of this column)</p>
+                    <p>1/6 (offset 1/6 on left AND on right of this column)</p>
                 </div>
             </div>
-            <div class="col-1-6 off-1-6">
+            <div class="col-1-6">
                 <div class="demo">
-                    <p>1/6 (offset 1/6 on left of this column)</p>
+                    <p>1/6</p>
                 </div>
             </div>
-            <div class="col-1-6 off-1-6">
+            <div class="col-1-6 col-1-6-pull">
                 <div class="demo">
                     <p>1/6 (offset 1/6 on left of this column)</p>
                 </div>
@@ -710,42 +742,47 @@
                     <p>1/6</p>
                 </div>
             </div>
-            <div class="col-1-6 off-1-6">
+            <div class="col-1-6 col-1-6-pull">
                 <div class="demo">
                     <p>1/6 (offset 1/6 on left of this column)</p>
                 </div>
             </div>
-            <div class="col-1-6 off-1-6">
+            <div class="col-1-6 col-1-6-pull col-1-6-push">
                 <div class="demo">
-                    <p>1/6 (offset 1/6 on left of this column)</p>
+                    <p>1/6 (offset 1/6 on left AND on right of this column)</p>
+                </div>
+            </div>
+            <div class="col-1-6">
+                <div class="demo">
+                    <p>1/6</p>
                 </div>
             </div>
         </div>
 
         <h3>Columns</h3>
         <p>
-            <button onclick="toggleView()">Change grid distib. to column distrib. (and vice-versa)</button>
+            <button onclick="toggleView()">Change order column distrib. (normal to reverse)</button>
         </p>
         <script>
             function toggleView() {
                 var oGrid = document.querySelector('#view');
-                oGrid.classList.toggle("orderColumn");
+                oGrid.classList.toggle("grid-column-reverse");
             }
         </script>
-        <div id="view" class="grid">
+        <div id="view" class="grid grid-column">
             <div class="col-1-3">
                 <div class="demo">
-                    <p>1/3</p>
+                    <p>1/3 (A)</p>
                 </div>
             </div>
             <div class="col-1-6">
                 <div class="demo">
-                    <p>1/6</p>
+                    <p>1/6 (B)</p>
                 </div>
             </div>
             <div class="col-1-2">
                 <div class="demo">
-                    <p>1/2</p>
+                    <p>1/2 (C)</p>
                 </div>
             </div>
         </div>
@@ -801,13 +838,13 @@
   .orderLast</code></pre>
 
         <h2>Offsets &amp; associated classNames: </h2>
-        <pre class="doc"><code>  .off-1-2, .off-2-4, .off-3-6, .off-4-8
-  .off-1-3, .off-2-6
-  .off-1-4, .off-2-8
-  .off-1-5
-  .off-1-6
-  .off-1-7
-  .off-1-8
+        <pre class="doc"><code>  .col-1-2, .off-2-4, .off-3-6, .off-4-8
+  .col-1-3, .off-2-6
+  .col-1-4, .off-2-8
+  .col-1-5
+  .col-1-6
+  .col-1-7
+  .col-1-8
   .off-2-3, .off-4-6
   .off-2-5
   .off-2-7
@@ -849,14 +886,14 @@
                     <td><b><code>xs</code></b></td>
                     <td><code>@media screen and (max-width: 35.5em)</code></td>
                     <td><b>up to 568px</b></td>
-                    <td><code>.<b>md</b>-*-*</code></td>
+                    <td><code>.<b>xs</b>-*-*</code></td>
                 </tr>
 
                 <tr>
                     <td><b><code>sm</code></b></td>
                     <td><code>@media screen and (min-width: 35.5em) and (max-width: 48em)</code></td>
                     <td><b>from 568px to 768px</b></td>
-                    <td><code>.<b>md</b>-*-*</code></td>
+                    <td><code>.<b>sm</b>-*-*</code></td>
                 </tr>
 
                 <tr>
@@ -888,9 +925,9 @@
     <section>
         <!-- Example -->
         <h2>Nav example</h2>
-        <nav class="grid noGutter" role="navigation">
+        <nav class="grid grid-noGutter" role="navigation">
             <span><a href="#_" class="logo">logo</a></span>
-            <ul class="grid noGutter">
+            <ul class="grid grid-noGutter">
                 <li class="col-auto">
                     <a href="#_">item 1</a>
                     <ul class="subNav">
@@ -903,7 +940,7 @@
                 <li class="col-auto"><a href="#_">item 2</a></li>
                 <li class="col-auto"><a href="#_">item 3</a></li>
             </ul>
-            <ul class="grid noGutter alignRight">
+            <ul class="grid grid-noGutter alignRight">
                 <li><a href="#_">FR</a>
                     <ul class="subNav">
                         <li><a href="#_">US</a></li>
@@ -912,7 +949,7 @@
                         <li><a href="#_">CN</a></li>
                     </ul>
                 </li>
-                <li class="grid noGutter">
+                <li class="grid grid-noGutter">
                     <input type="search" placeholder="Search...">
                     <button>ok</button>
                 </li>
@@ -922,14 +959,14 @@
 
         <!-- Example -->
         <h2>Layout example</h2>
-        <div class="layout grid noGutter">
+        <div class="layout grid grid-noGutter">
             <header class="col-1-1">
                 <div>HEADER</div>
             </header>
             <aside class="col-1-5">
                 <div><p>this is an <code>ASIDE</code></p></div>
             </aside>
-            <main class="col-4-5 grid noGutter">
+            <main class="col-4-5 grid grid-noGutter">
                 <article class="col-1-1">
                     <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur, debitis ducimus eligendi enim et mollitia obcaecati officiis praesentium. Consequatur iste molestiae odit possimus voluptas. Dolore magni perspiciatis rerum saepe tempore ut velit vitae. Animi aperiam aspernatur, aut autem consectetur delectus ducimus eius et fugit, itaque nobis, praesentium quis rerum sapiente tempora? A commodi deserunt et ipsa labore laudantium magnam minus nisi obcaecati reprehenderit, saepe sint tenetur vitae? A animi deserunt sapiente totam. Ab at blanditiis dignissimos eaque est expedita fugit incidunt, labore nam obcaecati quia reiciendis velit veritatis? A asperiores commodi ea enim mollitia neque nesciunt nobis vel. Cupiditate doloremque dolorum ea expedita fugiat iure labore odit quia totam voluptate. Asperiores autem, consequatur corporis distinctio doloremque enim error excepturi expedita harum, iste itaque maiores non nostrum omnis porro quae quis quod similique soluta tempora temporibus ut velit voluptates. Earum eius eum incidunt minus nemo nulla omnis quo similique voluptatem?</p></div>
                 </article>
@@ -948,7 +985,7 @@
 
         <!-- Example -->
         <h2>Banner example</h2>
-        <div class="banner grid noGutter alignCenter alignMiddle">
+        <div class="banner grid grid-noGutter alignCenter alignMiddle">
             <div class="banner_content ">
                 <h2 class="banner_title">My Title</h2>
                 <small class="banner_sub">Lorem ipsum dolor sit amet.</small>
@@ -1051,7 +1088,8 @@
             </div>
         </div>
     </section>
-
+    <h2>"Can I use" Gridlex?</h2>
+    <iframe width="100%" height="430" src="http://caniuse.com/flexbox/embed/"></iframe>
 </div>
 </body>
 </html>
