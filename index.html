@@ -5,10 +5,19 @@
     <title>Gridlex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="demo/normalize.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
     <link rel="stylesheet" href="demo/demo.css">
-
     <link rel="stylesheet" href="gridlex.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <style>
+        html{font: 400 100%/1.4 'Open Sans',sans-serif;color: #555;}
+        body{margin: 0;}
+        * {box-sizing: border-box;}
+        *::after,*::before {box-sizing: border-box;}
+        h1 {font-size: 2rem;}
+        h2 {font-size: 1.4rem;color: steelblue;}
+        h3 {font-size: 1.1rem;}
+        p {font-size: 0.9rem;}
+    </style>
 </head>
 <body>
 <header class="header">
@@ -19,10 +28,20 @@
 </header>
 <div class="demoPage">
     <section>
-        <h2>Simple. Robust. Flexible.</h2>
-        <p><strong>How it works?</strong> <br>
-            The concept is simple: you need to wrap your <code>.col</code> in a <code>.grid</code>. <br>
-            That's all.</p>
+        <div class="grid">
+            <div class="col-6">
+                <h2>Simple. Robust. Responsive. Flexible.</h2>
+                <h3>How it works?</h3>
+                <p>The concept is simple: <br> you need to wrap your <code>.col</code> in a <code>.grid</code>. </p>
+                <p>That's all.</p>
+            </div>
+            <div class="col-6 col-bottom">
+                <a class="btn-git" href="https://github.com/devlint/gridlex" aria-label="View devlint/gridlex on GitHub"><img src="demo/github.svg" width="20px" height="20px">View Project Source</a>
+                <a class="btn-fork" href="https://github.com/devlint/gridlex/fork" aria-label="Fork devlint/gridlex on GitHub"><img src="demo/fork.svg" width="20px" height="20px">Fork Gridlex</a>
+
+                <a class="btn-download" href="https://github.com/devlint/gridlex/archive/master.zip" aria-label="Download devlint/gridlex on GitHub"><img src="demo/download.svg" width="20px" height="20px">Download (zip)</a>
+            </div>
+        </div>
     </section>
 
     <section>
@@ -55,7 +74,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-6">
+        <div class="grid-6 grid-xs-3">
             <div class="col"><div class="demo"><p>grid-6</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -63,7 +82,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-7">
+        <div class="grid-7 grid-xs-3">
             <div class="col"><div class="demo"><p>grid-7</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -72,7 +91,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-8">
+        <div class="grid-8 grid-xs-4">
             <div class="col"><div class="demo"><p>grid-8</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -82,7 +101,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-9">
+        <div class="grid-9 grid-xs-3">
             <div class="col"><div class="demo"><p>grid-9</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -93,7 +112,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-10">
+        <div class="grid-10 grid-xs-5">
             <div class="col"><div class="demo"><p>grid-10</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -105,7 +124,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-11">
+        <div class="grid-11 grid-xs-5">
             <div class="col"><div class="demo"><p>grid-11</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -118,7 +137,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-12">
+        <div class="grid-12 grid-xs-6">
             <div class="col"><div class="demo"><p>grid-12</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -198,7 +217,7 @@
     &lt;div class="col">...&lt;/div>
 &lt;/div></code></pre>
 
-        <h2>2. Compose cell by cell (with class like <code>.col-*-*</code>)</h2>
+        <h2>2. Compose cell by cell (with class like <code>.col-*</code>)</h2>
         <h3>See <a href="#documentation">documentation</a> to have the list of availlable classNames</h3>
 
         <div class="grid">
@@ -207,22 +226,22 @@
                     <p>col-12</p>
                 </div>
             </div>
-            <div class="col-11">
+            <div class="col-11 col-xs-8">
                 <div class="demo">
                     <p>col-11</p>
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-1 col-xs-4">
                 <div class="demo">
                     <p>col-1</p>
                 </div>
             </div>
-            <div class="col-10">
+            <div class="col-10 col-xs-7">
                 <div class="demo">
                     <p>col-10</p>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 col-xs-5">
                 <div class="demo">
                     <p>col-2</p>
                 </div>
@@ -297,22 +316,22 @@
                     <p>col-9</p>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 col-xs-5">
                 <div class="demo">
                     <p>col-2</p>
                 </div>
             </div>
-            <div class="col-10">
+            <div class="col-10 col-xs-7">
                 <div class="demo">
                     <p>col-10</p>
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-1 col-xs-4">
                 <div class="demo">
                     <p>col-1</p>
                 </div>
             </div>
-            <div class="col-11">
+            <div class="col-11 col-xs-8">
                 <div class="demo">
                     <p>col-11</p>
                 </div>
@@ -361,7 +380,7 @@
             </div>
         </div>
         <p>... and last a grid with ... nine columns?</p>
-        <div class="grid">
+        <div class="grid grid-xs-4">
             <div class="col">
                 <div class="demo">
                     <p>auto</p>
@@ -417,7 +436,6 @@
 &lt;/div></code></pre>
 
         <h2>Did I mention that you can mix the 3 ways?</h2>
-        <p>Composition:<br> <code>.grid-6</code> within <code>.col-8 + .col + .col + .col + .col-4 + .col-4 + .col</code></p>
         <div class="grid-6">
             <div class="col-8">
                 <div class="demo">
@@ -490,7 +508,26 @@
                 </div>
             </div>
         </div>
-        <p>Composition:<br> <code>.grid</code> within <code>.col + .col-2 + .col-6</code></p>
+<pre><code>&lt;div class="grid-6">
+    &lt;!-- first row -->
+    &lt;div class="col-8">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;!-- second row -->
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col-5">...&lt;/div>
+    &lt;div class="col-2">...&lt;/div>
+    &lt;div class="col-1">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;!-- third row -->
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+&lt;/div></code></pre>
+
         <div class="grid">
             <div class="col">
                 <div class="demo">
@@ -508,9 +545,13 @@
                 </div>
             </div>
         </div>
-
+<pre><code>&lt;div class="grid">
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col-2">...&lt;/div>
+    &lt;div class="col-6">...&lt;/div>
+&lt;/div></code></pre>
         <h2>We can have a grid without gutter too:</h2>
-        <div class="grid-noGutter withBorder">
+        <div class="grid-noGutter grid-equalHeight withBorder">
             <div class="col-12">
                 <div class="demo">
                     <p>col-12</p>
@@ -546,12 +587,12 @@
                     <p>col-9</p>
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-1 col-xs-2">
                 <div class="demo">
                     <p>col-1</p>
                 </div>
             </div>
-            <div class="col-11">
+            <div class="col-11 col-xs-10">
                 <div class="demo">
                     <p>col-11</p>
                 </div>
@@ -571,14 +612,14 @@
 
         <h2>... and nesting in the grid grid</h2>
         <div class="grid">
-            <div class="col-6"><p class="demo-explain">Just an "empty" col-6:</p></div>
-            <div class="col-6"><p class="demo-explain">Each column can become a grid too (<code>.col-6.grid</code>)</p></div>
-            <div class="col-6">
+            <div class="col-6 col-xs-12"><p class="demo-explain">Just an "empty" col-6:</p></div>
+            <div class="col-6 col-xs-12"><p class="demo-explain">Each column can become a grid too (<code>.col-6.grid</code>)</p></div>
+            <div class="col-6 col-xs-12">
                 <div class="demo">
                     <p>col-6</p>
                 </div>
             </div>
-            <div class="col-6 grid">
+            <div class="col-6 col-xs-12 grid">
                 <div class="col-4">
                     <div class="demo">
                         <p>col-4</p>
@@ -663,24 +704,20 @@
                 </div>
             </div>
         </div>
-        <div class="grid-4">
-            <div class="col">
-                <div class="demo">
-                    <p>.col</p>
-                </div>
-            </div>
-            <div class="col-right">
-                <div class="demo">
-                    <p>.col-right</p>
-                </div>
-            </div>
-        </div>
-
+<pre><code>&lt;div class="grid-3">
+    &lt;div class="col">...&lt;/div>
+&lt;/div>
+&lt;div class="grid-3 grid-center">
+    &lt;div class="col">...&lt;/div>
+&lt;/div>
+&lt;div class="grid-3 grid-right">
+    &lt;div class="col">...&lt;/div>
+&lt;/div></code></pre>
     </section>
 
     <section>
-        <h2>Vertical alignment: top</h2>
-        <div class="grid-3">
+        <h2>Vertical alignment on the grid: top</h2>
+        <div class="grid">
             <div class="col">
                 <div class="demo">
                     <p>(default)</p>
@@ -697,9 +734,14 @@
                 </div>
             </div>
         </div>
+<pre><code>&lt;div class="grid">
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+&lt;/div></code></pre>
 
-        <h2>Vertical alignment: middle</h2>
-        <div class="grid-3 grid-middle">
+        <h2>Vertical alignment on the grid: middle</h2>
+        <div class="grid-middle">
             <div class="col">
                 <div class="demo">
                     <p>.grid-middle</p>
@@ -716,9 +758,14 @@
                 </div>
             </div>
         </div>
+<pre><code>&lt;div class="grid-middle">
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+&lt;/div></code></pre>
 
-        <h2>Vertical alignment: bottom</h2>
-        <div class="grid-3 grid-bottom">
+        <h2>Vertical alignment on the grid: bottom</h2>
+        <div class="grid-bottom">
             <div class="col">
                 <div class="demo">
                     <p>.grid-bottom</p>
@@ -735,6 +782,40 @@
                 </div>
             </div>
         </div>
+<pre><code>&lt;div class="grid-bottom">
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>Vertical alignment on the column: grid-middle & mixed columns</h2>
+        <div class="grid-4 grid-middle">
+            <div class="col">
+                <div class="demo">
+                    <p>default (middle)</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="demo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam architecto aut, commodi deserunt dicta eligendi error incidunt inventore maiores mollitia officiis placeat quibusdam tempora unde veritatis vero voluptas. Ab consectetur delectus nam. Ab animi aspernatur, deserunt eos et, inventore iure laboriosam laborum minus nam nihil quae tempore tenetur ullam.</p>
+                </div>
+            </div>
+            <div class="col-bottom">
+                <div class="demo">
+                    <p>col-bottom</p>
+                </div>
+            </div>
+            <div class="col-top">
+                <div class="demo">
+                    <p>col-top</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div class="grid-3 grid-bottom">
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+    &lt;div class="col">...&lt;/div>
+&lt;/div></code></pre>
 
     </section>
 
@@ -769,6 +850,13 @@
                 </div>
             </div>
         </div>
+<pre><code>&lt;div class="grid">
+    &lt;div class="col">A&lt;/div>
+    &lt;div class="col">B&lt;/div>
+    &lt;div class="col">C&lt;/div>
+    &lt;div class="col">D&lt;/div>
+    &lt;div class="col">E&lt;/div>
+&lt;/div></code></pre>
 
         <h3>Reverse flow</h3>
         <div class="grid-5 grid-reverse">
@@ -866,7 +954,6 @@
             </div>
         </div>
 <pre><code>&lt;div class="grid-noGutter grid-equalHeight">
-    &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -1092,7 +1179,7 @@
         <h1 id="documentation">Documentation: helpers</h1>
         <h2>Grid &amp; associated classNames</h2>
         <pre class="doc"><code>.grid
-  .grid-1
+  .grid-1 (.grid-xs-1 / .grid-sm-1 / .grid-md-1 / .grid-lg-1 / .grid-xl-1)
   .grid-2
   .grid-3
   .grid-4
@@ -1121,7 +1208,7 @@
 
         <h2>Columns &amp; associated classNames: </h2>
         <pre class="doc"><code>.col
-  .col-1
+  .col-1 (.col-xs-1 / .col-sm-1 / .col-md-1 / .col-lg-1 / .col-xl-1)
   .col-2
   .col-3
   .col-4
@@ -1137,28 +1224,30 @@
   .col-first
   .col-last</code></pre>
 
-  <!--      <h2>Offsets &amp; associated classNames: </h2>
-        <pre class="doc"><code>  .col-1-2, .off-2-4, .off-3-6, .off-4-8
-  .col-1-3, .off-2-6
-  .col-1-4, .off-2-8
-  .col-1-5
-  .col-1-6
-  .col-1-7
-  .col-1-8
-  .off-2-3, .off-4-6
-  .off-2-5
-  .off-2-7
-  .off-3-4, .off-6-8
-  .off-3-5
-  .off-3-7
-  .off-3-8
-  .off-4-5
-  .off-4-7
-  .off-5-6
-  .off-5-7
-  .off-5-8
-  .off-6-7
-  .off-7-8</code></pre>-->
+        <h2>Offsets &amp; associated classNames: </h2>
+<pre class="doc"><code>  .off-1-left (.off-xs-1-left / .off-sm-1-left / .off-md-1-left / .off-lg-1-left / .off-xl-1-left)
+  .off-2-left
+  .off-3-left
+  .off-4-left
+  .off-5-left
+  .off-6-left
+  .off-7-left
+  .off-8-left
+  .off-9-left
+  .off-10-left
+  .off-11-left
+
+  .off-1-right (.off-xs-1-right / .off-sm-1-right / .off-md-1-right / .off-lg-1-right / .off-xl-1-right)
+  .off-2-right
+  .off-3-right
+  .off-4-right
+  .off-5-right
+  .off-6-right
+  .off-7-right
+  .off-8-right
+  .off-9-right
+  .off-10-right
+  .off-11-right</code></pre>
 
         <h2>Gridlex and media-queries</h2>
         <h3>Because of responsive, you need sometimes to change the size of columns: with this keys as classNames you can control your layout by media-queries.</h3>
@@ -1166,52 +1255,52 @@
             <table>
                 <thead>
                 <tr>
-                    <th>Key</th>
                     <th>CSS Media Query</th>
                     <th>Applies</th>
-                    <th>Classname</th>
+                    <th>Grid class</th>
+                    <th>Column class</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td><b><code></code></b></td>
-                    <td><code> - </code></td>
+                    <td><code>-</code></td>
                     <td> Always </td>
-                    <td><code>.<b>col</b>-</code></td>
+                    <td><code>.<b>grid</b>-*</code></td>
+                    <td><code>.<b>col</b>-*</code></td>
                 </tr>
 
                 <tr>
-                    <td><b><code>xs</code></b></td>
                     <td><code>@media screen and (max-width: 35.5em)</code></td>
-                    <td><b>up to 568px</b></td>
+                    <td>up to 568px</td>
+                    <td><code>.<b>grid-xs</b>-*</code></td>
                     <td><code>.<b>col-xs</b>-*</code></td>
                 </tr>
 
                 <tr>
-                    <td><b><code>sm-</code></b></td>
                     <td><code>@media screen and (min-width: 35.5em) and (max-width: 48em)</code></td>
-                    <td><b>from 568px to 768px</b></td>
+                    <td>from 568px to 768px</td>
+                    <td><code>.<b>grid-sm</b>-*</code></td>
                     <td><code>.<b>col-sm</b>-*</code></td>
                 </tr>
 
                 <tr>
-                    <td><b><code>md</code></b></td>
                     <td><code>@media screen and (min-width: 48em) and (max-width: 64em)</code></td>
-                    <td><b>from 768px to 1024px</b></td>
+                    <td>from 768px to 1024px</td>
+                    <td><code>.<b>grid-md</b>-*</code></td>
                     <td><code>.<b>col-md</b>-*</code></td>
                 </tr>
 
                 <tr>
-                    <td><b><code>lg</code></b></td>
                     <td><code>@media screen and (min-width: 64em) and (max-width: 80em)</code></td>
-                    <td><b>from 1024px to 1280px</b></td>
+                    <td>from 1024px to 1280px</td>
+                    <td><code>.<b>grid-lg</b>-*</code></td>
                     <td><code>.<b>col-lg</b>-*</code></td>
                 </tr>
 
                 <tr>
-                    <td><b><code>xl</code></b></td>
                     <td><code>@media screen and (min-width: 80em)</code></td>
-                    <td><b>from 1280px</b></td>
+                    <td>from 1280px</td>
+                    <td><code>.<b>grid-xl</b>-*</code></td>
                     <td><code>.<b>col-xl</b>-*</code></td>
                 </tr>
 
