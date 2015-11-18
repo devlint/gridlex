@@ -641,6 +641,9 @@
           flex-basis: 100%;
   max-width: 100%;
 }
+[class*='grid'] .off-0-left {
+  margin-left: 0;
+}
 [class*='grid'] .off-1-left {
   margin-left: 8.33333333%;
 }
@@ -673,6 +676,9 @@
 }
 [class*='grid'] .off-11-left {
   margin-left: 91.66666667%;
+}
+[class*='grid'] .off-0-right {
+  margin-right: 0;
 }
 [class*='grid'] .off-1-right {
   margin-right: 8.33333333%;
@@ -780,6 +786,9 @@
             flex-basis: 100%;
     max-width: 100%;
   }
+  [class*='grid'] .off-xs-0-left {
+    margin-left: 0;
+  }
   [class*='grid'] .off-xs-1-left {
     margin-left: 8.33333333%;
   }
@@ -812,6 +821,9 @@
   }
   [class*='grid'] .off-xs-11-left {
     margin-left: 91.66666667%;
+  }
+  [class*='grid'] .off-xs-0-right {
+    margin-right: 0;
   }
   [class*='grid'] .off-xs-1-right {
     margin-right: 8.33333333%;
@@ -920,6 +932,9 @@
             flex-basis: 100%;
     max-width: 100%;
   }
+  [class*='grid'] .off-sm-0-left {
+    margin-left: 0;
+  }
   [class*='grid'] .off-sm-1-left {
     margin-left: 8.33333333%;
   }
@@ -952,6 +967,9 @@
   }
   [class*='grid'] .off-sm-11-left {
     margin-left: 91.66666667%;
+  }
+  [class*='grid'] .off-sm-0-right {
+    margin-right: 0;
   }
   [class*='grid'] .off-sm-1-right {
     margin-right: 8.33333333%;
@@ -1060,6 +1078,9 @@
             flex-basis: 100%;
     max-width: 100%;
   }
+  [class*='grid'] .off-md-0-left {
+    margin-left: 0;
+  }
   [class*='grid'] .off-md-1-left {
     margin-left: 8.33333333%;
   }
@@ -1092,6 +1113,9 @@
   }
   [class*='grid'] .off-md-11-left {
     margin-left: 91.66666667%;
+  }
+  [class*='grid'] .off-md-0-right {
+    margin-right: 0;
   }
   [class*='grid'] .off-md-1-right {
     margin-right: 8.33333333%;
@@ -1200,6 +1224,9 @@
             flex-basis: 100%;
     max-width: 100%;
   }
+  [class*='grid'] .off-lg-0-left {
+    margin-left: 0;
+  }
   [class*='grid'] .off-lg-1-left {
     margin-left: 8.33333333%;
   }
@@ -1232,6 +1259,9 @@
   }
   [class*='grid'] .off-lg-11-left {
     margin-left: 91.66666667%;
+  }
+  [class*='grid'] .off-lg-0-right {
+    margin-right: 0;
   }
   [class*='grid'] .off-lg-1-right {
     margin-right: 8.33333333%;
@@ -1340,6 +1370,9 @@
             flex-basis: 100%;
     max-width: 100%;
   }
+  [class*='grid'] .off-xl-0-left {
+    margin-left: 0;
+  }
   [class*='grid'] .off-xl-1-left {
     margin-left: 8.33333333%;
   }
@@ -1372,6 +1405,9 @@
   }
   [class*='grid'] .off-xl-11-left {
     margin-left: 91.66666667%;
+  }
+  [class*='grid'] .off-xl-0-right {
+    margin-right: 0;
   }
   [class*='grid'] .off-xl-1-right {
     margin-right: 8.33333333%;
