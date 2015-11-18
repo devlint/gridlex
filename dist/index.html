@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="gridlex.min.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
     <style>
-        html{font: 400 100%/1.4 'Open Sans',sans-serif;color: #555;}
-        body{margin: 0;}
-        * {box-sizing: border-box;}
-        *::after,*::before {box-sizing: border-box;}
-        h1 {font-size: 2rem;}
-        h2 {font-size: 1.4rem;color: steelblue;}
-        h3 {font-size: 1.1rem;}
-        p {font-size: 0.9rem;}
+        html{ font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+        body{ margin: 0; }
+        *{ box-sizing: border-box; }
+        *::after,*::before{ box-sizing: border-box; }
+        h1{ font-size: 2rem; }
+        h2{ font-size: 1.4rem; color: steelblue; }
+        h3{ font-size: 1.1rem; }
+        p { font-size: 0.9rem; }
+        ul{ padding:0; list-style-position: inside; }
+        li{ font-size: 0.9rem; margin: 0; }
     </style>
 </head>
 <body>
@@ -28,18 +30,28 @@
 </header>
 <div class="demoPage">
     <section>
-        <div class="grid">
-            <div class="col-6">
+        <div class="grid-2 grid-xs-1">
+            <div class="col">
                 <h2>Simple. Robust. Responsive. Flexible.</h2>
                 <h3>How it works?</h3>
                 <p>The concept is simple: <br> you need to wrap your <code>.col</code> in a <code>.grid</code>. </p>
                 <p>That's all.</p>
             </div>
-            <div class="col-6 col-bottom">
+            <div class="col-bottom">
                 <a class="btn-git" href="https://github.com/devlint/gridlex" aria-label="View devlint/gridlex on GitHub"><img src="demo/github.svg" width="20px" height="20px">View Project Source</a>
                 <a class="btn-fork" href="https://github.com/devlint/gridlex/fork" aria-label="Fork devlint/gridlex on GitHub"><img src="demo/fork.svg" width="20px" height="20px">Fork Gridlex</a>
 
                 <a class="btn-download" href="https://github.com/devlint/gridlex/archive/master.zip" aria-label="Download devlint/gridlex on GitHub"><img src="demo/download.svg" width="20px" height="20px">Download (zip)</a>
+            </div>
+            <div class="col-12">
+                <h3>What can we expect?</h3>
+                <ul class="grid-3 grid-sm-2 grid-xs-1">
+                    <li class="col">Basically each column is the same width as every other cell in the grid.</li>
+                    <li class="col">But you can add sizing classes to individual columns.</li>
+                    <li class="col">For responsive designs, you can add classes based on media-queries.</li>
+                    <li class="col">Top, bottom, or middle. For the grid. And for the columns.</li>
+                    <li class="col">Grids can be nested. Always. Directly in a column.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -47,8 +59,10 @@
     <section>
 
         <h1>3 ways to use Gridlex</h1>
-        <h2>1. Just add a class <code>.grid-*</code> (from -1 to -12)</h2>
-        <p>In this ways, you will always have the specified number of columns in a row:</p>
+        <h2>1. The basic. Just add a class <code>.grid-*</code> (from -1 to -12)</h2>
+        <p><strong>This feature is so simple, but we can't find it anywhere in a robust and flexible grid!</strong> <br>
+            Why should we be required to put sizing classes on every single cell when they all have the same width? </p>
+            <p>In this ways, you will always have the specified number of columns in a row:</p>
         <div class="grid-1">
             <div class="col"><div class="demo"><p>grid-1</p></div></div>
         </div>
@@ -217,8 +231,8 @@
     &lt;div class="col">...&lt;/div>
 &lt;/div></code></pre>
 
-        <h2>2. Compose cell by cell (with class like <code>.col-*</code>)</h2>
-        <h3>See <a href="#documentation">documentation</a> to have the list of availlable classNames</h3>
+        <h2>2. The precise. Compose cell by cell (with class like <code>.col-*</code>)</h2>
+        <h3>See <a href="#documentation">documentation</a> to have the list of availlable classes</h3>
 
         <div class="grid">
             <div class="col-12">
@@ -344,7 +358,7 @@
     &lt;div class="col-3">...&lt;/div>
 &lt;/div></code></pre>
 
-        <h2>3. Or just add number of cells you want in the grid (<code>.grid > .col</code>):</h2>
+        <h2>3. The automatic. Just add number of cells you want in the grid (<code>.grid > .col</code>):</h2>
         <p>Auto width columns, no size on cells ! <br> That's a pretty cool feature of flex: the number determines the width (size = grid/cells children).</p>
         <p><em>Tip: Keep in mind that in this way, your grid will only be a row!</em></p>
 
@@ -964,7 +978,7 @@
     <section>
         <h2>Distribution</h2>
         <h3>Horizontal distribution (grid-spaceBetween)</h3>
-        <p>If you add <code>spaceBetween</code> className, the distribution will have no margin around first and last elements :</p>
+        <p>If you add <code>spaceBetween</code> class, the distribution will have no margin around first and last elements :</p>
         <div class="grid-spaceBetween">
             <div class="col-2">
                 <div class="demo">
@@ -989,7 +1003,7 @@
 &lt;/div></code></pre>
 
         <h3>Horizontal distribution (spaceAround)</h3>
-        <p>If you add <code>grid-spaceAround</code> className, the distribution will have margins around first and last elements :</p>
+        <p>If you add <code>grid-spaceAround</code> class, the distribution will have margins around first and last elements :</p>
         <div class="grid-spaceAround">
             <div class="col-2">
                 <div class="demo">
@@ -1177,7 +1191,7 @@
 
     <section class="doc">
         <h1 id="documentation">Documentation: helpers</h1>
-        <h2>Grid &amp; associated classNames</h2>
+        <h2>Grid &amp; associated classes</h2>
         <pre class="doc"><code>.grid
   .grid-1 (.grid-xs-1 / .grid-sm-1 / .grid-md-1 / .grid-lg-1 / .grid-xl-1)
   .grid-2
@@ -1206,7 +1220,7 @@
   .grid-noGutter
   .grid-equalHeight</code></pre>
 
-        <h2>Columns &amp; associated classNames: </h2>
+        <h2>Columns &amp; associated classes: </h2>
         <pre class="doc"><code>.col
   .col-1 (.col-xs-1 / .col-sm-1 / .col-md-1 / .col-lg-1 / .col-xl-1)
   .col-2
@@ -1224,7 +1238,7 @@
   .col-first
   .col-last</code></pre>
 
-        <h2>Offsets &amp; associated classNames: </h2>
+        <h2>Offsets &amp; associated classes: </h2>
 <pre class="doc"><code>  .off-1-left (.off-xs-1-left / .off-sm-1-left / .off-md-1-left / .off-lg-1-left / .off-xl-1-left)
   .off-2-left
   .off-3-left
@@ -1236,6 +1250,7 @@
   .off-9-left
   .off-10-left
   .off-11-left
+  .off-0-left (reboot the offset: can be usefull in responsive mode with key-prefixes)
 
   .off-1-right (.off-xs-1-right / .off-sm-1-right / .off-md-1-right / .off-lg-1-right / .off-xl-1-right)
   .off-2-right
@@ -1247,10 +1262,11 @@
   .off-8-right
   .off-9-right
   .off-10-right
-  .off-11-right</code></pre>
+  .off-11-right
+  .off-0-right (reboot the offset: can be usefull in responsive mode with key-prefixes)</code></pre>
 
         <h2>Gridlex and media-queries</h2>
-        <h3>Because of responsive, you need sometimes to change the size of columns: with this keys as classNames you can control your layout by media-queries.</h3>
+        <h3>Because of responsive, you need sometimes to change the size of columns: with this keys as classes you can control your layout by media-queries.</h3>
         <div class="bs-callout">
             <table>
                 <thead>
