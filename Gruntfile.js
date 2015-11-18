@@ -64,7 +64,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: 'src/**/*.less',
-        tasks: ['compileless']
+        tasks: ['compile']
       }
     }
 

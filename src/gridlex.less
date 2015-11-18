@@ -17,18 +17,22 @@
 }
 
 /* GRID BY NUMBER */
-.grid-1 > [class*='col']{ flex-basis: @col-12; max-width: @col-12; }
-.grid-2 > [class*='col']{ flex-basis: @col-6; max-width: @col-6; }
-.grid-3 > [class*='col']{ flex-basis: @col-4; max-width: @col-4; }
-.grid-4 > [class*='col']{ flex-basis: @col-3; max-width: @col-3; }
-.grid-5 > [class*='col']{ flex-basis: @col-5-12; max-width: @col-5-12; }
-.grid-6 > [class*='col']{ flex-basis: @col-2; max-width: @col-2; }
-.grid-7 > [class*='col']{ flex-basis: @col-7-12; max-width: @col-7-12; }
-.grid-8 > [class*='col']{ flex-basis: @col-8-12; max-width: @col-8-12; }
-.grid-9 > [class*='col']{ flex-basis: @col-9-12; max-width: @col-9-12; }
-.grid-10 > [class*='col']{ flex-basis: @col-10-12; max-width: @col-10-12; }
-.grid-11 > [class*='col']{ flex-basis: @col-11-12; max-width: @col-11-12; }
-.grid-12 > [class*='col']{ flex-basis: @col-1; max-width: @col-1; }
+.makeGridByNumber(grid-);
+@media @xs{
+    .makeGridByNumber(grid-xs-);
+}
+@media @sm{
+    .makeGridByNumber(grid-sm-);
+}
+@media @md{
+    .makeGridByNumber(grid-md-);
+}
+@media @lg{
+    .makeGridByNumber(grid-lg-);
+}
+@media @xl{
+    .makeGridByNumber(grid-xl-);
+}
 
 /* No spacing between cols : noGutter */
     .grid-noGutter{
@@ -99,51 +103,17 @@
     .col-last{
         order: 1;
     }
+    .col-top{
+        align-self: flex-start;
+    }
+    .col-middle{
+        align-self: center;
+    }
+    .col-bottom{
+        align-self: flex-end;
+    }
 
 /* Columns widths */
-// Function to generate the grid @media:
-.makeGrid(@col, @off) {
-    [class*='grid']{
-        .@{col}-1{ flex-basis: @col-1;max-width: @col-1; }
-        .@{col}-2{ flex-basis: @col-2;max-width: @col-2; }
-        .@{col}-3{ flex-basis: @col-3;max-width: @col-3; }
-        .@{col}-4{ flex-basis: @col-4;max-width: @col-4;}
-        .@{col}-5{ flex-basis: @col-5;max-width: @col-5;}
-        .@{col}-6{ flex-basis: @col-6;max-width: @col-6;}
-        .@{col}-7{ flex-basis: @col-7;max-width: @col-7;}
-        .@{col}-8{ flex-basis: @col-8;max-width: @col-8;}
-        .@{col}-9{ flex-basis: @col-9;max-width: @col-9;}
-        .@{col}-10{ flex-basis: @col-10;max-width: @col-10;}
-        .@{col}-11{ flex-basis: @col-11;max-width: @col-11;}
-        .@{col}-12{ flex-basis: @col-12;max-width: @col-12;}
-
-        .@{off}-1-left{ margin-left: @col-1; }
-        .@{off}-2-left{ margin-left: @col-2; }
-        .@{off}-3-left{ margin-left: @col-3; }
-        .@{off}-4-left{ margin-left: @col-4; }
-        .@{off}-5-left{ margin-left: @col-5; }
-        .@{off}-6-left{ margin-left: @col-6; }
-        .@{off}-7-left{ margin-left: @col-7; }
-        .@{off}-8-left{ margin-left: @col-8; }
-        .@{off}-9-left{ margin-left: @col-9; }
-        .@{off}-10-left{ margin-left: @col-10; }
-        .@{off}-11-left{ margin-left: @col-11; }
-
-        .@{off}-1-right{ margin-right: @col-1; }
-        .@{off}-2-right{ margin-right: @col-2; }
-        .@{off}-3-right{ margin-right: @col-3; }
-        .@{off}-4-right{ margin-right: @col-4; }
-        .@{off}-5-right{ margin-right: @col-5; }
-        .@{off}-6-right{ margin-right: @col-6; }
-        .@{off}-7-right{ margin-right: @col-7; }
-        .@{off}-8-right{ margin-right: @col-8; }
-        .@{off}-9-right{ margin-right: @col-9; }
-        .@{off}-10-right{ margin-right: @col-10; }
-        .@{off}-11-right{ margin-right: @col-11; }
-    }
-}
-
-// Launch of .makeGrid():
 .makeGrid(col, off);
 
 @media @xs{
