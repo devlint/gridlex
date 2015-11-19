@@ -9,3 +9,5 @@ Thumbs.db
 # Node
 node_modules
 npm-*.log
+
+dist/CNAME
