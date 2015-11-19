@@ -55,6 +55,23 @@
   text-transform: uppercase;
   margin-bottom: .3em;
 }
+.header h1:before {
+  content: '';
+  position: relative;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 5px;
+  height: 40px;
+  width: 42px;
+  border: 1px solid steelblue;
+  background-color: white;
+  background-image: linear-gradient(to top, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px);
+  background-size: 100% 50%, 50% 50%, 100%, 100%;
+  background-position: 0 0, 0 100%, 0 0;
+  background-repeat: repeat-y, repeat-x;
+}
 .header p {
   color: rgba(255, 255, 255, 0.7);
   margin: 0 auto;
@@ -157,24 +174,6 @@ pre.doc {
 .demo img {
   display: block;
   width: 100%;
-}
-.separator {
-  margin: 5rem auto;
-  height: 30px;
-  width: 30px;
-  background-color: steelblue;
-  background-image: linear-gradient(to top, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px);
-  background-size: 100% 50%, 50% 50%, 100%, 100%;
-  background-position: 0 0, 0 100%, 0 0;
-  background-repeat: repeat-y, repeat-x;
-}
-.separator.white {
-  margin: 0 20px 0 0;
-  width: 40px;
-  height: 40px;
-  display: block;
-  background-color: white;
-  background-image: linear-gradient(to top, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px);
 }
 .grid-noGutter.withBorder {
   border: 1px solid rgba(147, 128, 108, 0.5);
