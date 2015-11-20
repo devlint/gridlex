@@ -1,9 +1,6 @@
 /******
 * DEMO
 *******/
-/************************
-    VARIABLES
-*************************/
 /* Demo specific css
    ========================================================================== */
 .demoPage {
@@ -175,12 +172,12 @@ pre.doc {
   display: block;
   width: 100%;
 }
-.grid-noGutter.withBorder {
+.withBorder {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
-.grid-noGutter.withBorder [class*='col-'] {
+.withBorder [class*='col-'] {
   padding: 0;
 }
-.grid-noGutter.withBorder .demo {
+.withBorder .demo {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
