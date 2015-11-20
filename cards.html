@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gridlex - Just a Flexbox Grid System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="demo/normalize.css">
+    <link rel="stylesheet" href="gridlex.min.css">
+    <link rel="stylesheet" href="demo/demo.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <style>
+        html{  }
+        body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+        *{ box-sizing: border-box; }
+        *::after,*::before{ box-sizing: border-box; }
+        h1{ font-size: 2rem; }
+        h2{ font-size: 1.4rem; color: steelblue; }
+        h3{ font-size: 1.1rem; }
+        p { font-size: 0.9rem; }
+        ul{ padding:0; list-style-position: inside; }
+        li{ font-size: 0.9rem; margin: 0; }
+
+
+        .thecard {
+            box-shadow: 0 1px 30px rgba(0,0,0,.4);
+            background-color: #fff;
+            border-radius: 4px;
+            transition: 400ms ease;
+            text-align: left;
+        }
+        .thecard:hover{
+            box-shadow: 0 10px 50px rgba(0,0,0,.6);
+        }
+        .thecard:hover .card-outmore {
+            background: #2C3E50;
+            color: #fff;
+        }
+        .thecard a{
+            color: currentColor;
+            text-decoration: none;
+        }
+        .card-img {
+            display: block;
+            max-height: 395px;
+            overflow: hidden;
+        }
+        .card-img img {
+            display: block;
+            width:100%;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .card-caption {
+            position: relative;
+            padding: 5px 25px;
+        }
+        .card-caption h1 {
+            line-height: 1;
+        }
+
+        .card-outmore {
+            padding: 10px 25px;
+            border-radius: 0 0 4px 4px;
+            border-top: 1px solid #e0e0e0;
+            background: #efefef;
+            color: #222;
+            display: flex;
+            transition: 400ms ease;
+        }
+        .card-outmore h5 {
+            align-self: flex-start;
+        }
+        .card-outmore i {
+            align-self: flex-end;
+            border:1px solid ;
+            padding: 1px 6px;
+            border-radius: 50%;
+        }
+
+        span.date { font-size: 10px; }
+
+        h5 { margin:0; }
+
+        .thecard .like-btn {
+            font-size: 18px;
+            background: #446CB3;
+            color: #fff;
+            padding: 13px 15px;
+            border-radius: 50em;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            box-shadow: 0 2px 1px rgba(0,0,0,.2);
+            transition: 400ms ease;
+        }
+        .card-img + .card-caption > .like-btn{
+            top: -22px;
+
+        }
+
+        .thecard .like-btn:hover {
+            background: #3B5998;
+            box-shadow: 0 4px 5px rgba(0,0,0,.3);
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div>
+        <h1>Gridlex</h1>
+        <p>Just a Flexbox Grid System <br>(v2.0.1)</p>
+    </div>
+</header>
+<div class="demoPage grid">
+
+    <div class="col-4_sm-12">
+        <div class="thecard">
+            <a class="card-img" href="#_">
+                <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?fit=crop&fm=jpg&h=375&w=500">
+            </a>
+            <div class="card-caption">
+                <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                <a href="#_">
+                    <span class="date">Thursday, July 16, 2015</span>
+                    <h1>The nice sample title of this card.</h1>
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="#_">
+                <h5>Read more</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-4_sm-12">
+        <div class="thecard">
+            <a class="card-img" href="#_">
+                <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?fit=crop&fm=jpg&h=375&w=500">
+            </a>
+            <div class="card-caption">
+                <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                <a href="#_">
+                    <span class="date">Thursday, July 16, 2015</span>
+                    <h1>The nice sample title of this card.</h1>
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="#_">
+                <h5>Read more</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-4_sm-12">
+        <div class="thecard">
+            <a class="card-img" href="#_">
+                <img src="https://images.unsplash.com/photo-1427466920301-a96b3cadc6c8?fit=crop&fm=jpg&h=375&w=500">
+            </a>
+            <div class="card-caption">
+                <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                <a href="#_">
+                    <span class="date">Thursday, July 16, 2015</span>
+                    <h1>The nice sample title of this card.</h1>
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="#_">
+                <h5>Read more</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-6_md-12 grid">
+        <div class="col-6_md-6">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-6_md-6">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-6_md-6">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-6_md-6">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-6_md-12 grid">
+        <div class="col-6_md-12">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-6_md-12">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-6_md-12">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-6_md-12">
+            <div class="thecard">
+                <div class="card-caption">
+                    <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                    <a href="#_">
+                        <span class="date">Thursday, July 16, 2015</span>
+                        <h1>The nice sample title of this card.</h1>
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                    </a>
+                </div>
+                <a class="card-outmore" href="#_">
+                    <h5>Read more</h5>
+                    <i class="outmore-icon fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-6_xs-12">
+        <div class="thecard">
+            <a class="card-img" href="#_">
+                <img src="https://images.unsplash.com/photo-1441312311734-f44cc0bda31d?fit=crop&fm=jpg&h=375&w=500">
+            </a>
+            <div class="card-caption">
+                <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                <a href="#_">
+                    <span class="date">Thursday, July 16, 2015</span>
+                    <h1>The nice sample title of this card.</h1>
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="#_">
+                <h5>Read more</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-6_xs-12">
+        <div class="thecard">
+            <a class="card-img" href="#_">
+                <img src="https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?fit=crop&fm=jpg&h=375&w=500">
+            </a>
+            <div class="card-caption">
+                <a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+                <a href="#_">
+                    <span class="date">Thursday, July 16, 2015</span>
+                    <h1>The nice sample title of this card.</h1>
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="#_">
+                <h5>Read more</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
