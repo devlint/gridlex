@@ -1,13 +1,12 @@
-/************************
-    VARIABLES
-*************************/
+//************************
+//    VARIABLES
+//************************
 @gutter:    .5rem;
 
 @xs:        ~"screen and (max-width: 35.5em)"; // up to 568px
-@sm:        ~"screen and (min-width: 35.5em) and (max-width: 48em)"; // from 568px to 768px
-@md:        ~"screen and (min-width: 48em) and (max-width: 64em)"; // from 768px to 1024px
-@lg:        ~"screen and (min-width: 64em) and (max-width: 80em)"; // from 1024px to 1280px
-@xl:        ~"screen and (min-width: 80em)"; // from 1280px
+@sm:        ~"screen and (max-width: 48em)"; // max 768px
+@md:        ~"screen and (max-width: 64em)"; // max 1024px
+@lg:        ~"screen and (max-width: 80em)"; // max 1280px
 
 @col-1: (100%/12);
 @col-2: (@col-1*2);
@@ -30,61 +29,54 @@
 @col-11-12: (100%/11);
 
 // Function to generate the grid by number
-.makeGridByNumber(@mq){
-  .@{mq}1 > [class*='col']{ flex-basis: @col-12; max-width: @col-12; }
-  .@{mq}2 > [class*='col']{ flex-basis: @col-6; max-width: @col-6; }
-  .@{mq}3 > [class*='col']{ flex-basis: @col-4; max-width: @col-4; }
-  .@{mq}4 > [class*='col']{ flex-basis: @col-3; max-width: @col-3; }
-  .@{mq}5 > [class*='col']{ flex-basis: @col-5-12; max-width: @col-5-12; }
-  .@{mq}6 > [class*='col']{ flex-basis: @col-2; max-width: @col-2; }
-  .@{mq}7 > [class*='col']{ flex-basis: @col-7-12; max-width: @col-7-12; }
-  .@{mq}8 > [class*='col']{ flex-basis: @col-8-12; max-width: @col-8-12; }
-  .@{mq}9 > [class*='col']{ flex-basis: @col-9-12; max-width: @col-9-12; }
-  .@{mq}10 > [class*='col']{ flex-basis: @col-10-12; max-width: @col-10-12; }
-  .@{mq}11 > [class*='col']{ flex-basis: @col-11-12; max-width: @col-11-12; }
-  .@{mq}12 > [class*='col']{ flex-basis: @col-1; max-width: @col-1; }
+.makeGridByNumber(@grid){
+  [class*="@{grid}-1"] > [class*='col']{ flex-basis: @col-12; max-width: @col-12; }
+  [class*="@{grid}-2"] > [class*='col']{ flex-basis: @col-6; max-width: @col-6; }
+  [class*="@{grid}-3"] > [class*='col']{ flex-basis: @col-4; max-width: @col-4; }
+  [class*="@{grid}-4"] > [class*='col']{ flex-basis: @col-3; max-width: @col-3; }
+  [class*="@{grid}-5"] > [class*='col']{ flex-basis: @col-5-12; max-width: @col-5-12; }
+  [class*="@{grid}-6"] > [class*='col']{ flex-basis: @col-2; max-width: @col-2; }
+  [class*="@{grid}-7"] > [class*='col']{ flex-basis: @col-7-12; max-width: @col-7-12; }
+  [class*="@{grid}-8"] > [class*='col']{ flex-basis: @col-8-12; max-width: @col-8-12; }
+  [class*="@{grid}-9"] > [class*='col']{ flex-basis: @col-9-12; max-width: @col-9-12; }
+  [class*="@{grid}-10"] > [class*='col']{ flex-basis: @col-10-12; max-width: @col-10-12; }
+  [class*="@{grid}-11"] > [class*='col']{ flex-basis: @col-11-12; max-width: @col-11-12; }
+  [class*="@{grid}-12"] > [class*='col']{ flex-basis: @col-1; max-width: @col-1; }
 }
 
 // Function to generate the grid by columns
-.makeGrid(@col, @off) {
-    [class*='grid']{
-        .@{col}-1{ flex-basis: @col-1;max-width: @col-1; }
-        .@{col}-2{ flex-basis: @col-2;max-width: @col-2; }
-        .@{col}-3{ flex-basis: @col-3;max-width: @col-3; }
-        .@{col}-4{ flex-basis: @col-4;max-width: @col-4;}
-        .@{col}-5{ flex-basis: @col-5;max-width: @col-5;}
-        .@{col}-6{ flex-basis: @col-6;max-width: @col-6;}
-        .@{col}-7{ flex-basis: @col-7;max-width: @col-7;}
-        .@{col}-8{ flex-basis: @col-8;max-width: @col-8;}
-        .@{col}-9{ flex-basis: @col-9;max-width: @col-9;}
-        .@{col}-10{ flex-basis: @col-10;max-width: @col-10;}
-        .@{col}-11{ flex-basis: @col-11;max-width: @col-11;}
-        .@{col}-12{ flex-basis: @col-12;max-width: @col-12;}
+.makeCol(@col) {
+    [class*='grid'] {
+        > [class*="@{col}-1"]{ flex-basis: @col-1;max-width: @col-1; }
+        > [class*="@{col}-2"]{ flex-basis: @col-2;max-width: @col-2; }
+        > [class*="@{col}-3"]{ flex-basis: @col-3;max-width: @col-3; }
+        > [class*="@{col}-4"]{ flex-basis: @col-4;max-width: @col-4;}
+        > [class*="@{col}-5"]{ flex-basis: @col-5;max-width: @col-5;}
+        > [class*="@{col}-6"]{ flex-basis: @col-6;max-width: @col-6;}
+        > [class*="@{col}-7"]{ flex-basis: @col-7;max-width: @col-7;}
+        > [class*="@{col}-8"]{ flex-basis: @col-8;max-width: @col-8;}
+        > [class*="@{col}-9"]{ flex-basis: @col-9;max-width: @col-9;}
+        > [class*="@{col}-10"]{ flex-basis: @col-10;max-width: @col-10;}
+        > [class*="@{col}-11"]{ flex-basis: @col-11;max-width: @col-11;}
+        > [class*="@{col}-12"]{ flex-basis: @col-12;max-width: @col-12;}
+    }
+}
 
-        .@{off}-0-left{ margin-left: 0; }
-        .@{off}-1-left{ margin-left: @col-1; }
-        .@{off}-2-left{ margin-left: @col-2; }
-        .@{off}-3-left{ margin-left: @col-3; }
-        .@{off}-4-left{ margin-left: @col-4; }
-        .@{off}-5-left{ margin-left: @col-5; }
-        .@{off}-6-left{ margin-left: @col-6; }
-        .@{off}-7-left{ margin-left: @col-7; }
-        .@{off}-8-left{ margin-left: @col-8; }
-        .@{off}-9-left{ margin-left: @col-9; }
-        .@{off}-10-left{ margin-left: @col-10; }
-        .@{off}-11-left{ margin-left: @col-11; }
-
-        .@{off}-0-right{ margin-right: 0; }
-        .@{off}-1-right{ margin-right: @col-1; }
-        .@{off}-2-right{ margin-right: @col-2; }
-        .@{off}-3-right{ margin-right: @col-3; }
-        .@{off}-4-right{ margin-right: @col-4; }
-        .@{off}-5-right{ margin-right: @col-5; }
-        .@{off}-6-right{ margin-right: @col-6; }
-        .@{off}-7-right{ margin-right: @col-7; }
-        .@{off}-8-right{ margin-right: @col-8; }
-        .@{off}-9-right{ margin-right: @col-9; }
-        .@{off}-10-right{ margin-right: @col-10; }
-        .@{off}-11-right{ margin-right: @col-11; }
+// Function to generate the offset
+.makeOff(@off,@dir) {
+    [class*="grid"] > {
+        > [@{dir}*="@{off}-0"]{ margin-@{dir}: 0; }
+        > [@{dir}*="@{off}-1"]{ margin-@{dir}: @col-1; }
+        > [@{dir}*="@{off}-2"]{ margin-@{dir}: @col-2; }
+        > [@{dir}*="@{off}-3"]{ margin-@{dir}: @col-3; }
+        > [@{dir}*="@{off}-4"]{ margin-@{dir}: @col-4; }
+        > [@{dir}*="@{off}-5"]{ margin-@{dir}: @col-5; }
+        > [@{dir}*="@{off}-6"]{ margin-@{dir}: @col-6; }
+        > [@{dir}*="@{off}-6"]{ margin-@{dir}: @col-6; }
+        > [@{dir}*="@{off}-7"]{ margin-@{dir}: @col-7; }
+        > [@{dir}*="@{off}-8"]{ margin-@{dir}: @col-8; }
+        > [@{dir}*="@{off}-9"]{ margin-@{dir}: @col-9; }
+        > [@{dir}*="@{off}-10"]{ margin-@{dir}: @col-10; }
+        > [@{dir}*="@{off}-11"]{ margin-@{dir}: @col-11; }
     }
 }

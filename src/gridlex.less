@@ -5,129 +5,131 @@
 
 @import "gridlex-vars";
 
-/************************
-    GRID
-*************************/
-[class*='grid']{
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 1 auto;
-    flex-flow: row wrap;
-    margin: 0 -@gutter;
+[class*="grid"]{
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -@gutter;
 }
-
-/* GRID BY NUMBER */
-.makeGridByNumber(grid-);
-@media @xs{
-    .makeGridByNumber(grid-xs-);
+[class*="col"]{
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: 0 @gutter (@gutter*2);
 }
-@media @sm{
-    .makeGridByNumber(grid-sm-);
-}
-@media @md{
-    .makeGridByNumber(grid-md-);
-}
-@media @lg{
-    .makeGridByNumber(grid-lg-);
-}
-@media @xl{
-    .makeGridByNumber(grid-xl-);
-}
-
-/* No spacing between cols : noGutter */
-    .grid-noGutter{
-        margin: 0;
-        > [class*='col']{
-            padding: 0;
-        }
-    }
-
-/* Horizontal aligment */
-    .grid-center{
-        justify-content: center;
-    }
-    .grid-right{
-        justify-content: flex-end;
-        margin-left: auto;
-    }
-/* Vertical aligment */
-    .grid-middle{
-        align-items: center;
-    }
-    .grid-bottom{
-        align-items: flex-end;
-    }
-
-/* Orders */
-    .grid-reverse{
-        flex-direction: row-reverse;
-    }
-    .grid-column {
-        flex-direction: column;
-    }
-    .grid-column-reverse {
-        flex-direction: column-reverse;
-    }
-
-/* Spaces */
-    .grid-spaceBetween{
-        justify-content: space-between;
-    }
-    .grid-spaceAround{
-        justify-content: space-around;
-    }
-
-/* Equal heights columns */
-    .grid-equalHeight > [class*='col']{
-        display: flex;
-    }
-
-
-
-/************************
-    COLS
-*************************/
-[class*='col']{
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    padding: 0 @gutter (@gutter*2);
+[class*="grid"][class*="col"]{
+  margin: 0;
+  padding: 0;
 }
 .col{
-    flex: 1 1 0;
+  flex: 1 1 0;
 }
 
-/* Cols alignments */
-    .col-first{
-        order: -1;
+/************************
+    HELPERS SUFFIXES
+*************************/
+/* No spacing between cols : noGutter */
+  [class*="-noGutter"]{
+    margin: 0;
+    > [class*="col"]{
+      padding: 0;
     }
-    .col-last{
-        order: 1;
-    }
-    .col-top{
-        align-self: flex-start;
-    }
-    .col-middle{
-        align-self: center;
-    }
-    .col-bottom{
-        align-self: flex-end;
-    }
+  }
 
-/* Columns widths */
-.makeGrid(col, off);
+/* Horizontal aligment */
+  [class*="-center"]{
+    justify-content: center;
+  }
+  [class*="-right"]{
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+/* Vertical aligment */
+  [class*="-top"]{ // for grid & col
+    align-items: flex-start;
+    align-self: flex-start;
+  }
+  [class*="-middle"]{ // for grid & col
+    align-items: center;
+  align-self: center;
+  }
+  [class*="-bottom"]{ // for grid & col
+    align-items: flex-end;
+    align-self: flex-end;
+  }
 
-@media @xs{
-    .makeGrid(col-xs, off-xs);
-}
-@media @sm{
-    .makeGrid(col-sm, off-sm);
+/* Orders */
+  [class*="-reverse"]{ // for grid
+    flex-direction: row-reverse;
+  }
+  [class*="-column"] { // for grid
+    flex-direction: column;
+  }
+  [class*="-column-reverse"] { // for grid
+    flex-direction: column-reverse;
+  }
+  [class*="-first"]{ // for col
+      order: -1;
+  }
+  [class*="-last"]{ // for col
+      order: 1;
+  }
+
+/* Spaces between and around cols */
+  [class*="-spaceBetween"]{ // for grid
+    justify-content: space-between;
+  }
+  [class*="-spaceAround"]{ // for grid
+    justify-content: space-around;
+  }
+
+/* Equal heights columns */
+  [class*="-equalHeight"] > [class*="col"]{ // for grid
+    display: flex;
+  }
+
+/************************
+    GRID BY NUMBER
+*************************/
+.makeGridByNumber(grid);
+
+@media @lg{
+  .makeGridByNumber(_lg);
 }
 @media @md{
-    .makeGrid(col-md, off-md);
+  .makeGridByNumber(_md);
 }
+@media @sm{
+  .makeGridByNumber(_sm);
+}
+@media @xs{
+  .makeGridByNumber(_xs);
+}
+
+
+/************************
+    COLS SIZEQ
+*************************/
+.makeCol(col);
+.makeOff(off,left);
+.makeOff(off,right);
+
 @media @lg{
-    .makeGrid(col-lg, off-lg);
+  .makeCol(_lg);
+  .makeOff(_lg,left);
+  .makeOff(_lg,right);
 }
-@media @xl{
-    .makeGrid(col-xl, off-xl);
+@media @md{
+  .makeCol(_md);
+  .makeOff(_md,left);
+  .makeOff(_md,right);
+}
+@media @sm{
+  .makeCol(_sm);
+  .makeOff(_sm,left);
+  .makeOff(_sm,right);
+}
+@media @xs{
+  .makeCol(_xs);
+  .makeOff(_xs,left);
+  .makeOff(_xs,right);
 }

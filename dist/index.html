@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Gridlex</title>
+    <title>Gridlex - Just a Flexbox Grid System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="demo/normalize.css">
     <link rel="stylesheet" href="gridlex.min.css">
@@ -25,12 +25,12 @@
 <header class="header">
     <div>
         <h1>Gridlex</h1>
-        <p>Just a Flexbox Grid System</p>
+        <p>Just a Flexbox Grid System <br>(v2.0.1)</p>
     </div>
 </header>
 <div class="demoPage">
     <section>
-        <div class="grid-2 grid-xs-1">
+        <div class="grid-2_xs-1">
             <div class="col">
                 <h2>Simple. Robust. Responsive. Flexible.</h2>
                 <h3>How it works?</h3>
@@ -45,7 +45,7 @@
             </div>
             <div class="col-12">
                 <h3>What can we expect?</h3>
-                <ul class="grid-3 grid-sm-2 grid-xs-1">
+                <ul class="grid-3_sm-2_xs-1">
                     <li class="col">Basically each column is the same width as every other cell in the grid.</li>
                     <li class="col">But you can add sizing classes to individual columns.</li>
                     <li class="col">For responsive designs, you can add classes based on media-queries.</li>
@@ -60,7 +60,7 @@
 
         <h1>3 ways to use Gridlex</h1>
         <h2>1. The basic. Just add a class <code>.grid-*</code> (from -1 to -12)</h2>
-        <p><strong>This feature is so simple, but we can't find it anywhere in a robust and flexible grid!</strong> <br>
+        <p><strong>This feature is so simple, but we find it very very rarely in a robust and flexible grid!</strong> <br>
             Why should we be required to put sizing classes on every single cell when they all have the same width? </p>
             <p>In this ways, you will always have the specified number of columns in a row:</p>
         <div class="grid-1">
@@ -70,25 +70,25 @@
             <div class="col"><div class="demo"><p>grid-2</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-3">
+        <div class="grid-3_xs-1">
             <div class="col"><div class="demo"><p>grid-3</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-4">
+        <div class="grid-4_xs-2">
             <div class="col"><div class="demo"><p>grid-4</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-5">
+        <div class="grid-5_xs-2">
             <div class="col"><div class="demo"><p>grid-5</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-6 grid-xs-3">
+        <div class="grid-6_sm-3">
             <div class="col"><div class="demo"><p>grid-6</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -96,7 +96,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-7 grid-xs-3">
+        <div class="grid-7_md-3">
             <div class="col"><div class="demo"><p>grid-7</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -105,7 +105,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-8 grid-xs-4">
+        <div class="grid-8_md-4">
             <div class="col"><div class="demo"><p>grid-8</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -115,7 +115,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-9 grid-xs-3">
+        <div class="grid-9_lg-3">
             <div class="col"><div class="demo"><p>grid-9</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -126,7 +126,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-10 grid-xs-5">
+        <div class="grid-10_md-5_sm-2">
             <div class="col"><div class="demo"><p>grid-10</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -138,7 +138,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-11 grid-xs-5">
+        <div class="grid-11_md-5_sm-2">
             <div class="col"><div class="demo"><p>grid-11</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -151,7 +151,7 @@
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
         </div>
-        <div class="grid-12 grid-xs-6">
+        <div class="grid-12_lg-8_md-6_sm-4_xs-2">
             <div class="col"><div class="demo"><p>grid-12</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
             <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
@@ -167,7 +167,7 @@
         </div>
         <p><em>But what happens if we have more than 3 columns in a <code>.grid-3</code> ?</em><br>This:</p>
 
-        <div class="grid-3">
+        <div class="grid-3_xs-1">
             <div class="col">
                 <div class="demo">
                     <p>col 1</p>
@@ -219,7 +219,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-3">
+<pre><code>&lt;div class="grid-3_xs-1">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -240,22 +240,22 @@
                     <p>col-12</p>
                 </div>
             </div>
-            <div class="col-11 col-xs-8">
+            <div class="col-11_md-10_xs-8">
                 <div class="demo">
                     <p>col-11</p>
                 </div>
             </div>
-            <div class="col-1 col-xs-4">
+            <div class="col-1_md-2_xs-4">
                 <div class="demo">
                     <p>col-1</p>
                 </div>
             </div>
-            <div class="col-10 col-xs-7">
+            <div class="col-10_xs-7">
                 <div class="demo">
                     <p>col-10</p>
                 </div>
             </div>
-            <div class="col-2 col-xs-5">
+            <div class="col-2_xs-5">
                 <div class="demo">
                     <p>col-2</p>
                 </div>
@@ -330,22 +330,22 @@
                     <p>col-9</p>
                 </div>
             </div>
-            <div class="col-2 col-xs-5">
+            <div class="col-2_xs-5">
                 <div class="demo">
                     <p>col-2</p>
                 </div>
             </div>
-            <div class="col-10 col-xs-7">
+            <div class="col-10_xs-7">
                 <div class="demo">
                     <p>col-10</p>
                 </div>
             </div>
-            <div class="col-1 col-xs-4">
+            <div class="col-1_md-2_xs-4">
                 <div class="demo">
                     <p>col-1</p>
                 </div>
             </div>
-            <div class="col-11 col-xs-8">
+            <div class="col-11_md-10_xs-8">
                 <div class="demo">
                     <p>col-11</p>
                 </div>
@@ -394,7 +394,7 @@
             </div>
         </div>
         <p>... and last a grid with ... nine columns?</p>
-        <div class="grid grid-xs-4">
+        <div class="grid_xs-4">
             <div class="col">
                 <div class="demo">
                     <p>auto</p>
@@ -450,8 +450,8 @@
 &lt;/div></code></pre>
 
         <h2>Did I mention that you can mix the 3 ways?</h2>
-        <div class="grid-6">
-            <div class="col-8">
+        <div class="grid-6_sm-2">
+            <div class="col-8_sm-12">
                 <div class="demo">
                     <p>col-8</p>
                 </div>
@@ -471,7 +471,7 @@
                     <p>col</p>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-5_sm-6">
                 <div class="demo">
                     <p>col-5</p>
                 </div>
@@ -481,7 +481,7 @@
                     <p>col-2</p>
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-1_sm-4">
                 <div class="demo">
                     <p>col-1</p>
                 </div>
@@ -522,16 +522,16 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-6">
+<pre><code>&lt;div class="grid-6_sm-2">
     &lt;!-- first row -->
-    &lt;div class="col-8">...&lt;/div>
+    &lt;div class="col-8_sm-12">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;!-- second row -->
     &lt;div class="col">...&lt;/div>
-    &lt;div class="col-5">...&lt;/div>
+    &lt;div class="col-5_sm-6">...&lt;/div>
     &lt;div class="col-2">...&lt;/div>
-    &lt;div class="col-1">...&lt;/div>
+    &lt;div class="col-1_sm-4">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;!-- third row -->
     &lt;div class="col">...&lt;/div>
@@ -548,12 +548,12 @@
                     <p>auto</p>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-2_sm-12">
                 <div class="demo">
                     <p>col-2</p>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6_sm-12">
                 <div class="demo">
                     <p>col-6</p>
                 </div>
@@ -561,11 +561,11 @@
         </div>
 <pre><code>&lt;div class="grid">
     &lt;div class="col">...&lt;/div>
-    &lt;div class="col-2">...&lt;/div>
-    &lt;div class="col-6">...&lt;/div>
+    &lt;div class="col-2_sm-12">...&lt;/div>
+    &lt;div class="col-6_sm-12">...&lt;/div>
 &lt;/div></code></pre>
         <h2>We can have a grid without gutter too:</h2>
-        <div class="grid-noGutter grid-equalHeight withBorder">
+        <div class="grid-noGutter-equalHeight withBorder">
             <div class="col-12">
                 <div class="demo">
                     <p>col-12</p>
@@ -601,12 +601,12 @@
                     <p>col-9</p>
                 </div>
             </div>
-            <div class="col-1 col-xs-2">
+            <div class="col-1_xs-2">
                 <div class="demo">
                     <p>col-1</p>
                 </div>
             </div>
-            <div class="col-11 col-xs-10">
+            <div class="col-11_xs-10">
                 <div class="demo">
                     <p>col-11</p>
                 </div>
@@ -626,14 +626,14 @@
 
         <h2>... and nesting in the grid:</h2>
         <div class="grid">
-            <div class="col-6 col-xs-12"><p class="demo-explain">Just an "empty" col-6:</p></div>
-            <div class="col-6 col-xs-12"><p class="demo-explain">Each column can become a grid too (<code>.col-6.grid</code>)</p></div>
-            <div class="col-6 col-xs-12">
+            <div class="col-6_sm-12"><p class="demo-explain">Just an "empty" col-6:</p></div>
+            <div class="col-6_sm-12"><p class="demo-explain">Each column can become a grid too (<code>.col-6.grid</code>)</p></div>
+            <div class="col-6_sm-12">
                 <div class="demo">
                     <p>col-6</p>
                 </div>
             </div>
-            <div class="col-6 col-xs-12 grid">
+            <div class="col-6_sm-12 grid">
                 <div class="col-4">
                     <div class="demo">
                         <p>col-4</p>
@@ -695,7 +695,9 @@
         &lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
+    </section>
 
+    <section>
         <h2>Horizontal alignment</h2>
         <div class="grid-3">
             <div class="col">
@@ -704,14 +706,14 @@
                 </div>
             </div>
         </div>
-        <div class="grid-3 grid-center">
+        <div class="grid-3-center">
             <div class="col">
                 <div class="demo">
                     <p>.grid-center</p>
                 </div>
             </div>
         </div>
-        <div class="grid-3 grid-right">
+        <div class="grid-3-right">
             <div class="col">
                 <div class="demo">
                     <p>.grid-right</p>
@@ -721,15 +723,13 @@
 <pre><code>&lt;div class="grid-3">
     &lt;div class="col">...&lt;/div>
 &lt;/div>
-&lt;div class="grid-3 grid-center">
+&lt;div class="grid-3-center">
     &lt;div class="col">...&lt;/div>
 &lt;/div>
-&lt;div class="grid-3 grid-right">
+&lt;div class="grid-3-right">
     &lt;div class="col">...&lt;/div>
 &lt;/div></code></pre>
-    </section>
 
-    <section>
         <h2>Vertical alignment on the grid: top</h2>
         <div class="grid">
             <div class="col">
@@ -803,7 +803,7 @@
 &lt;/div></code></pre>
 
         <h2>Vertical alignment on the column: grid-middle & mixed columns</h2>
-        <div class="grid-4 grid-middle">
+        <div class="grid-4-middle">
             <div class="col">
                 <div class="demo">
                     <p>default (middle)</p>
@@ -825,10 +825,11 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-3 grid-bottom">
+<pre><code>&lt;div class="grid-4-middle">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
-    &lt;div class="col">...&lt;/div>
+    &lt;div class="col-bottom">...&lt;/div>
+    &lt;div class="col-top">...&lt;/div>
 &lt;/div></code></pre>
 
     </section>
@@ -873,7 +874,7 @@
 &lt;/div></code></pre>
 
         <h3>Reverse flow</h3>
-        <div class="grid-5 grid-reverse">
+        <div class="grid-5-reverse">
             <div class="col">
                 <div class="demo">
                     <p>A</p>
@@ -945,7 +946,7 @@
 &lt;/div></code></pre>
 
         <h3>No gutter? Equal-height?</h3>
-        <div class="grid-noGutter grid-equalHeight withBorder">
+        <div class="grid-noGutter-equalHeight withBorder">
             <div class="col">
                 <div class="demo">
                     <p>&nbsp;</p>
@@ -967,7 +968,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-noGutter grid-equalHeight">
+<pre><code>&lt;div class="grid-noGutter-equalHeight">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -1051,57 +1052,65 @@
     &lt;div class="col-2">...&lt;/div>
 &lt;/div></code></pre>
 
-        <h3>Columns</h3>
-        <div class="grid-column">
-            <div class="col-4">
-                <div class="demo">
-                    <p>A</p>
+
+        <div class="grid-2_md-1">
+            <div class="col">
+                <h3>Columns</h3>
+                <div class="grid-column">
+                    <div class="col-4">
+                        <div class="demo">
+                            <p>A</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="demo">
+                            <p>B</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="demo">
+                            <p>C</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-2">
-                <div class="demo">
-                    <p>B</p>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="demo">
-                    <p>C</p>
-                </div>
-            </div>
-        </div>
 <pre><code>&lt;div class="grid-column">
     &lt;div class="col-4">A&lt;/div>
     &lt;div class="col-2">B&lt;/div>
     &lt;div class="col-6">C&lt;/div>
 &lt;/div></code></pre>
-        <div class="grid-column-reverse">
-            <div class="col-4">
-                <div class="demo">
-                    <p>A</p>
-                </div>
             </div>
-            <div class="col-2">
-                <div class="demo">
-                    <p>B</p>
+            <div class="col">
+                <h3>Columns-reverse</h3>
+                <div class="grid-column-reverse">
+                    <div class="col-4">
+                        <div class="demo">
+                            <p>A</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="demo">
+                            <p>B</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="demo">
+                            <p>C</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="demo">
-                    <p>C</p>
-                </div>
-            </div>
-        </div>
 <pre><code>&lt;div class="grid-column-reverse">
     &lt;div class="col-4">A&lt;/div>
     &lt;div class="col-2">B&lt;/div>
     &lt;div class="col-6">C&lt;/div>
 &lt;/div></code></pre>
+            </div>
+        </div>
     </section>
 
     <section>
         <h2>Offset: push a col from left or from right</h2>
         <div class="grid">
-            <div class="col-6 off-6-left">
+            <div class="col-6 left-6">
                 <div class="demo">
                     <p>col-6 off-6-left</p>
                 </div>
@@ -1116,7 +1125,7 @@
                     <p>col-4</p>
                 </div>
             </div>
-            <div class="col-4 off-4-left">
+            <div class="col-4 left-4">
                 <div class="demo">
                     <p>col-4 off-4-left</p>
                 </div>
@@ -1127,34 +1136,34 @@
     &lt;div class="col-4 off-4-left">col-4 off-4-left&lt;/div>
 &lt;/div></code></pre>
         <div class="grid">
-            <div class="col-2 off-2-left">
+            <div class="col-2_xs-6" push-left="off-2_xs-6">
                 <div class="demo">
-                    <p>col-2 off-2-left</p>
+                    <p>col-2 left-2</p>
                 </div>
             </div>
-            <div class="col-2 off-2-left">
+            <div class="col-2_xs-6" push-left="off-2_xs-6">
                 <div class="demo">
-                    <p>col-2 off-2-left</p>
+                    <p>col-2 left-2</p>
                 </div>
             </div>
-            <div class="col-2 off-2-left">
+            <div class="col-2_xs-6" push-left="off-2_xs-6">
                 <div class="demo">
-                    <p>col-2 off-2-left</p>
+                    <p>col-2 left-2</p>
                 </div>
             </div>
-            <div class="col-2 off-2-right">
+            <div class="col-2" push-right="off-2">
                 <div class="demo">
-                    <p>col-2 off-2-right</p>
+                    <p>col-2 right-2</p>
                 </div>
             </div>
-            <div class="col-2 off-2-right">
+            <div class="col-2" push-right="off-2t">
                 <div class="demo">
-                    <p>col-2 off-2-right</p>
+                    <p>col-2 right-2</p>
                 </div>
             </div>
-            <div class="col-2 off-2-right">
+            <div class="col-2" push-right="off-2">
                 <div class="demo">
-                    <p>col-2 off-2-right</p>
+                    <p>col-2 right-2</p>
                 </div>
             </div>
             <div class="col-2">
@@ -1162,9 +1171,9 @@
                     <p>col-2</p>
                 </div>
             </div>
-            <div class="col-6 off-1-left off-1-right">
+            <div class="col-6" push-left="off-1" push-right="off-1">
                 <div class="demo">
-                    <p>col-6 off-1-left off-1-right</p>
+                    <p>col-6 left-1 right-1</p>
                 </div>
             </div>
             <div class="col-2">
@@ -1193,77 +1202,46 @@
         <h1 id="documentation">Documentation: helpers</h1>
         <h2>Grid &amp; associated classes</h2>
         <pre class="doc"><code>.grid
-  .grid-1 (.grid-xs-1 / .grid-sm-1 / .grid-md-1 / .grid-lg-1 / .grid-xl-1)
-  .grid-2
-  .grid-3
-  .grid-4
-  .grid-5
-  .grid-6
-  .grid-7
-  .grid-8
-  .grid-9
-  .grid-10
-  .grid-11
-  .grid-12
+  -* (1 to 12)
+    _xs-* (1 to 12)
+    _sm-* (1 to 12)
+    _md-* (1 to 12)
+    _lg-* (1 to 12)
 
-  .grid-center
-  .grid-right
-  .grid-middle
-  .grid-bottom
-  .grid-spaceBetween
-  .grid-spaceAround
+  -center
+  -right
+  -middle
+  -bottom
+  -spaceBetween
+  -spaceAround
 
-  .grid-reverse
-  .grid-column
-  .grid-column-reverse
+  -reverse
+  -column
+  -column-reverse
 
-  .grid-noGutter
-  .grid-equalHeight</code></pre>
+  -noGutter
+  -equalHeight</code></pre>
 
         <h2>Columns &amp; associated classes: </h2>
         <pre class="doc"><code>.col
-  .col-1 (.col-xs-1 / .col-sm-1 / .col-md-1 / .col-lg-1 / .col-xl-1)
-  .col-2
-  .col-3
-  .col-4
-  .col-5
-  .col-6
-  .col-7
-  .col-8
-  .col-9
-  .col-10
-  .col-11
-  .col-12
+  -* (1 to 12)
+  _xs-* (1 to 12)
+  _sm-* (1 to 12)
+  _md-* (1 to 12)
+  _lg-* (1 to 12)
+    i.e. &lt;div class="col-12_lg-8_md-6_sm-3_xs-1">...&lt;/div>
 
   .col-first
   .col-last</code></pre>
 
-        <h2>Offsets &amp; associated classes: </h2>
-<pre class="doc"><code>  .off-1-left (.off-xs-1-left / .off-sm-1-left / .off-md-1-left / .off-lg-1-left / .off-xl-1-left)
-  .off-2-left
-  .off-3-left
-  .off-4-left
-  .off-5-left
-  .off-6-left
-  .off-7-left
-  .off-8-left
-  .off-9-left
-  .off-10-left
-  .off-11-left
-  .off-0-left (reboot the offset: can be usefull in responsive mode with key-prefixes)
+        <h2>Offsets: with left="" and right="" attribute</h2>
+<pre class="doc"><code>  .off-* (0 to 11)
+  _xs-* (0 to 11)
+  _sm-* (0 to 11)
+  _md-* (0 to 11)
+  _lg-* (0 to 11)
 
-  .off-1-right (.off-xs-1-right / .off-sm-1-right / .off-md-1-right / .off-lg-1-right / .off-xl-1-right)
-  .off-2-right
-  .off-3-right
-  .off-4-right
-  .off-5-right
-  .off-6-right
-  .off-7-right
-  .off-8-right
-  .off-9-right
-  .off-10-right
-  .off-11-right
-  .off-0-right (reboot the offset: can be usefull in responsive mode with key-prefixes)</code></pre>
+  -0: reboot the offset (can be usefull in responsive mode with key-suffixes)</code></pre>
 
         <h2>Gridlex and media-queries</h2>
         <h3>Because of responsive, you need sometimes to change the size of columns: with this keys as classes you can control your layout by media-queries.</h3>
@@ -1273,53 +1251,30 @@
                 <tr>
                     <th>CSS Media Query</th>
                     <th>Applies</th>
-                    <th>Grid class</th>
-                    <th>Column class</th>
+                    <th>Usage</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td><code>-</code></td>
-                    <td> Always </td>
-                    <td><code>.<b>grid</b>-*</code></td>
-                    <td><code>.<b>col</b>-*</code></td>
-                </tr>
-
-                <tr>
                     <td><code>@media screen and (max-width: 35.5em)</code></td>
-                    <td>up to 568px</td>
-                    <td><code>.<b>grid-xs</b>-*</code></td>
-                    <td><code>.<b>col-xs</b>-*</code></td>
+                    <td>Max 568px</td>
+                    <td><code><b>_xs</b>-*</code></td>
                 </tr>
-
                 <tr>
-                    <td><code>@media screen and (min-width: 35.5em) and (max-width: 48em)</code></td>
-                    <td>from 568px to 768px</td>
-                    <td><code>.<b>grid-sm</b>-*</code></td>
-                    <td><code>.<b>col-sm</b>-*</code></td>
+                    <td><code>@media screen and (max-width: 48em)</code></td>
+                    <td>Max 768px</td>
+                    <td><code><b>_sm</b>-*</code></td>
                 </tr>
-
                 <tr>
-                    <td><code>@media screen and (min-width: 48em) and (max-width: 64em)</code></td>
-                    <td>from 768px to 1024px</td>
-                    <td><code>.<b>grid-md</b>-*</code></td>
-                    <td><code>.<b>col-md</b>-*</code></td>
+                    <td><code>@media screen and (max-width: 64em)</code></td>
+                    <td>Max 1024px</td>
+                    <td><code><b>_md</b>-*</code></td>
                 </tr>
-
                 <tr>
-                    <td><code>@media screen and (min-width: 64em) and (max-width: 80em)</code></td>
-                    <td>from 1024px to 1280px</td>
-                    <td><code>.<b>grid-lg</b>-*</code></td>
-                    <td><code>.<b>col-lg</b>-*</code></td>
+                    <td><code>@media screen and (max-width: 80em)</code></td>
+                    <td>Max 1280px</td>
+                    <td><code><b>_lg</b>-*</code></td>
                 </tr>
-
-                <tr>
-                    <td><code>@media screen and (min-width: 80em)</code></td>
-                    <td>from 1280px</td>
-                    <td><code>.<b>grid-xl</b>-*</code></td>
-                    <td><code>.<b>col-xl</b>-*</code></td>
-                </tr>
-
                 </tbody>
             </table>
         </div>
