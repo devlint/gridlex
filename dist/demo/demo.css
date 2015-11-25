@@ -198,7 +198,7 @@ section:not(:first-of-type) [class*="col-"]:hover:after {
   padding: 2px 8px;
   position: absolute;
   left: 0.5rem;
-  bottom: 100%;
+  top: 0;
   white-space: nowrap;
   z-index: 20;
   background-color: #555;
