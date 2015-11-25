@@ -186,3 +186,22 @@ pre.doc {
 .withBorder .demo {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
+/* Tooltip */
+section:not(:first-of-type) [class*="grid-"],
+section:not(:first-of-type) [class*="col-"] {
+  position: relative;
+  cursor: help;
+}
+section:not(:first-of-type) [class*="grid-"]:hover:after,
+section:not(:first-of-type) [class*="col-"]:hover:after {
+  content: attr(class);
+  padding: 2px 8px;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 100%;
+  white-space: nowrap;
+  z-index: 20;
+  background-color: #555;
+  color: #fff;
+  font-size: .8rem;
+}

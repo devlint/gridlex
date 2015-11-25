@@ -183,3 +183,20 @@ pre {
   }
 }
 
+/* Tooltip */
+section:not(:first-of-type){
+  [class*="grid-"], [class*="col-"]{position: relative;cursor: help;}
+  [class*="grid-"]:hover:after,
+  [class*="col-"]:hover:after{
+    content: attr(class);
+    padding: 2px 8px;
+    position: absolute;
+    left: @gutter;
+    bottom: 100%;
+    white-space: nowrap;
+    z-index: 20;
+    background-color: #555;
+    color: #fff;
+    font-size: .8rem;
+  }
+}
