@@ -9,12 +9,12 @@
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
-  margin: 0 -@gutter;
+  margin: 0 -@gl-gutter;
 }
 [class*="col"]{
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding: 0 @gutter (@gutter*2);
+  padding: 0 @gl-gutter (@gl-gutter*2);
 }
 [class*="grid"][class*="col"]{
   margin: 0;
@@ -99,16 +99,16 @@
 *************************/
 .makeGridByNumber(grid);
 
-@media @lg{
+@media @gl-lg{
   .makeGridByNumber(_lg);
 }
-@media @md{
+@media @gl-md{
   .makeGridByNumber(_md);
 }
-@media @sm{
+@media @gl-sm{
   .makeGridByNumber(_sm);
 }
-@media @xs{
+@media @gl-xs{
   .makeGridByNumber(_xs);
 }
 
@@ -119,19 +119,19 @@
 .makeCol(col);
 .makeOff(off);
 
-@media @lg{
+@media @gl-lg{
   .makeCol(_lg);
   .makeOff(_lg);
 }
-@media @md{
+@media @gl-md{
   .makeCol(_md);
   .makeOff(_md);
 }
-@media @sm{
+@media @gl-sm{
   .makeCol(_sm);
   .makeOff(_sm);
 }
-@media @xs{
+@media @gl-xs{
   .makeCol(_xs);
   .makeOff(_xs);
 }
