@@ -63,20 +63,34 @@
 }
 
 // Function to generate the offset
-.makeOff(@off,@dir) {
+.makeOff(@off) {
     [class*="grid"] > {
-        > [@{dir}*="@{off}-0"]{ margin-@{dir}: 0; }
-        > [@{dir}*="@{off}-1"]{ margin-@{dir}: @col-1; }
-        > [@{dir}*="@{off}-2"]{ margin-@{dir}: @col-2; }
-        > [@{dir}*="@{off}-3"]{ margin-@{dir}: @col-3; }
-        > [@{dir}*="@{off}-4"]{ margin-@{dir}: @col-4; }
-        > [@{dir}*="@{off}-5"]{ margin-@{dir}: @col-5; }
-        > [@{dir}*="@{off}-6"]{ margin-@{dir}: @col-6; }
-        > [@{dir}*="@{off}-6"]{ margin-@{dir}: @col-6; }
-        > [@{dir}*="@{off}-7"]{ margin-@{dir}: @col-7; }
-        > [@{dir}*="@{off}-8"]{ margin-@{dir}: @col-8; }
-        > [@{dir}*="@{off}-9"]{ margin-@{dir}: @col-9; }
-        > [@{dir}*="@{off}-10"]{ margin-@{dir}: @col-10; }
-        > [@{dir}*="@{off}-11"]{ margin-@{dir}: @col-11; }
+        > [push-left*="@{off}-0"]{ margin-left: 0; }
+        > [push-left*="@{off}-1"]{ margin-left: @col-1; }
+        > [push-left*="@{off}-2"]{ margin-left: @col-2; }
+        > [push-left*="@{off}-3"]{ margin-left: @col-3; }
+        > [push-left*="@{off}-4"]{ margin-left: @col-4; }
+        > [push-left*="@{off}-5"]{ margin-left: @col-5; }
+        > [push-left*="@{off}-6"]{ margin-left: @col-6; }
+        > [push-left*="@{off}-6"]{ margin-left: @col-6; }
+        > [push-left*="@{off}-7"]{ margin-left: @col-7; }
+        > [push-left*="@{off}-8"]{ margin-left: @col-8; }
+        > [push-left*="@{off}-9"]{ margin-left: @col-9; }
+        > [push-left*="@{off}-10"]{ margin-left: @col-10; }
+        > [push-left*="@{off}-11"]{ margin-left: @col-11; }
+
+        > [push-right*="@{off}-0"]{ margin-right: 0; }
+        > [push-right*="@{off}-1"]{ margin-right: @col-1; }
+        > [push-right*="@{off}-2"]{ margin-right: @col-2; }
+        > [push-right*="@{off}-3"]{ margin-right: @col-3; }
+        > [push-right*="@{off}-4"]{ margin-right: @col-4; }
+        > [push-right*="@{off}-5"]{ margin-right: @col-5; }
+        > [push-right*="@{off}-6"]{ margin-right: @col-6; }
+        > [push-right*="@{off}-6"]{ margin-right: @col-6; }
+        > [push-right*="@{off}-7"]{ margin-right: @col-7; }
+        > [push-right*="@{off}-8"]{ margin-right: @col-8; }
+        > [push-right*="@{off}-9"]{ margin-right: @col-9; }
+        > [push-right*="@{off}-10"]{ margin-right: @col-10; }
+        > [push-right*="@{off}-11"]{ margin-right: @col-11; }
     }
 }
