@@ -1,1 +1,13 @@
-node_modules/
+# OS or Editor folders
+._*
+.cache
+.DS_Store
+.idea
+Thumbs.db
+.tmp
+
+# Node
+node_modules
+npm-*.log
+
+dist/CNAME

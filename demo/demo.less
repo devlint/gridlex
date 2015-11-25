@@ -24,21 +24,25 @@
 }
 
 .header {
+  background: steelblue;
   position: relative;
+  margin-bottom: 50px;
   color: white;
   padding: 4em 0;
   text-align: center;
-  &:before{
+  &:before {
+    background: inherit;
     content: '';
-    background: steelblue;
-    position: absolute;
-    z-index: -1;
-    top: -100%;
+    display: block;
+    height: 50%;
     left: 0;
+    position: absolute;
     right: 0;
-    height: 200%;
+    z-index: -1;
+    bottom: 0;
     transform: skewY(4deg);
-  }
+    transform-origin: 0%;
+}
   h1 {
 	display: inline-flex;
     align-items: center;
