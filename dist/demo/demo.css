@@ -20,22 +20,27 @@
   color: steelblue;
 }
 .header {
+  background: steelblue;
   position: relative;
+  margin-bottom: 50px;
   color: white;
   padding: 4em 0;
   text-align: center;
 }
 .header:before {
+  background: inherit;
   content: '';
-  background: steelblue;
-  position: absolute;
-  z-index: -1;
-  top: -100%;
+  display: block;
+  height: 50%;
   left: 0;
+  position: absolute;
   right: 0;
-  height: 200%;
+  z-index: -1;
+  bottom: 0;
   -webkit-transform: skewY(4deg);
           transform: skewY(4deg);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
 }
 .header h1 {
   display: -webkit-inline-flex;
