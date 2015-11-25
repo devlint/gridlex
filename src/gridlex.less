@@ -45,16 +45,22 @@
     margin-left: auto;
   }
 /* Vertical aligment */
-  [class*="-top"]{ // for grid & col
+  [class*="grid"][class*="-top"]{ // for grid
     align-items: flex-start;
+  }
+  [class*="col"][class*="-top"]{ // for col
     align-self: flex-start;
   }
-  [class*="-middle"]{ // for grid & col
+  [class*="grid"][class*="-middle"]{ // for grid
     align-items: center;
-  align-self: center;
   }
-  [class*="-bottom"]{ // for grid & col
+  [class*="col"][class*="-middle"]{ // for col
+    align-self: center;
+  }
+  [class*="grid"][class*="-bottom"]{ // for grid
     align-items: flex-end;
+  }
+  [class*="col"][class*="-bottom"]{ // for col
     align-self: flex-end;
   }
 

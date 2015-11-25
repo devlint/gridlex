@@ -54,26 +54,32 @@
   margin-left: auto;
 }
 /* Vertical aligment */
-[class*="-top"] {
+[class*="grid"][class*="-top"] {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+[class*="col"][class*="-top"] {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
 }
-[class*="-middle"] {
+[class*="grid"][class*="-middle"] {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+[class*="col"][class*="-middle"] {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
 }
-[class*="-bottom"] {
+[class*="grid"][class*="-bottom"] {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+[class*="col"][class*="-bottom"] {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
