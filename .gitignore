@@ -1,10 +1,12 @@
 # OS or Editor folders
 ._*
 .cache
+.sass-cache
 .DS_Store
 .idea
 Thumbs.db
 .tmp
+*.log
 
 # Node
 node_modules
