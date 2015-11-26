@@ -10,41 +10,41 @@
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: 0 -0.5rem;
+  margin: 0 -(1rem/2);
 }
-[class*="col"] {
+.col,
+[class*="col-"] {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   padding: 0 0.5rem 1rem;
 }
-[class*="grid"][class*="col"] {
-  margin: 0;
-  padding: 0;
-}
 .col {
   -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0;
           flex: 1 1 0;
 }
+.grid.col,
+.grid[class*="col-"] {
+  margin: 0;
+  padding: 0;
+}
 /************************
     HELPERS SUFFIXES
 *************************/
-/* No spacing between cols : noGutter */
-[class*="-noGutter"] {
+[class*="grid-"][class*="-noGutter"] {
   margin: 0;
 }
-[class*="-noGutter"] > [class*="col"] {
+[class*="grid-"][class*="-noGutter"] > [class*="col"] {
   padding: 0;
 }
-/* Horizontal aligment */
-[class*="-center"] {
+[class*="grid-"][class*="-center"] {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-[class*="-right"] {
+[class*="grid-"][class*="-right"] {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -53,79 +53,75 @@
           align-self: flex-end;
   margin-left: auto;
 }
-/* Vertical aligment */
-[class*="grid"][class*="-top"] {
+[class*="grid-"][class*="-top"] {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
-[class*="col"][class*="-top"] {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-}
-[class*="grid"][class*="-middle"] {
+[class*="grid-"][class*="-middle"] {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
-[class*="col"][class*="-middle"] {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-}
-[class*="grid"][class*="-bottom"] {
+[class*="grid-"][class*="-bottom"] {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
-[class*="col"][class*="-bottom"] {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-}
-/* Orders */
-[class*="-reverse"] {
+[class*="grid-"][class*="-reverse"] {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-[class*="-column"] {
+[class*="grid-"][class*="-column"] {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-[class*="-column-reverse"] {
+[class*="grid-"][class*="-column-reverse"] {
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
 }
-[class*="-first"] {
-  -webkit-order: -1;
-      -ms-flex-order: -1;
-          order: -1;
-}
-[class*="-last"] {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
-}
-/* Spaces between and around cols */
-[class*="-spaceBetween"] {
+[class*="grid-"][class*="-spaceBetween"] {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-[class*="-spaceAround"] {
+[class*="grid-"][class*="-spaceAround"] {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
-/* Equal heights columns */
-[class*="-equalHeight"] > [class*="col"] {
+[class*="grid-"][class*="-equalHeight"] > [class*="col"] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+[class*="col-"][class*="-top"] {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+[class*="col-"][class*="-middle"] {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+[class*="col-"][class*="-bottom"] {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+[class*="col-"][class*="-first"] {
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
+}
+[class*="col-"][class*="-last"] {
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
 }
 /************************
     GRID BY NUMBER
@@ -499,7 +495,7 @@
   }
 }
 /************************
-    COLS SIZEQ
+    COLS SIZES
 *************************/
 [class*='grid'] > [class*="col-1"] {
   -webkit-flex-basis: 8.33333333%;

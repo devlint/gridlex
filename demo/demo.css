@@ -27,6 +27,10 @@
   padding: 4em 0;
   text-align: center;
 }
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
 .header:before {
   background: inherit;
   content: '';
@@ -180,6 +184,7 @@ pre.doc {
 .withBorder {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
+.withBorder .col,
 .withBorder [class*='col-'] {
   padding: 0;
 }
