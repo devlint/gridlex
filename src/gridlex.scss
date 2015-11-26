@@ -9,13 +9,13 @@
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
-  margin: 0 (-@gl-gutter/2);
+  margin: 0 (-$gl-gutter/2);
 }
 .col,
 [class*="col-"]{
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding: 0 (@gl-gutter/2) @gl-gutter;
+  padding: 0 ($gl-gutter/2) $gl-gutter;
 }
 .col{
   flex: 1 1 0;
@@ -106,41 +106,41 @@
 /************************
     GRID BY NUMBER
 *************************/
-.makeGridByNumber(grid);
+@include makeGridByNumber(grid);
 
-@media @gl-lg{
-  .makeGridByNumber(_lg);
+@media #{$gl-lg}{
+  @include makeGridByNumber(_lg);
 }
-@media @gl-md{
-  .makeGridByNumber(_md);
+@media #{$gl-md}{
+  @include makeGridByNumber(_md);
 }
-@media @gl-sm{
-  .makeGridByNumber(_sm);
+@media #{$gl-sm}{
+  @include makeGridByNumber(_sm);
 }
-@media @gl-xs{
-  .makeGridByNumber(_xs);
+@media #{$gl-xs}{
+  @include makeGridByNumber(_xs);
 }
 
 
 /************************
     COLS SIZES
 *************************/
-.makeCol(col);
-.makeOff(off);
+@include makeCol(col);
+@include makeOff(off);
 
-@media @gl-lg{
-  .makeCol(_lg);
-  .makeOff(_lg);
+@media #{$gl-lg}{
+  @include makeCol(_lg);
+  @include makeOff(_lg);
 }
-@media @gl-md{
-  .makeCol(_md);
-  .makeOff(_md);
+@media #{$gl-md}{
+  @include makeCol(_md);
+  @include makeOff(_md);
 }
-@media @gl-sm{
-  .makeCol(_sm);
-  .makeOff(_sm);
+@media #{$gl-sm}{
+  @include makeCol(_sm);
+  @include makeOff(_sm);
 }
-@media @gl-xs{
-  .makeCol(_xs);
-  .makeOff(_xs);
+@media #{$gl-xs}{
+  @include makeCol(_xs);
+  @include makeOff(_xs);
 }

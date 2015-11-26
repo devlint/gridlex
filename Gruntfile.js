@@ -18,8 +18,21 @@ module.exports = function(grunt) {
           strictMath: true
         },
         files: {
-          "dist/gridlex.css": "src/gridlex.less",
-          "dist/demo/demo.css": "dist/demo/demo.less" // example only
+          "dist/gridlex.css": "src/gridlex.less"
+        }
+      }
+    },
+
+    /* SASS
+      ================================================================= */
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none'
+        },
+        files: {
+          "dist/gridlex.css": "src/gridlex.scss"
         }
       }
     },
@@ -75,5 +88,6 @@ module.exports = function(grunt) {
   ================================================================= */
   grunt.registerTask('default', ['mincss']);
   grunt.registerTask('compile', ['less', 'autoprefixer', 'cssmin']);
+  //grunt.registerTask('compile', ['sass', 'autoprefixer', 'cssmin']);
 
 };
