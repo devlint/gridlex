@@ -15,7 +15,7 @@ The concept is simple: you need to wrap your `.col` in a `.grid`.
 
 **I just wanna use it in my page!**
 
-To use directly Gridlex, call the gridlex.css or gridlex.min.css file in your project :
+To use Gridlex out of the box, call the gridlex.css or gridlex.min.css file in your project :
 ```html
 <link rel="stylesheet" href="gridlex.min.css">
 ```
@@ -51,7 +51,7 @@ Include gridlex/src/gridlex.less or gridlex/src/gridlex.scss
 ```
 
 ### Gridlex and media-queries
-Because of responsive, you need sometimes to change the size of columns: with this keys as classes you can control your layout by media-queries.
+Because of responsive, you sometimes need to change the size of columns: with this keys as classes you can control your layout by media-queries.
 <table>
 <thead>
 	<tr>
