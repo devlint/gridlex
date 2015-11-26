@@ -14,13 +14,17 @@ The concept is simple: you need to wrap your `.col` in a `.grid`.
 ### Less, Sass, CSS?
 
 **I just wanna use it in my page!**
+
 To use directly Gridlex, call the gridlex.css or gridlex.min.css file in your project :
 ```html
 <link rel="stylesheet" href="gridlex.min.css">
 ```
 **I want to include it in my source files!**
+
 Because I'm working with Less, Gridlex comes first in Less (with less-compilation Grunt task).
+
 But there is the same version in Sass in the `src` folder.
+
 Include gridlex/src/gridlex.less or gridlex/src/gridlex.scss
 
 ### 3 ways to use Gridlex
