@@ -10,7 +10,7 @@
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: 0 -(1rem/2);
+  margin: 0 -0.5rem;
 }
 .col,
 [class*="col-"] {

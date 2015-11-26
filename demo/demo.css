@@ -202,7 +202,7 @@ section:not(:first-of-type) [class*="col-"]:hover:after {
   content: attr(class);
   padding: 2px 8px;
   position: absolute;
-  left: 0.5rem;
+  left: 0.25rem;
   top: 0;
   white-space: nowrap;
   z-index: 20;
