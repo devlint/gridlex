@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="demo/normalize.css">
     <link rel="stylesheet" href="gridlex.min.css">
-    <link rel="stylesheet" href="demo/demo.css">
+    <link rel="stylesheet" href="demo/demo.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel='stylesheet' type='text/css'>
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-touch-icon-60x60.png">
@@ -66,11 +66,10 @@
                 <p>That's all.</p>
                 <p><a href="cards.html" aria-label="View cards demo">You prefer a visual demo?</a></p>
             </div>
-            <div class="col-bottom">
-                <a class="btn-git" href="https://github.com/devlint/gridlex" aria-label="View devlint/gridlex on GitHub"><img src="demo/github.svg" width="20px" height="20px">View Project Source</a>
-                <a class="btn-fork" href="https://github.com/devlint/gridlex/fork" aria-label="Fork devlint/gridlex on GitHub"><img src="demo/fork.svg" width="20px" height="20px">Fork Gridlex</a>
-
-                <a class="btn-download" href="https://github.com/devlint/gridlex/archive/master.zip" aria-label="Download devlint/gridlex on GitHub"><img src="demo/download.svg" width="20px" height="20px">Download (zip)</a>
+            <div class="col-bottom github-button">
+                <a class="github-button" href="https://github.com/devlint/gridlex" data-style="mega" data-count-href="/devlint/gridlex/stargazers" data-count-api="/repos/devlint/gridlex#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star devlint/gridlex on GitHub">View Project Source</a>
+                <a class="github-button" href="https://github.com/devlint/gridlex/fork" data-style="mega" data-count-href="/devlint/gridlex/network" data-count-api="/repos/devlint/gridlex#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork devlint/gridlex on GitHub">Fork Gridlex</a>
+                <a class="github-button" href="https://github.com/devlint/gridlex/archive/master.zip" data-style="mega" aria-label="Download devlint/gridlex on GitHub">Download (zip)</a>
             </div>
             <div class="col-12">
                 <h3>What can we expect?</h3>
@@ -81,6 +80,9 @@
                     <li class="col">Top, bottom, or middle. For the grid. And for the columns.</li>
                     <li class="col">Grids can be nested. Always. Directly in a column.</li>
                 </ul>
+                <p>Based on <a href="http://dev.w3.org/csswg/css-flexbox/">Flexbox</a> (<em>CSS Flexible Box Layout Module</em>), <strong>Gridlex</strong> is a very simple css grid system to quickly create modern layouts and submodules.
+                    <br>Gridlex is ready to use "out of the box" in CSS, with all the vendor prefixes needed thanks to <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>.
+                    <br>Or you can use Less or Sass files included!</p>
             </div>
         </div>
     </section>
@@ -1312,5 +1314,6 @@
     <h2>When "Can I use" Gridlex?</h2>
     <iframe width="100%" height="430" src="http://caniuse.com/flexbox/embed/"></iframe>
 </div>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

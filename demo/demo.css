@@ -24,7 +24,7 @@
   position: relative;
   margin-bottom: 50px;
   color: white;
-  padding: 4em 0;
+  padding: 4em 0 1em;
   text-align: center;
 }
 .header a {
@@ -41,18 +41,12 @@
   right: 0;
   z-index: -1;
   bottom: 0;
-  -webkit-transform: skewY(4deg);
-          transform: skewY(4deg);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
+  transform: skewY(4deg);
+  transform-origin: 0%;
 }
 .header h1 {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 3rem;
   border-bottom: 10px solid #fff;
   border-top: 10px solid #fff;
@@ -64,8 +58,6 @@
 .header h1:before {
   content: '';
   position: relative;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
   margin-right: 5px;
@@ -82,17 +74,8 @@
   color: rgba(255, 255, 255, 0.7);
   margin: 0 auto;
 }
-[class^='btn'] {
-  text-decoration: none;
-  margin-bottom: .5rem;
-  padding: .5rem;
-  display: inline-block;
-  background: rgba(147, 128, 108, 0.2);
-  border-radius: 3px;
-}
-[class^='btn'] img {
-  vertical-align: top;
-  margin-right: .5rem;
+.github-button iframe {
+  margin: 0 .5rem .5rem;
 }
 section {
   position: relative;
@@ -100,14 +83,10 @@ section {
 }
 section:before {
   content: '';
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   border: 1px solid steelblue;
   width: 100%;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  align-items: stretch;
   position: absolute;
   bottom: 20px;
 }
@@ -202,7 +181,7 @@ section:not(:first-of-type) [class*="col-"]:hover:after {
   content: attr(class);
   padding: 2px 8px;
   position: absolute;
-  left: 0.25rem;
+  left: 0.5rem;
   top: 0;
   white-space: nowrap;
   z-index: 20;
