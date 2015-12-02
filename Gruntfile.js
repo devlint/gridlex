@@ -18,7 +18,8 @@ module.exports = function(grunt) {
           strictMath: true
         },
         files: {
-          "dist/gridlex.css": "src/gridlex.less"
+          "dist/gridlex.css": "src/gridlex.less",
+          "dist/demo/demo.css": "dist/demo/demo.less"
         }
       }
     },

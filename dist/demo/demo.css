@@ -24,7 +24,7 @@
   position: relative;
   margin-bottom: 50px;
   color: white;
-  padding: 4em 0;
+  padding: 4em 0 1em;
   text-align: center;
 }
 .header a {
@@ -82,17 +82,8 @@
   color: rgba(255, 255, 255, 0.7);
   margin: 0 auto;
 }
-[class^='btn'] {
-  text-decoration: none;
-  margin-bottom: .5rem;
-  padding: .5rem;
-  display: inline-block;
-  background: rgba(147, 128, 108, 0.2);
-  border-radius: 3px;
-}
-[class^='btn'] img {
-  vertical-align: top;
-  margin-right: .5rem;
+.github-button iframe {
+  margin: 0 .5rem .5rem;
 }
 section {
   position: relative;
@@ -202,7 +193,7 @@ section:not(:first-of-type) [class*="col-"]:hover:after {
   content: attr(class);
   padding: 2px 8px;
   position: absolute;
-  left: 0.25rem;
+  left: 0.5rem;
   top: 0;
   white-space: nowrap;
   z-index: 20;
