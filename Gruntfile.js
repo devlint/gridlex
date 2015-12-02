@@ -38,32 +38,19 @@ module.exports = function(grunt) {
       }
     },
 
-
-    /* AUTOPREFIXER
+    /* POSTCSS - autoprefixer & cssnano
       ================================================================= */
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 2 version']
+        processors: [
+          require('autoprefixer')({browsers: 'last 2 versions'}),
+          require('cssnano')()
+        ]
       },
       css: {
         files: {
-          "dist/gridlex.css": "dist/gridlex.css",
-          "dist/demo/demo.css": "dist/demo/demo.css"
-        }
-      }
-    },
-
-
-    /* CSS MINIFY
-     ================================================================= */
-    cssmin: {
-      options: {
-        shorthandCompacting: false,
-        roundingPrecision: -1
-      },
-      target: {
-        files:{
-            "dist/gridlex.min.css": "dist/gridlex.css"
+          "dist/gridlex.min.css": "dist/gridlex.css",
+          "dist/demo/demo.min.css": "dist/demo/demo.css"
         }
       }
     },
@@ -77,7 +64,8 @@ module.exports = function(grunt) {
         //, livereload: true
       },
       less: {
-        files: 'src/**/*.less',
+        files: '**/*.less',
+        //files: '**/*.scss',
         tasks: ['compile']
       }
     }
@@ -87,8 +75,8 @@ module.exports = function(grunt) {
 
   /* GRUNT TASKS
   ================================================================= */
-  grunt.registerTask('default', ['mincss']);
-  grunt.registerTask('compile', ['less', 'autoprefixer', 'cssmin']);
-  //grunt.registerTask('compile', ['sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('default', ['compile']);
+  grunt.registerTask('compile', ['less', 'postcss']);
+  //grunt.registerTask('compile', ['sass', 'postcss']); // uncomment for Sass compilation
 
 };

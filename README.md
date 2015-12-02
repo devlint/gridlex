@@ -15,7 +15,7 @@ The concept is simple: you need to wrap your `.col` in a `.grid`.
 
 **I just wanna use it in my page!**
 
-To use Gridlex out of the box, call the gridlex.css or gridlex.min.css file in your project :
+To use Gridlex out of the box, call the gridlex.min.css file in your project :
 ```html
 <link rel="stylesheet" href="gridlex.min.css">
 ```

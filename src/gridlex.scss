@@ -39,7 +39,7 @@
     }
   }
 
-// Horizontal aligment
+// Horizontal alignment
   &[class*="-center"]{
     justify-content: center;
   }
@@ -48,7 +48,7 @@
     align-self: flex-end;
     margin-left: auto;
   }
-// Vertical aligment
+// Vertical alignment
   &[class*="-top"]{
     align-items: flex-start;
   }
