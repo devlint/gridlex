@@ -1,6 +1,6 @@
 # Gridlex
 ## Just a Flexbox Grid System
-v. 2.0.5
+v. 2.0.6
 
 The concept is simple: you need to wrap your `.col` in a `.grid`.
 
