@@ -2,6 +2,8 @@
 ## Just a Flexbox Grid System
 v. 2.0.6
 
+Based on Flexbox (CSS Flexible Box Layout Module), Gridlex is a very simple css grid system to quickly create modern layouts and submodules.
+
 The concept is simple: you need to wrap your `.col` in a `.grid`.
 
 ### What can we expect?
