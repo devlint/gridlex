@@ -15,7 +15,7 @@
   padding: 0 0.5rem 1rem;
 }
 .col {
-  flex: 1 1 0;
+  flex: 1 1 0%;
 }
 .grid.col,
 .grid[class*="col-"] {
@@ -53,6 +53,9 @@
 }
 [class*="grid-"][class*="-column"] {
   flex-direction: column;
+}
+[class*="grid-"][class*="-column"] > [class*="col-"] {
+  flex-basis: auto;
 }
 [class*="grid-"][class*="-column-reverse"] {
   flex-direction: column-reverse;
