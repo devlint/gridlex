@@ -15,7 +15,7 @@
   padding: 0 0.5rem 1rem;
 }
 .col {
-  flex: 1 1 0;
+  flex: 1 1 0%;
 }
 .grid.col,
 .grid[class*="col-"] {

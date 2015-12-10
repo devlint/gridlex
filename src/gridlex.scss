@@ -18,7 +18,7 @@
   padding: 0 ($gl-gutter/2) $gl-gutter;
 }
 .col{
-  flex: 1 1 0;
+  flex: 1 1 0%;
 }
 .grid.col,
 .grid[class*="col-"]{
