@@ -54,6 +54,9 @@
 [class*="grid-"][class*="-column"] {
   flex-direction: column;
 }
+[class*="grid-"][class*="-column"] > [class*="col-"] {
+  flex-basis: auto;
+}
 [class*="grid-"][class*="-column-reverse"] {
   flex-direction: column-reverse;
 }

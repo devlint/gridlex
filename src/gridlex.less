@@ -65,6 +65,9 @@
   }
   &[class*="-column"] {
     flex-direction: column;
+    > [class*="col-"] {
+      flex-basis: auto;
+    }
   }
   &[class*="-column-reverse"]{
     flex-direction: column-reverse;
