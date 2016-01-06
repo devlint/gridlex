@@ -30,18 +30,18 @@
 
 // Function to generate the grid by number
 .makeGridByNumber(@grid){
-  [class*="@{grid}-1"] > [class*='col']{ flex-basis: @glp_col-12; max-width: @glp_col-12; }
-  [class*="@{grid}-2"] > [class*='col']{ flex-basis: @glp_col-6; max-width: @glp_col-6; }
-  [class*="@{grid}-3"] > [class*='col']{ flex-basis: @glp_col-4; max-width: @glp_col-4; }
-  [class*="@{grid}-4"] > [class*='col']{ flex-basis: @glp_col-3; max-width: @glp_col-3; }
-  [class*="@{grid}-5"] > [class*='col']{ flex-basis: @glp_col-5-12; max-width: @glp_col-5-12; }
-  [class*="@{grid}-6"] > [class*='col']{ flex-basis: @glp_col-2; max-width: @glp_col-2; }
-  [class*="@{grid}-7"] > [class*='col']{ flex-basis: @glp_col-7-12; max-width: @glp_col-7-12; }
-  [class*="@{grid}-8"] > [class*='col']{ flex-basis: @glp_col-8-12; max-width: @glp_col-8-12; }
-  [class*="@{grid}-9"] > [class*='col']{ flex-basis: @glp_col-9-12; max-width: @glp_col-9-12; }
-  [class*="@{grid}-10"] > [class*='col']{ flex-basis: @glp_col-10-12; max-width: @glp_col-10-12; }
-  [class*="@{grid}-11"] > [class*='col']{ flex-basis: @glp_col-11-12; max-width: @glp_col-11-12; }
-  [class*="@{grid}-12"] > [class*='col']{ flex-basis: @glp_col-1; max-width: @glp_col-1; }
+  [class*="@{grid}-1"] > .col, [class*="@{grid}-1"] > [class*='col-']{ flex-basis: @glp_col-12; max-width: @glp_col-12; }
+  [class*="@{grid}-2"] > .col, [class*="@{grid}-2"] > [class*='col-']{ flex-basis: @glp_col-6; max-width: @glp_col-6; }
+  [class*="@{grid}-3"] > .col, [class*="@{grid}-3"] > [class*='col-']{ flex-basis: @glp_col-4; max-width: @glp_col-4; }
+  [class*="@{grid}-4"] > .col, [class*="@{grid}-4"] > [class*='col-']{ flex-basis: @glp_col-3; max-width: @glp_col-3; }
+  [class*="@{grid}-5"] > .col, [class*="@{grid}-5"] > [class*='col-']{ flex-basis: @glp_col-5-12; max-width: @glp_col-5-12; }
+  [class*="@{grid}-6"] > .col, [class*="@{grid}-6"] > [class*='col-']{ flex-basis: @glp_col-2; max-width: @glp_col-2; }
+  [class*="@{grid}-7"] > .col, [class*="@{grid}-7"] > [class*='col-']{ flex-basis: @glp_col-7-12; max-width: @glp_col-7-12; }
+  [class*="@{grid}-8"] > .col, [class*="@{grid}-8"] > [class*='col-']{ flex-basis: @glp_col-8-12; max-width: @glp_col-8-12; }
+  [class*="@{grid}-9"] > .col, [class*="@{grid}-9"] > [class*='col-']{ flex-basis: @glp_col-9-12; max-width: @glp_col-9-12; }
+  [class*="@{grid}-10"] > .col, [class*="@{grid}-10"] > [class*='col-']{ flex-basis: @glp_col-10-12; max-width: @glp_col-10-12; }
+  [class*="@{grid}-11"] > .col, [class*="@{grid}-10"] > [class*='col-']{ flex-basis: @glp_col-11-12; max-width: @glp_col-11-12; }
+  [class*="@{grid}-12"] > .col, [class*="@{grid}-11"] > [class*='col-']{ flex-basis: @glp_col-1; max-width: @glp_col-1; }
 }
 
 // Function to generate the grid by columns
