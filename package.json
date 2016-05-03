@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git@github.com:devlint/gridlex.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.1.2",
     "cssnano": "^3.3.2",
