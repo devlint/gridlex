@@ -2,7 +2,7 @@
 
 **Contributions are welcome!**
 
-You can edit/modify Gridlex as you want, and are free to propose fixes and contribution you find nice or important for you.
+You can edit/modify Gridlex as you want, and are free to propose fixes and contributions you find nice or important for you.
 
 Be sure to modify **less and sass files** AND to **edit documentation** to reflect your changes, before submitting a pull request!
 
