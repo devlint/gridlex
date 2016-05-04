@@ -1,5 +1,7 @@
 # Gridlex
 ## Just a Flexbox Grid System
+
+[![Join the chat at https://gitter.im/devlint/gridlex](https://badges.gitter.im/devlint/gridlex.svg)](https://gitter.im/devlint/gridlex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 v. 2.0.9
 
 Based on Flexbox (CSS Flexible Box Layout Module), Gridlex is a very simple css grid system to quickly create modern layouts and submodules.
