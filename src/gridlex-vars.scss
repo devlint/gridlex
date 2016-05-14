@@ -1,7 +1,7 @@
 //************************
 //    VARIABLES
 //************************
-$gl-gutter:    1rem; // Total
+$gl-gutter:    1rem !default; // Total
 $gl-col-bottom: $gl-gutter !default;
 
 $gl-xs:        "screen and (max-width: 35.5em)"; // up to 568px
