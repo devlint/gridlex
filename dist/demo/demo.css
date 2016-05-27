@@ -158,7 +158,8 @@ pre.doc {
 }
 .demo img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .withBorder {
   border: 1px solid rgba(147, 128, 108, 0.5);
