@@ -1,12 +1,13 @@
 //************************
 //    VARIABLES
 //************************
-$gl-gutter:    1rem; // Total
+$gl-gutter:    1rem !default; // Total
+$gl-col-bottom: $gl-gutter !default;
 
-$gl-xs:        "screen and (max-width: 35.5em)"; // up to 568px
-$gl-sm:        "screen and (max-width: 48em)"; // max 768px
-$gl-md:        "screen and (max-width: 64em)"; // max 1024px
-$gl-lg:        "screen and (max-width: 80em)"; // max 1280px
+$gl-xs:        "screen and (max-width: 35.5em)" !default; // up to 568px
+$gl-sm:        "screen and (max-width: 48em)" !default; // max 768px
+$gl-md:        "screen and (max-width: 64em)" !default; // max 1024px
+$gl-lg:        "screen and (max-width: 80em)" !default; // max 1280px
 
 $glp_col-1: (100%/12);
 $glp_col-2: ($glp_col-1*2);

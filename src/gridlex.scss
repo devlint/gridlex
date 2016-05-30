@@ -15,7 +15,7 @@
 [class*="col-"]{
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding: 0 ($gl-gutter/2) $gl-gutter;
+  padding: 0 ($gl-gutter/2) $gl-col-bottom;
 }
 .col{
   flex: 1 1 0%;
@@ -84,6 +84,10 @@
 // Equal heights columns
   &[class*="-equalHeight"] > [class*="col"]{
     display: flex;
+  }
+// Removes the padding-bottom
+  &[class*="-noBottom"] > [class*="col"]{
+    padding-bottom: 0;
   }
 }
 
