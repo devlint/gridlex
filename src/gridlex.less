@@ -5,23 +5,23 @@
 
 @import "gridlex-vars";
 
-[class*="grid"]{
+[class*="@{gl-gridName}"]{
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   margin: 0 (-@gl-gutter/2);
 }
-.col,
+.@{gl-colName},
 [class*="col-"]{
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 (@gl-gutter/2) @gl-col-bottom;
 }
-.col{
+.@{gl-colName}{
   flex: 1 1 0%;
 }
-.grid.col,
-.grid[class*="col-"]{
+.@{gl-gridName}.@{gl-colName},
+.@{gl-gridName}[class*="@{gl-colName}-"]{
   margin: 0;
   padding: 0;
 }
@@ -30,11 +30,11 @@
     HELPERS SUFFIXES
 *************************/
 // FOR GRID
-[class*="grid-"]{
+[class*="@{gl-gridName}-"]{
 // No spacing between cols : noGutter
   &[class*="-noGutter"]{
     margin: 0;
-    > [class*="col"]{
+    > [class*="@{gl-colName}"]{
       padding: 0;
     }
   }
@@ -65,7 +65,7 @@
   }
   &[class*="-column"] {
     flex-direction: column;
-    > [class*="col-"] {
+    > [class*="@{gl-colName}-"] {
       flex-basis: auto;
     }
   }
@@ -82,17 +82,17 @@
   }
 
 // Equal heights columns
-  &[class*="-equalHeight"] > [class*="col"]{
+  &[class*="-equalHeight"] > [class*="@{gl-colName}"]{
     display: flex;
   }
 // Removes the padding-bottom
-  &[class*="-noBottom"] > [class*="col"]{
+  &[class*="-noBottom"] > [class*="@{gl-colName}"]{
     padding-bottom: 0;
   }
 }
 
 // FOR COL
-[class*="col-"]{
+[class*="@{gl-colName}-"]{
   &[class*="-top"]{
     align-self: flex-start;
   }
@@ -113,7 +113,7 @@
 /************************
     GRID BY NUMBER
 *************************/
-.makeGridByNumber(grid);
+.makeGridByNumber(@gl-gridName);
 
 @media @gl-lg{
   .makeGridByNumber(_lg);
@@ -132,7 +132,7 @@
 /************************
     COLS SIZES
 *************************/
-.makeCol(col);
+.makeCol(@gl-colName);
 .makeOff(off);
 
 @media @gl-lg{

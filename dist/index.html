@@ -62,7 +62,7 @@
             <div class="col-6_xs-12">
                 <h2>Simple. Robust. Responsive. Flexible.</h2><p>Based on <a href="http://dev.w3.org/csswg/css-flexbox/">Flexbox</a> (<em>CSS Flexible Box Layout Module</em>), <strong>Gridlex</strong> is a very simple css grid system to quickly create modern layouts and submodules.</p>
             </div>
-            <div class="col-5_xs-12-bottom github-button" push-left="off-1_xs-0">
+            <div class="col-5_xs-12-bottom github-button" data-push-left="off-1_xs-0">
                 <a class="github-button" href="https://github.com/devlint/gridlex" data-style="mega" data-count-href="/devlint/gridlex/stargazers" data-count-api="/repos/devlint/gridlex#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star devlint/gridlex on GitHub">View Project Source</a>
                 <a class="github-button" href="https://github.com/devlint/gridlex/fork" data-style="mega" data-count-href="/devlint/gridlex/network" data-count-api="/repos/devlint/gridlex#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork devlint/gridlex on GitHub">Fork Gridlex</a>
                 <a class="github-button" href="https://github.com/devlint/gridlex/archive/master.zip" data-style="mega" aria-label="Download devlint/gridlex on GitHub">Download (zip)</a>
@@ -1240,14 +1240,14 @@ OR
     <section>
         <h2>Offset: push a col from left or from right</h2>
         <div class="grid">
-            <div class="col-6" push-left="off-6">
+            <div class="col-6" data-push-left="off-6">
                 <div class="demo">
-                    <p>col-6 push-left="off-6"</p>
+                    <p>col-6 data-push-left="off-6"</p>
                 </div>
             </div>
         </div>
 <pre><code>&lt;div class="grid">
-    &lt;div class="col-6" push-left="off-6">col-6 push-left="off-6"&lt;/div>
+    &lt;div class="col-6" data-push-left="off-6">col-6 data-push-left="off-6"&lt;/div>
 &lt;/div></code></pre>
         <div class="grid">
             <div class="col-4">
@@ -1255,45 +1255,45 @@ OR
                     <p>col-4</p>
                 </div>
             </div>
-            <div class="col-4" push-left="off-4">
+            <div class="col-4" data-push-left="off-4">
                 <div class="demo">
-                    <p>col-4 push-left="off-4"</p>
+                    <p>col-4 data-push-left="off-4"</p>
                 </div>
             </div>
         </div>
 <pre><code>&lt;div class="grid">
     &lt;div class="col-4">col-4&lt;/div>
-    &lt;div class="col-4" push-left="off-4>col-4 push-left="off-4"&lt;/div>
+    &lt;div class="col-4" data-push-left="off-4>col-4 data-push-left="off-4"&lt;/div>
 &lt;/div></code></pre>
         <div class="grid">
-            <div class="col-2_xs-6" push-left="off-2_xs-6">
+            <div class="col-2_xs-6" data-push-left="off-2_xs-6">
                 <div class="demo">
-                    <p>col-2 push-left-2</p>
+                    <p>col-2 data-push-left-2</p>
                 </div>
             </div>
-            <div class="col-2_xs-6" push-left="off-2_xs-6">
+            <div class="col-2_xs-6" data-push-left="off-2_xs-6">
                 <div class="demo">
-                    <p>col-2 push-left="off-2"</p>
+                    <p>col-2 data-push-left="off-2"</p>
                 </div>
             </div>
-            <div class="col-2_xs-6" push-left="off-2_xs-6">
+            <div class="col-2_xs-6" data-push-left="off-2_xs-6">
                 <div class="demo">
-                    <p>col-2 push-left="off-2"</p>
+                    <p>col-2 data-push-left="off-2"</p>
                 </div>
             </div>
-            <div class="col-2" push-right="off-2">
+            <div class="col-2" data-push-right="off-2">
                 <div class="demo">
-                    <p>col-2 push-right="off-2"</p>
+                    <p>col-2 data-push-right="off-2"</p>
                 </div>
             </div>
-            <div class="col-2" push-right="off-2">
+            <div class="col-2" data-push-right="off-2">
                 <div class="demo">
-                    <p>col-2 push-right="off-2"</p>
+                    <p>col-2 data-push-right="off-2"</p>
                 </div>
             </div>
-            <div class="col-2" push-right="off-2">
+            <div class="col-2" data-push-right="off-2">
                 <div class="demo">
-                    <p>col-2 push-right="off-2"</p>
+                    <p>col-2 data-push-right="off-2"</p>
                 </div>
             </div>
             <div class="col-2">
@@ -1301,9 +1301,9 @@ OR
                     <p>col-2</p>
                 </div>
             </div>
-            <div class="col-6" push-left="off-1" push-right="off-1">
+            <div class="col-6" data-push-left="off-1" data-push-right="off-1">
                 <div class="demo">
-                    <p>col-6 push-left="off-1" push-right="off-1"</p>
+                    <p>col-6 data-push-left="off-1" data-push-right="off-1"</p>
                 </div>
             </div>
             <div class="col-2">
@@ -1313,16 +1313,16 @@ OR
             </div>
         </div>
 <pre><code>&lt;div class="grid">
-    &lt;div class="col-2" push-left="off-2">col-2 push-left="off-2"&lt;/div>
-    &lt;div class="col-2" push-left="off-2">col-2 push-left="off-2"&lt;/div>
-    &lt;div class="col-2" push-left="off-2">col-2 push-left="off-2"&lt;/div>
+    &lt;div class="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
+    &lt;div class="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
+    &lt;div class="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
 
-    &lt;div class="col-2" push-right="off-2">col-2 push-right="off-2"&lt;/div>
-    &lt;div class="col-2" push-right="off-2">col-2 push-right="off-2"&lt;/div>
-    &lt;div class="col-2" push-right="off-2">col-2 push-right="off-2"&lt;/div>
+    &lt;div class="col-2" data-push-right="off-2">col-2 data-push-right="off-2"&lt;/div>
+    &lt;div class="col-2" data-push-right="off-2">col-2 data-push-right="off-2"&lt;/div>
+    &lt;div class="col-2" data-push-right="off-2">col-2 data-push-right="off-2"&lt;/div>
 
     &lt;div class="col-2"&lt;/div>
-    &lt;div class="col-6" push-left="off-1" push-right="off-1">col-6 push-left="1" push-right="1"&lt;/div>
+    &lt;div class="col-6" data-push-left="off-1" data-push-right="off-1">col-6 data-push-left="1" data-push-right="1"&lt;/div>
     &lt;div class="col-2"&lt;/div>
 &lt;/div></code></pre>
     </section>
@@ -1365,7 +1365,7 @@ OR
   .col-first
   .col-last</code></pre>
 
-        <h2>Offsets: with push-left="" and push-right="" attributes</h2>
+        <h2>Offsets: with data-push-left="" and data-push-right="" attributes</h2>
 <pre class="doc"><code>off-* (0 to 11)
   _xs-* (0 to 11)
   _sm-* (0 to 11)
