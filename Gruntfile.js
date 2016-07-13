@@ -76,7 +76,7 @@ module.exports = function(grunt) {
   /* GRUNT TASKS
   ================================================================= */
   grunt.registerTask('default', ['compile']);
-  //grunt.registerTask('compile', ['less', 'postcss']);
-  grunt.registerTask('compile', ['sass', 'postcss']); // uncomment for Sass compilation
+  grunt.registerTask('compile', ['less', 'postcss']);
+  //grunt.registerTask('compile', ['sass', 'postcss']); // uncomment for Sass compilation
 
 };
