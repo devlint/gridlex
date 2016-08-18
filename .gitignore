@@ -12,4 +12,4 @@ Thumbs.db
 node_modules
 npm-*.log
 
-dist/CNAME
+docs/CNAME

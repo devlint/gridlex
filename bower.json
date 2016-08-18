@@ -14,8 +14,8 @@
   ],
   "main": [
     "src/gridlex.less",
-    "dist/gridlex.css",
-    "dist/gridlex.min.css"
+    "docs/gridlex.css",
+    "docs/gridlex.min.css"
   ],
   "license": "MIT",
   "ignore": [

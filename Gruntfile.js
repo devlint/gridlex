@@ -18,8 +18,8 @@ module.exports = function(grunt) {
           strictMath: true
         },
         files: {
-          "dist/gridlex.css": "src/gridlex.less",
-          "dist/demo/demo.css": "dist/demo/demo.less"
+          "docs/gridlex.css": "src/gridlex.less",
+          "docs/demo/demo.css": "docs/demo/demo.less"
         }
       }
     },
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
           sourcemap: 'none'
         },
         files: {
-          "dist/gridlex.css": "src/gridlex.scss"
+          "docs/gridlex.css": "src/gridlex.scss"
         }
       }
     },
@@ -49,8 +49,8 @@ module.exports = function(grunt) {
       },
       css: {
         files: {
-          "dist/gridlex.min.css": "dist/gridlex.css",
-          "dist/demo/demo.min.css": "dist/demo/demo.css"
+          "docs/gridlex.min.css": "docs/gridlex.css",
+          "docs/demo/demo.min.css": "docs/demo/demo.css"
         }
       }
     },
