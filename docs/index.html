@@ -1356,11 +1356,11 @@ OR
         <h2>Columns &amp; associated classes: </h2>
         <pre class="doc"><code>.col
   -* (1 to 12)
-  _xs-* (1 to 12)
-  _sm-* (1 to 12)
-  _md-* (1 to 12)
-  _lg-* (1 to 12)
-    i.e. &lt;div class="col-12_lg-8_md-6_sm-3_xs-1">...&lt;/div>
+  _xs-* (0 to 12)
+  _sm-* (0 to 12)
+  _md-* (0 to 12)
+  _lg-* (0 to 12)
+    e.g. &lt;div class="col-12_lg-8_md-6_sm-3_xs-1">...&lt;/div>
 
   .col-first
   .col-last</code></pre>
@@ -1376,6 +1376,7 @@ OR
 
         <h2>Gridlex and media-queries</h2>
         <h3>Because of responsive, you need sometimes to change the size of columns: with this keys as classes you can control your layout by media-queries.</h3>
+        <h3>Columns can be hidden at breakpoints using <code>_*-0</code> (e.g. <code>col-4_md-6_sm-0</code>)</h3>
         <div class="bs-callout">
             <table>
                 <thead>
