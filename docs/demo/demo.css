@@ -105,6 +105,18 @@ section:after {
   background-position: 0 0, 0 100%, 0 0;
   background-repeat: repeat-y, repeat-x;
 }
+footer {
+  background: steelblue;
+  padding: 1em 0;
+  text-align: center;
+}
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+}
+footer a {
+  color: inherit;
+}
 table {
   width: 100%;
   border-collapse: collapse;
