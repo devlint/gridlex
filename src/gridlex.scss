@@ -103,10 +103,34 @@
     align-self: flex-end;
   }
   &[class*="-first"]{
-      order: -1;
+    order: -1;
   }
   &[class*="-last"]{
-      order: 1;
+    order: 1;
+  }
+}
+
+/************************
+    HIDING COLS
+*************************/
+@media #{$gl-lg}{
+  [class*="#{$gl-colName}-"][class*="_lg-0"]{
+    display: none;
+  }
+}
+@media #{$gl-md}{
+  [class*="#{$gl-colName}-"][class*="_md-0"]{
+    display: none;
+  }
+}
+@media #{$gl-sm}{
+  [class*="#{$gl-colName}-"][class*="_sm-0"]{
+    display: none;
+  }
+}
+@media #{$gl-xs}{
+  [class*="#{$gl-colName}-"][class*="_xs-0"]{
+    display: none;
   }
 }
 
@@ -127,7 +151,6 @@
 @media #{$gl-xs}{
   @include makeGridByNumber(_xs);
 }
-
 
 /************************
     COLS SIZES

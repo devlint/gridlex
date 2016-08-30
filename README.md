@@ -63,6 +63,8 @@ Include gridlex/src/gridlex.less or gridlex/src/gridlex.scss
 
 ### Gridlex and media-queries
 Because of responsive, you sometimes need to change the size of columns: with this keys as classes you can control your layout by media-queries.
+
+Columns can be hidden at breakpoints using `_*-0` (e.g. `col-4_md-6_sm-0`)
 <table>
 <thead>
 	<tr>
