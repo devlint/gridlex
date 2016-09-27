@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Website using Gridlex - Just a Flexbox Grid System</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webdevlint">
+    <meta name="twitter:creator" content="@webdevlint">
+    <meta name="twitter:title" content="Gridlex">
+    <meta name="twitter:description" content="Website using Gridlex : just a Flexbox Grid System">
+    <meta name="twitter:image" content="http://gridlex.devlint.fr/demo/gridlex.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="demo/normalize.css">
+    <link rel="stylesheet" href="gridlex.min.css">
+    <link rel="stylesheet" href="demo/demo.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="fav/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="fav/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="fav/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="fav/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="fav/manifest.json">
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Gridlex">
+    <meta name="application-name" content="Gridlex">
+    <meta name="msapplication-TileColor" content="#4682b4">
+    <meta name="msapplication-TileImage" content="fav/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        html{  }
+        body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+        *{ box-sizing: border-box; }
+        *::after,*::before{ box-sizing: border-box; }
+        h1{ font-size: 2rem; }
+        h2{ font-size: 1.4rem; color: steelblue; }
+        h3{ font-size: 1.1rem; }
+        p { font-size: 0.9rem; }
+        ul{ padding:0; list-style-position: inside; }
+        li{ font-size: 0.9rem; margin: 0; }
+
+
+        .thecard {
+            box-shadow: 0 1px 30px rgba(0,0,0,.4);
+            background-color: #fff;
+            border-radius: 4px;
+            transition: 400ms ease;
+            text-align: left;
+        }
+        .thecard:hover{
+            box-shadow: 0 10px 50px rgba(0,0,0,.6);
+        }
+        .thecard:hover .card-outmore {
+            background: #2C3E50;
+            color: #fff;
+        }
+        .thecard a{
+            color: currentColor;
+            text-decoration: none;
+        }
+        .card-img {
+            display: block;
+            max-height: 395px;
+            overflow: hidden;
+        }
+        .card-img img {
+            display: block;
+            width:100%;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .card-caption {
+            position: relative;
+            padding: 5px 25px;
+        }
+        .card-caption h1 {
+            line-height: 1;
+        }
+
+        .card-outmore {
+            padding: 10px 25px;
+            border-radius: 0 0 4px 4px;
+            border-top: 1px solid #e0e0e0;
+            background: #efefef;
+            color: #222;
+            display: flex;
+            transition: 400ms ease;
+        }
+        .card-outmore h5 {
+            flex: 1;
+        }
+        .card-outmore i {
+            border:1px solid ;
+            padding: 1px 6px;
+            border-radius: 50%;
+        }
+
+        span.date { font-size: 10px; }
+
+        h5 { margin:0; }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div><a href="index.html">
+        <h1>Gridlex</h1>
+        <p>Just a Flexbox Grid System <br>(2.2.2)</p>
+    </a></div>
+</header>
+
+<div class="demoPage grid-1">
+	<div class="col">
+	<p><strong>Wanna show us what you do with Gridlex?</strong><br> Drop me a line on <a href="https://twitter.com/webdevlint">@webdevlint!</a></p>
+	</div>
+
+    <div class="col-4_sm-12">
+        <div class="thecard">
+            <a class="card-img" href="http://www.larosiere.net/">
+                <img src="http://devlint.fr/gridlex-img/la-rosiere.png">
+            </a>
+            <div class="card-caption">
+                <a href="http://www.larosiere.net/">
+                    <h1>La Rosière</h1>
+                    <p> La Rosière is a French-Italian ski area</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="http://www.larosiere.net">
+                <h5>http://www.larosiere.net</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-4_sm-12">
+        <div class="thecard">
+            <a class="card-img" href="http://www.appartcity.com">
+                <img src="http://devlint.fr/gridlex-img/appartcity.png">
+            </a>
+            <div class="card-caption">
+                <a href="http://www.appartcity.com">
+                    <h1>AppartCity</h1>
+                    <p>Leader of the apartment-hotels in france</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="http://www.appartcity.com">
+                <h5>http://www.appartcity.com</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-4_sm-12">
+        <div class="thecard">
+            <a class="card-img" href="http://www.ville-manosque.fr">
+                <img src="http://devlint.fr/gridlex-img/ville-manosque.png">
+            </a>
+            <div class="card-caption">
+                <a href="http://www.ville-manosque.fr">
+                    <h1>Manosque</h1>
+                    <p>Manosque is a town in France</p>
+                </a>
+            </div>
+            <a class="card-outmore" href="http://www.ville-manosque.fr">
+                <h5>http://www.ville-manosque.fr</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
