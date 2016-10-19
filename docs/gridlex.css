@@ -1045,46 +1045,60 @@
 /************************
     HIDING COLS
 *************************/
+[class*="col-"]:not([class*="col-0"]) {
+  display: block;
+}
+[class*="grid"][class*="col-"]:not([class*="col-0"]) {
+  display: flex;
+}
+[class*="col-"][class*="col-0"] {
+  display: none;
+}
 @media screen and (max-width: 80em) {
-  [class*='grid'] > [class*="_xs-0"],
-  [class*='grid'] > [class*="_sm-0"],
-  [class*='grid'] > [class*="_md-0"] {
+  [class*="grid"] > :not([class*="_lg-0"]) {
     display: block;
   }
-  [class*='grid'] > [class*="_lg-0"],
-  [class*='grid'][class*="-equalHeight"] > [class*="_lg-0"] {
+  [class*="grid"]:not([class*="_lg-0"]) {
+    display: flex;
+  }
+  [class*="grid"] > [class*="_lg-0"],
+  [class*="grid"][class*="-equalHeight"] > [class*="_lg-0"] {
     display: none;
   }
 }
 @media screen and (max-width: 64em) {
-  [class*='grid'] > [class*="_xs-0"],
-  [class*='grid'] > [class*="_sm-0"],
-  [class*='grid'] > [class*="_lg-0"] {
+  [class*="grid"] > :not([class*="_-md-0"]) {
     display: block;
   }
-  [class*='grid'] > [class*="_md-0"],
-  [class*='grid'][class*="-equalHeight"] > [class*="_md-0"] {
+  [class*="grid"]:not([class*="_-md-0"]) {
+    display: flex;
+  }
+  [class*="grid"] > [class*="_-md-0"],
+  [class*="grid"][class*="-equalHeight"] > [class*="_-md-0"] {
     display: none;
   }
 }
 @media screen and (max-width: 48em) {
-  [class*='grid'] > [class*="_xs-0"] > [class*="_md-0"],
-  [class*='grid'] > [class*="_lg-0"] {
+  [class*="grid"] > :not([class*="_sm-0"]) {
     display: block;
   }
-  [class*='grid'] > [class*="_sm-0"],
-  [class*='grid'][class*="-equalHeight"] > [class*="_sm-0"] {
+  [class*="grid"]:not([class*="_sm-0"]) {
+    display: flex;
+  }
+  [class*="grid"] > [class*="_sm-0"],
+  [class*="grid"][class*="-equalHeight"] > [class*="_sm-0"] {
     display: none;
   }
 }
 @media screen and (max-width: 35.5em) {
-  [class*='grid'] > [class*="_sm-0"],
-  [class*='grid'] > [class*="_md-0"],
-  [class*='grid'] > [class*="_lg-0"] {
+  [class*="grid"] > :not([class*="_xs-0"]) {
     display: block;
   }
-  [class*='grid'] > [class*="_xs-0"],
-  [class*='grid'][class*="-equalHeight"] > [class*="_xs-0"] {
+  [class*="grid"]:not([class*="_xs-0"]) {
+    display: flex;
+  }
+  [class*="grid"] > [class*="_xs-0"],
+  [class*="grid"][class*="-equalHeight"] > [class*="_xs-0"] {
     display: none;
   }
 }

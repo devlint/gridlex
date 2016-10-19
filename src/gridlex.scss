@@ -157,10 +157,22 @@
 /************************
     HIDING COLS
 *************************/
+[class*="#{$gl-colName}-"]:not([class*="#{$gl-colName}-0"]) {
+  display: block;
+}
+[class*="#{$gl-gridName}"][class*="#{$gl-colName}-"]:not([class*="#{$gl-colName}-0"]) {
+  display: flex;
+}
+[class*="#{$gl-colName}-"][class*="#{$gl-colName}-0"] {
+  display: none;
+}
 @media #{$gl-lg}{
-  [class*="#{$gl-gridName}-"] {
-    >[class*="_xs-0"],>[class*="_sm-0"],>[class*="_md-0"]{
+  [class*="#{$gl-gridName}"] {
+    > :not([class*="_lg-0"]){
       display: block;
+    }
+    &:not([class*="_lg-0"]) {
+      display: flex;
     }
     >[class*="_lg-0"],
     &[class*="-equalHeight"] > [class*="_lg-0"]{
@@ -169,9 +181,12 @@
   }
 }
 @media #{$gl-md}{
-  [class*="#{$gl-gridName}-"] {
-    >[class*="_xs-0"],>[class*="_sm-0"],>[class*="_lg-0"]{
+  [class*="#{$gl-gridName}"] {
+    > :not([class*="_md-0"]){
       display: block;
+    }
+    &:not([class*="_md-0"]) {
+      display: flex;
     }
     >[class*="_md-0"],
     &[class*="-equalHeight"] > [class*="_md-0"]{
@@ -180,9 +195,12 @@
   }
 }
 @media #{$gl-sm}{
-  [class*="#{$gl-gridName}-"] {
-    >[class*="_xs-0"]>[class*="_md-0"],>[class*="_lg-0"]{
+  [class*="#{$gl-gridName}"] {
+    > :not([class*="_sm-0"]){
       display: block;
+    }
+    &:not([class*="_sm-0"]) {
+      display: flex;
     }
     >[class*="_sm-0"],
     &[class*="-equalHeight"] > [class*="_sm-0"]{
@@ -191,9 +209,12 @@
   }
 }
 @media #{$gl-xs}{
-  [class*="#{$gl-gridName}-"] {
-    >[class*="_sm-0"],>[class*="_md-0"],>[class*="_lg-0"]{
+  [class*="#{$gl-gridName}"] {
+    > :not([class*="_xs-0"]){
       display: block;
+    }
+    &:not([class*="_xs-0"]) {
+      display: flex;
     }
     >[class*="_xs-0"],
     &[class*="-equalHeight"] > [class*="_xs-0"]{
