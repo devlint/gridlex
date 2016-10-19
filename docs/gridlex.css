@@ -1046,26 +1046,45 @@
     HIDING COLS
 *************************/
 @media screen and (max-width: 80em) {
-  [class*="col-"][class*="_lg-0"],
-  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_lg-0"] {
+  [class*='grid'] > [class*="_xs-0"],
+  [class*='grid'] > [class*="_sm-0"],
+  [class*='grid'] > [class*="_md-0"] {
+    display: block;
+  }
+  [class*='grid'] > [class*="_lg-0"],
+  [class*='grid'][class*="-equalHeight"] > [class*="_lg-0"] {
     display: none;
   }
 }
 @media screen and (max-width: 64em) {
-  [class*="col-"][class*="_md-0"],
-  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_md-0"] {
+  [class*='grid'] > [class*="_xs-0"],
+  [class*='grid'] > [class*="_sm-0"],
+  [class*='grid'] > [class*="_lg-0"] {
+    display: block;
+  }
+  [class*='grid'] > [class*="_md-0"],
+  [class*='grid'][class*="-equalHeight"] > [class*="_md-0"] {
     display: none;
   }
 }
 @media screen and (max-width: 48em) {
-  [class*="col-"][class*="_sm-0"],
-  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_sm-0"] {
+  [class*='grid'] > [class*="_xs-0"] > [class*="_md-0"],
+  [class*='grid'] > [class*="_lg-0"] {
+    display: block;
+  }
+  [class*='grid'] > [class*="_sm-0"],
+  [class*='grid'][class*="-equalHeight"] > [class*="_sm-0"] {
     display: none;
   }
 }
 @media screen and (max-width: 35.5em) {
-  [class*="col-"][class*="_xs-0"],
-  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_xs-0"] {
+  [class*='grid'] > [class*="_sm-0"],
+  [class*='grid'] > [class*="_md-0"],
+  [class*='grid'] > [class*="_lg-0"] {
+    display: block;
+  }
+  [class*='grid'] > [class*="_xs-0"],
+  [class*='grid'][class*="-equalHeight"] > [class*="_xs-0"] {
     display: none;
   }
 }
