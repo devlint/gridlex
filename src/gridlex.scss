@@ -84,6 +84,9 @@
 // Equal heights columns
   &[class*="-equalHeight"] > [class*="#{$gl-colName}"]{
     display: flex;
+    > *{
+      flex: 1;
+    }
   }
 // Removes the padding-bottom
   &[class*="-noBottom"] > [class*="#{$gl-colName}"]{
@@ -107,30 +110,6 @@
   }
   &[class*="-last"]{
     order: 1;
-  }
-}
-
-/************************
-    HIDING COLS
-*************************/
-@media #{$gl-lg}{
-  [class*="#{$gl-colName}-"][class*="_lg-0"]{
-    display: none;
-  }
-}
-@media #{$gl-md}{
-  [class*="#{$gl-colName}-"][class*="_md-0"]{
-    display: none;
-  }
-}
-@media #{$gl-sm}{
-  [class*="#{$gl-colName}-"][class*="_sm-0"]{
-    display: none;
-  }
-}
-@media #{$gl-xs}{
-  [class*="#{$gl-colName}-"][class*="_xs-0"]{
-    display: none;
   }
 }
 
@@ -173,4 +152,32 @@
 @media #{$gl-xs}{
   @include makeCol(_xs);
   @include makeOff(_xs);
+}
+
+/************************
+    HIDING COLS
+*************************/
+@media #{$gl-lg}{
+  [class*="#{$gl-colName}-"][class*="_lg-0"],
+  [class*="#{$gl-gridName}-"][class*="-equalHeight"] > [class*="#{$gl-colName}-"][class*="_lg-0"]{
+    display: none;
+  }
+}
+@media #{$gl-md}{
+  [class*="#{$gl-colName}-"][class*="_md-0"],
+  [class*="#{$gl-gridName}-"][class*="-equalHeight"] > [class*="#{$gl-colName}-"][class*="_md-0"]{
+    display: none;
+  }
+}
+@media #{$gl-sm}{
+  [class*="#{$gl-colName}-"][class*="_sm-0"],
+  [class*="#{$gl-gridName}-"][class*="-equalHeight"] > [class*="#{$gl-colName}-"][class*="_sm-0"]{
+    display: none;
+  }
+}
+@media #{$gl-xs}{
+  [class*="#{$gl-colName}-"][class*="_xs-0"],
+  [class*="#{$gl-gridName}-"][class*="-equalHeight"] > [class*="#{$gl-colName}-"][class*="_xs-0"]{
+    display: none;
+  }
 }

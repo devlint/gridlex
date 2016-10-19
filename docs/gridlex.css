@@ -69,6 +69,9 @@
 [class*="grid-"][class*="-equalHeight"] > [class*="col"] {
   display: flex;
 }
+[class*="grid-"][class*="-equalHeight"] > [class*="col"] > * {
+  flex: 1;
+}
 [class*="grid-"][class*="-noBottom"] > [class*="col"] {
   padding-bottom: 0;
 }
@@ -86,29 +89,6 @@
 }
 [class*="col-"][class*="-last"] {
   order: 1;
-}
-/************************
-    HIDING COLS
-*************************/
-@media screen and (max-width: 80em) {
-  [class*="col-"][class*="_lg-0"] {
-    display: none;
-  }
-}
-@media screen and (max-width: 64em) {
-  [class*="col-"][class*="_md-0"] {
-    display: none;
-  }
-}
-@media screen and (max-width: 48em) {
-  [class*="col-"][class*="_sm-0"] {
-    display: none;
-  }
-}
-@media screen and (max-width: 35.5em) {
-  [class*="col-"][class*="_xs-0"] {
-    display: none;
-  }
 }
 /************************
     GRID BY NUMBER
@@ -1060,5 +1040,32 @@
   }
   [class*="grid"] > [data-push-right*="_xs-11"] {
     margin-right: 91.66666667%;
+  }
+}
+/************************
+    HIDING COLS
+*************************/
+@media screen and (max-width: 80em) {
+  [class*="col-"][class*="_lg-0"],
+  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_lg-0"] {
+    display: none;
+  }
+}
+@media screen and (max-width: 64em) {
+  [class*="col-"][class*="_md-0"],
+  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_md-0"] {
+    display: none;
+  }
+}
+@media screen and (max-width: 48em) {
+  [class*="col-"][class*="_sm-0"],
+  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_sm-0"] {
+    display: none;
+  }
+}
+@media screen and (max-width: 35.5em) {
+  [class*="col-"][class*="_xs-0"],
+  [class*="grid-"][class*="-equalHeight"] > [class*="col-"][class*="_xs-0"] {
+    display: none;
   }
 }
