@@ -31,6 +31,9 @@
 [class*="grid-"][class*="-noGutter"] > [class*="col"] {
   padding: 0;
 }
+[class*="grid-"][class*="-noWrap"] {
+  flex-wrap: nowrap;
+}
 [class*="grid-"][class*="-center"] {
   justify-content: center;
 }
