@@ -114,22 +114,26 @@
     HIDING COLS
 *************************/
 @media @gl-lg{
-  [class*="@{gl-colName}-"][class*="_lg-0"]{
+  [class*="@{gl-colName}-"][class*="_lg-0"],
+  [class*="@{gl-gridName}-"][class*="-equalHeight"] > [class*="@{gl-colName}-"][class*="_lg-0"]{
     display: none;
   }
 }
 @media @gl-md{
-  [class*="@{gl-colName}-"][class*="_md-0"]{
+  [class*="@{gl-colName}-"][class*="_md-0"],
+  [class*="@{gl-gridName}-"][class*="-equalHeight"] > [class*="@{gl-colName}-"][class*="_md-0"]{
     display: none;
   }
 }
 @media @gl-sm{
-  [class*="@{gl-colName}-"][class*="_sm-0"]{
+  [class*="@{gl-colName}-"][class*="_sm-0"],
+  [class*="@{gl-gridName}-"][class*="-equalHeight"] > [class*="@{gl-colName}-"][class*="_sm-0"]{
     display: none;
   }
 }
 @media @gl-xs{
-  [class*="@{gl-colName}-"][class*="_xs-0"]{
+  [class*="@{gl-colName}-"][class*="_xs-0"],
+  [class*="@{gl-gridName}-"][class*="-equalHeight"] > [class*="@{gl-colName}-"][class*="_xs-0"]{
     display: none;
   }
 }
