@@ -39,6 +39,10 @@
     }
   }
 
+// No Wrapping
+  &[class*="-noWrap"]{
+    flex-wrap: nowrap;
+  }
 // Horizontal alignment
   &[class*="-center"]{
     justify-content: center;
