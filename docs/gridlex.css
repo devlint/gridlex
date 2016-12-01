@@ -1070,14 +1070,14 @@
   }
 }
 @media screen and (max-width: 64em) {
-  [class*="grid"] > :not([class*="_-md-0"]) {
+  [class*="grid"] > :not([class*="_md-0"]) {
     display: block;
   }
-  [class*="grid"]:not([class*="_-md-0"]) {
+  [class*="grid"]:not([class*="_md-0"]) {
     display: flex;
   }
-  [class*="grid"] > [class*="_-md-0"],
-  [class*="grid"][class*="-equalHeight"] > [class*="_-md-0"] {
+  [class*="grid"] > [class*="_md-0"],
+  [class*="grid"][class*="-equalHeight"] > [class*="_md-0"] {
     display: none;
   }
 }
