@@ -184,13 +184,13 @@ pre.doc {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
 /* Tooltip */
-section:not(:first-of-type) [class*="grid-"],
-section:not(:first-of-type) [class*="col-"] {
+section:nth-child(n+3) [class*="grid-"],
+section:nth-child(n+3) [class*="col-"] {
   position: relative;
   cursor: help;
 }
-section:not(:first-of-type) [class*="grid-"]:hover:after,
-section:not(:first-of-type) [class*="col-"]:hover:after {
+section:nth-child(n+3) [class*="grid-"]:hover:after,
+section:nth-child(n+3) [class*="col-"]:hover:after {
   content: attr(class);
   padding: 2px 8px;
   position: absolute;
