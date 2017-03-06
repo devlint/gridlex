@@ -88,8 +88,9 @@
 // Equal heights columns
   &[class*="-equalHeight"] > [class*="#{$gl-colName}"]{
     display: flex;
+    flex-wrap: wrap;
     > *{
-      flex: 1;
+      flex: 1 0 100%;
     }
   }
 // Removes the padding-bottom

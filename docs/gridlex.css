@@ -71,9 +71,10 @@
 }
 [class*="grid-"][class*="-equalHeight"] > [class*="col"] {
   display: flex;
+  flex-wrap: wrap;
 }
 [class*="grid-"][class*="-equalHeight"] > [class*="col"] > * {
-  flex: 1;
+  flex: 1 0 100%;
 }
 [class*="grid-"][class*="-noBottom"] > [class*="col"] {
   padding-bottom: 0;
