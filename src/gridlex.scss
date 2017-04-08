@@ -11,14 +11,14 @@
   flex-flow: row wrap;
   margin: 0 (-$gl-gutter/2);
 }
+.#{$gl-colName}{
+  flex: 1 1 0%;
+}
 .#{$gl-colName},
 [class*="#{$gl-colName}-"]{
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 ($gl-gutter/2) $gl-col-bottom;
-}
-.#{$gl-colName}{
-  flex: 1 1 0%;
 }
 .#{$gl-gridName}.#{$gl-colName},
 .#{$gl-gridName}[class*="#{$gl-colName}-"]{
