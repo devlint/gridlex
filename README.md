@@ -2,7 +2,7 @@
 ## Just a Flexbox Grid System
 
 [![Join the chat at https://gitter.im/devlint/gridlex](https://badges.gitter.im/devlint/gridlex.svg)](https://gitter.im/devlint/gridlex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-v. 2.2.5
+v. 2.3
 
 
 Based on Flexbox (CSS Flexible Box Layout Module), Gridlex is a very simple css grid system to quickly create modern layouts and submodules.
@@ -24,12 +24,12 @@ To use Gridlex out of the box, call the gridlex.min.css file in your project :
 
 Via cdnjs:
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.2.5/gridlex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.3/gridlex.min.css">
 ```
 
 Via jsdelivr:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.2.5/gridlex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.3/gridlex.min.css">
 ```
 **I want to include it in my source files!**
 
