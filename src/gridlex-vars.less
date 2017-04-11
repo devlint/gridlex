@@ -3,6 +3,7 @@
 //************************
 @gl-gridName:   grid;
 @gl-colName:   col;
+@gl-attributeName: class;
 @gl-gutter:    1rem; // Total
 @gl-col-bottom: @gl-gutter;
 
@@ -33,42 +34,42 @@
 
 // Function to generate the grid by number
 .makeGridByNumber(@grid){
-  [class*="@{grid}-1"] > .@{gl-colName}, [class*="@{grid}-1"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-12; max-width: @glp_col-12; }
-  [class*="@{grid}-2"] > .@{gl-colName}, [class*="@{grid}-2"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-6; max-width: @glp_col-6; }
-  [class*="@{grid}-3"] > .@{gl-colName}, [class*="@{grid}-3"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-4; max-width: @glp_col-4; }
-  [class*="@{grid}-4"] > .@{gl-colName}, [class*="@{grid}-4"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-3; max-width: @glp_col-3; }
-  [class*="@{grid}-5"] > .@{gl-colName}, [class*="@{grid}-5"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-5-12; max-width: @glp_col-5-12; }
-  [class*="@{grid}-6"] > .@{gl-colName}, [class*="@{grid}-6"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-2; max-width: @glp_col-2; }
-  [class*="@{grid}-7"] > .@{gl-colName}, [class*="@{grid}-7"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-7-12; max-width: @glp_col-7-12; }
-  [class*="@{grid}-8"] > .@{gl-colName}, [class*="@{grid}-8"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-8-12; max-width: @glp_col-8-12; }
-  [class*="@{grid}-9"] > .@{gl-colName}, [class*="@{grid}-9"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-9-12; max-width: @glp_col-9-12; }
-  [class*="@{grid}-10"] > .@{gl-colName}, [class*="@{grid}-10"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-10-12; max-width: @glp_col-10-12; }
-  [class*="@{grid}-11"] > .@{gl-colName}, [class*="@{grid}-10"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-11-12; max-width: @glp_col-11-12; }
-  [class*="@{grid}-12"] > .@{gl-colName}, [class*="@{grid}-11"] > [class*="@{gl-colName}-"]{ flex-basis: @glp_col-1; max-width: @glp_col-1; }
+  [@{gl-attributeName}*="@{grid}-1"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-1"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-12; max-width: @glp_col-12; }
+  [@{gl-attributeName}*="@{grid}-2"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-2"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-6; max-width: @glp_col-6; }
+  [@{gl-attributeName}*="@{grid}-3"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-3"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-4; max-width: @glp_col-4; }
+  [@{gl-attributeName}*="@{grid}-4"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-4"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-3; max-width: @glp_col-3; }
+  [@{gl-attributeName}*="@{grid}-5"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-5"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-5-12; max-width: @glp_col-5-12; }
+  [@{gl-attributeName}*="@{grid}-6"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-6"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-2; max-width: @glp_col-2; }
+  [@{gl-attributeName}*="@{grid}-7"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-7"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-7-12; max-width: @glp_col-7-12; }
+  [@{gl-attributeName}*="@{grid}-8"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-8"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-8-12; max-width: @glp_col-8-12; }
+  [@{gl-attributeName}*="@{grid}-9"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-9"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-9-12; max-width: @glp_col-9-12; }
+  [@{gl-attributeName}*="@{grid}-10"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-10"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-10-12; max-width: @glp_col-10-12; }
+  [@{gl-attributeName}*="@{grid}-11"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-10"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-11-12; max-width: @glp_col-11-12; }
+  [@{gl-attributeName}*="@{grid}-12"] > [@{gl-attributeName}^="@{gl-colName}"], [@{gl-attributeName}*="@{grid}-11"] > [@{gl-attributeName}*="@{gl-colName}-"]{ flex-basis: @glp_col-1; max-width: @glp_col-1; }
 
 }
 
 // Function to generate the grid by columns
 .makeCol(@col) {
-    [class*='@{gl-gridName}'] {
-        > [class*="@{col}-1"]{ flex-basis: @glp_col-1;max-width: @glp_col-1; }
-        > [class*="@{col}-2"]{ flex-basis: @glp_col-2;max-width: @glp_col-2; }
-        > [class*="@{col}-3"]{ flex-basis: @glp_col-3;max-width: @glp_col-3; }
-        > [class*="@{col}-4"]{ flex-basis: @glp_col-4;max-width: @glp_col-4;}
-        > [class*="@{col}-5"]{ flex-basis: @glp_col-5;max-width: @glp_col-5;}
-        > [class*="@{col}-6"]{ flex-basis: @glp_col-6;max-width: @glp_col-6;}
-        > [class*="@{col}-7"]{ flex-basis: @glp_col-7;max-width: @glp_col-7;}
-        > [class*="@{col}-8"]{ flex-basis: @glp_col-8;max-width: @glp_col-8;}
-        > [class*="@{col}-9"]{ flex-basis: @glp_col-9;max-width: @glp_col-9;}
-        > [class*="@{col}-10"]{ flex-basis: @glp_col-10;max-width: @glp_col-10;}
-        > [class*="@{col}-11"]{ flex-basis: @glp_col-11;max-width: @glp_col-11;}
-        > [class*="@{col}-12"]{ flex-basis: @glp_col-12;max-width: @glp_col-12;}
+    [@{gl-attributeName}*='@{gl-gridName}'] {
+        > [@{gl-attributeName}*="@{col}-1"]{ flex-basis: @glp_col-1;max-width: @glp_col-1; }
+        > [@{gl-attributeName}*="@{col}-2"]{ flex-basis: @glp_col-2;max-width: @glp_col-2; }
+        > [@{gl-attributeName}*="@{col}-3"]{ flex-basis: @glp_col-3;max-width: @glp_col-3; }
+        > [@{gl-attributeName}*="@{col}-4"]{ flex-basis: @glp_col-4;max-width: @glp_col-4;}
+        > [@{gl-attributeName}*="@{col}-5"]{ flex-basis: @glp_col-5;max-width: @glp_col-5;}
+        > [@{gl-attributeName}*="@{col}-6"]{ flex-basis: @glp_col-6;max-width: @glp_col-6;}
+        > [@{gl-attributeName}*="@{col}-7"]{ flex-basis: @glp_col-7;max-width: @glp_col-7;}
+        > [@{gl-attributeName}*="@{col}-8"]{ flex-basis: @glp_col-8;max-width: @glp_col-8;}
+        > [@{gl-attributeName}*="@{col}-9"]{ flex-basis: @glp_col-9;max-width: @glp_col-9;}
+        > [@{gl-attributeName}*="@{col}-10"]{ flex-basis: @glp_col-10;max-width: @glp_col-10;}
+        > [@{gl-attributeName}*="@{col}-11"]{ flex-basis: @glp_col-11;max-width: @glp_col-11;}
+        > [@{gl-attributeName}*="@{col}-12"]{ flex-basis: @glp_col-12;max-width: @glp_col-12;}
     }
 }
 
 // Function to generate the offset
 .makeOff(@off) {
-    [class*="@{gl-gridName}"] {
+    [@{gl-attributeName}*="@{gl-gridName}"] {
         > [data-push-left*="@{off}-0"]{ margin-left: 0; }
         > [data-push-left*="@{off}-1"]{ margin-left: @glp_col-1; }
         > [data-push-left*="@{off}-2"]{ margin-left: @glp_col-2; }

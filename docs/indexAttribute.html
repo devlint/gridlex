@@ -1,0 +1,1464 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gridlex - Just a Flexbox Grid System</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webdevlint">
+    <meta name="twitter:creator" content="@webdevlint">
+    <meta name="twitter:title" content="Gridlex">
+    <meta name="twitter:description" content="Just a Flexbox Grid System">
+    <meta name="twitter:image" content="http://gridlex.devlint.fr/demo/gridlex.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="demo/normalize.css">
+    <link rel="stylesheet" href="gridlex.min.css">
+    <link rel="stylesheet" href="demo/demo.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="fav/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="fav/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="fav/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="fav/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="fav/manifest.json">
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Gridlex">
+    <meta name="application-name" content="Gridlex">
+    <meta name="msapplication-TileColor" content="#4682b4">
+    <meta name="msapplication-TileImage" content="fav/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        html{  }
+        body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+        *{ box-sizing: border-box; }
+        *::after,*::before{ box-sizing: border-box; }
+        h1{ font-size: 2rem; }
+        h2{ font-size: 1.4rem; color: steelblue; }
+        h3{ font-size: 1.1rem; }
+        p { font-size: 0.9rem; }
+        ul{ padding:0; list-style-position: inside; }
+        li{ font-size: 0.9rem; margin: 0; }
+        .btn {
+          display: inline-block;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          user-select: none;
+          border: 1px solid #4682b4;
+          padding: 10px 16px;
+          font-size: 16px;
+          line-height: 1.3333333;
+          border-radius: 6px;
+          color: #4682b4;
+          background-color: transparent;
+          text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div><a href="index.html">
+        <h1>Gridlex</h1>
+        <p>Just a Flexbox Grid System <br>(v2.2.5)</p>
+    </a></div>
+</header>
+<div class="demoPage">
+    <section>
+        <div gridlex="grid">
+            <div gridlex="col-6_xs-12">
+                <h2>Simple. Robust. Responsive. Flexible.</h2><p>Based on <a href="http://dev.w3.org/csswg/css-flexbox/">Flexbox</a> (<em>CSS Flexible Box Layout Module</em>), <strong>Gridlex</strong> is a very simple css grid system to quickly create modern layouts and submodules.</p>
+            </div>
+            <div gridlex="col-5_xs-12-bottom" class="github-button" data-push-left="off-1_xs-0">
+                <a class="github-button" href="https://github.com/devlint/gridlex" data-style="mega" data-count-href="/devlint/gridlex/stargazers" data-count-api="/repos/devlint/gridlex#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star devlint/gridlex on GitHub">View Project Source</a>
+                <a class="github-button" href="https://github.com/devlint/gridlex/fork" data-style="mega" data-count-href="/devlint/gridlex/network" data-count-api="/repos/devlint/gridlex#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork devlint/gridlex on GitHub">Fork Gridlex</a>
+                <a class="github-button" href="https://github.com/devlint/gridlex/archive/master.zip" data-style="mega" aria-label="Download devlint/gridlex on GitHub">Download (zip)</a>
+            </div>
+
+            <div gridlex="col-12">
+                <h3>How it works?</h3>
+                <p>The concept is simple: <br> you need to wrap your <code>.col</code> in a <code>.grid</code>. </p>
+                <p>That's all.</p><br>
+                <p><strong>Gridlex</strong> is ready to use "out of the box" in CSS, with all the vendor prefixes needed:</p>
+                <pre><code>&lt;link rel="stylesheet" href="<a href="https://cdn.jsdelivr.net/gridlex/2.2.5/gridlex.min.css">https://cdn.jsdelivr.net/gridlex/2.2.5/gridlex.min.css</a>">
+OR
+&lt;link rel="stylesheet" href="<a href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.2.5/gridlex.min.css">https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.2.5/gridlex.min.css</a>"></code></pre>
+                <p>Or you can use Less or Sass files included!</p>
+            </div>
+            <div gridlex="col-12">
+                <h3>What can we expect?</h3>
+                <ul gridlex="grid-3_sm-2_xs-1">
+                    <li gridlex="col">Basically each column is the same width as every other cell in the grid.</li>
+                    <li gridlex="col">But you can add sizing classes to individual columns.</li>
+                    <li gridlex="col">For responsive designs, you can add classes based on media-queries.</li>
+                    <li gridlex="col">Top, bottom, or middle. For the grid. And for the columns.</li>
+                    <li gridlex="col">Grids can be nested. Always. Directly in a column.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div gridlex="grid">
+            <div gridlex="col-12 class="no-hover" style="text-align: center;">
+                <h2 style="margin-top: 1rem;">Built with Gridlex!</h2>
+                <p>Discover who and how Gridlex is used around the world!</p>
+                <a href="expo.html" aria-label="View websites using Gridlex" class="btn">Discover the expo</a>
+            </div><!--
+            <div gridlex="col-6">
+                <ul>
+                    <li><a href="cards.html" aria-label="View cards demo">Cards in the grid</a></li>
+                    <li><a href="contribs.html" aria-label="View contributions">Users contributions</a></p></li>
+                </ul>
+            </div>-->
+        </div>
+    </section>
+
+    <section>
+
+        <h1>3 ways to use Gridlex</h1>
+        <h2>1. The basic. Just add a class <code>.grid-*</code> (from -1 to -12)</h2>
+        <p><strong>This feature is so simple, but we find it very very rarely in a robust and flexible grid!</strong> <br>
+            Why should we be required to put sizing classes on every single cell when they all have the same width? </p>
+            <p>In this ways, you will always have the specified number of columns in a row:</p>
+        <div gridlex="grid-1">
+            <div gridlex="col"><div class="demo"><p>grid-1</p></div></div>
+        </div>
+        <div gridlex="grid-2">
+            <div gridlex="col"><div class="demo"><p>grid-2</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-3_xs-1">
+            <div gridlex="col"><div class="demo"><p>grid-3</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-4_xs-2">
+            <div gridlex="col"><div class="demo"><p>grid-4</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-5_xs-2">
+            <div gridlex="col"><div class="demo"><p>grid-5</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-6_sm-3">
+            <div gridlex="col"><div class="demo"><p>grid-6</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-7_md-3">
+            <div gridlex="col"><div class="demo"><p>grid-7</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-8_md-4">
+            <div gridlex="col"><div class="demo"><p>grid-8</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-9_lg-3">
+            <div gridlex="col"><div class="demo"><p>grid-9</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-10_md-5_sm-2">
+            <div gridlex="col"><div class="demo"><p>grid-10</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-11_md-5_sm-2">
+            <div gridlex="col"><div class="demo"><p>grid-11</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <div gridlex="grid-12_lg-8_md-6_sm-4_xs-2">
+            <div gridlex="col"><div class="demo"><p>grid-12</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div gridlex="col"><div class="demo"><p>&nbsp;</p></div></div>
+        </div>
+        <p><em>But what happens if we have more than 3 columns in a <code>.grid-3</code> ?</em><br>This:</p>
+
+        <div gridlex="grid-3_xs-1">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 1</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 2</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 3</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 4</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 5</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 6</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 7</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 8</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 9</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col 10</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-3_xs-1">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>2. The precise. Compose cell by cell (with class like <code>.col-*</code>)</h2>
+        <h3>See <a href="#documentation">documentation</a> to have the list of available classes</h3>
+
+        <div gridlex="grid">
+            <div gridlex="col-12">
+                <div class="demo">
+                    <p>col-12</p>
+                </div>
+            </div>
+            <div gridlex="col-11_md-10_xs-8">
+                <div class="demo">
+                    <p>col-11</p>
+                </div>
+            </div>
+            <div gridlex="col-1_md-2_xs-4">
+                <div class="demo">
+                    <p>col-1</p>
+                </div>
+            </div>
+            <div gridlex="col-10_xs-7">
+                <div class="demo">
+                    <p>col-10</p>
+                </div>
+            </div>
+            <div gridlex="col-2_xs-5">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-9">
+                <div class="demo">
+                    <p>col-9</p>
+                </div>
+            </div>
+            <div gridlex="col-3">
+                <div class="demo">
+                    <p>col-3</p>
+                </div>
+            </div>
+            <div gridlex="col-8">
+                <div class="demo">
+                    <p>col-8</p>
+                </div>
+            </div>
+            <div gridlex="col-4">
+                <div class="demo">
+                    <p>col-4</p>
+                </div>
+            </div>
+            <div gridlex="col-7">
+                <div class="demo">
+                    <p>col-7</p>
+                </div>
+            </div>
+            <div gridlex="col-5">
+                <div class="demo">
+                    <p>col-5</p>
+                </div>
+            </div>
+            <div gridlex="col-6">
+                <div class="demo">
+                    <p>col-6</p>
+                </div>
+            </div>
+            <div gridlex="col-6">
+                <div class="demo">
+                    <p>col-6</p>
+                </div>
+            </div>
+            <div gridlex="col-5">
+                <div class="demo">
+                    <p>col-5</p>
+                </div>
+            </div>
+            <div gridlex="col-7">
+                <div class="demo">
+                    <p>col-7</p>
+                </div>
+            </div>
+            <div gridlex="col-4">
+                <div class="demo">
+                    <p>col-4</p>
+                </div>
+            </div>
+            <div gridlex="col-8">
+                <div class="demo">
+                    <p>col-8</p>
+                </div>
+            </div>
+            <div gridlex="col-3">
+                <div class="demo">
+                    <p>col-3</p>
+                </div>
+            </div>
+            <div gridlex="col-9">
+                <div class="demo">
+                    <p>col-9</p>
+                </div>
+            </div>
+            <div gridlex="col-2_xs-5">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-10_xs-7">
+                <div class="demo">
+                    <p>col-10</p>
+                </div>
+            </div>
+            <div gridlex="col-1_md-2_xs-4">
+                <div class="demo">
+                    <p>col-1</p>
+                </div>
+            </div>
+            <div gridlex="col-11_md-10_xs-8">
+                <div class="demo">
+                    <p>col-11</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col-12">...&lt;/div> &lt;!-- first row: one column -->
+    &lt;div gridlex="col-6">...&lt;/div> &lt;!-- second row: three columns (6+3+3) -->
+    &lt;div gridlex="col-3">...&lt;/div>
+    &lt;div gridlex="col-3">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>3. The automatic. Just add number of cells you want in the grid (<code>.grid > .col</code>):</h2>
+        <p>Auto width columns, no size on cells ! <br> That's a pretty cool feature of flex: the number determines the width (size = grid/cells children).</p>
+        <p><em>Tip: Keep in mind that in this way, your grid will only be a row!</em></p>
+
+        <p>So here we have a grid with one column...</p>
+        <div gridlex="grid">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+        </div>
+        <p>... another one with four columns...</p>
+        <div gridlex="grid">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+        </div>
+        <p>... and last a grid with ... nine columns?</p>
+        <div gridlex="grid_xs-4">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div gridlex="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+        </div>
+
+<pre><code>&lt;div gridlex="grid"> &lt;!-- Four &lt;div gridlex="col"> for 4 columns in the grid --&gt;
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>Did I mention that you can mix the 3 ways?</h2>
+        <div gridlex="grid-6_sm-2">
+            <div gridlex="col-8_sm-12">
+                <div class="demo">
+                    <p>col-8</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col-5_sm-6">
+                <div class="demo">
+                    <p>col-5</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-1_sm-4">
+                <div class="demo">
+                    <p>col-1</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-6_sm-2">
+    &lt;!-- first row -->
+    &lt;div gridlex="col-8_sm-12">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;!-- second row -->
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col-5_sm-6">...&lt;/div>
+    &lt;div gridlex="col-2">...&lt;/div>
+    &lt;div gridlex="col-1_sm-4">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;!-- third row -->
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <div gridlex="grid">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>auto</p>
+                </div>
+            </div>
+            <div gridlex="col-2_sm-12">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-6_sm-12">
+                <div class="demo">
+                    <p>col-6</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col-2_sm-12">...&lt;/div>
+    &lt;div gridlex="col-6_sm-12">...&lt;/div>
+&lt;/div></code></pre>
+        <h2>We can have a grid without gutter too:</h2>
+        <div gridlex="grid-noGutter-equalHeight" class="withBorder">
+            <div gridlex="col-12">
+                <div class="demo">
+                    <p>col-12</p>
+                </div>
+            </div>
+            <div gridlex="col-6">
+                <div class="demo">
+                    <p>col-6</p>
+                </div>
+            </div>
+            <div gridlex="col-6">
+                <div class="demo">
+                    <p>col-6</p>
+                </div>
+            </div>
+            <div gridlex="col-4">
+                <div class="demo">
+                    <p>col-4</p>
+                </div>
+            </div>
+            <div gridlex="col-8">
+                <div class="demo">
+                    <p>col-8</p>
+                </div>
+            </div>
+            <div gridlex="col-3">
+                <div class="demo">
+                    <p>col-3</p>
+                </div>
+            </div>
+            <div gridlex="col-9">
+                <div class="demo">
+                    <p>col-9</p>
+                </div>
+            </div>
+            <div gridlex="col-1_xs-2">
+                <div class="demo">
+                    <p>col-1</p>
+                </div>
+            </div>
+            <div gridlex="col-11_xs-10">
+                <div class="demo">
+                    <p>col-11</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-noGutter">
+    &lt;div gridlex="col-12">...&lt;/div>
+    &lt;div gridlex="col-6">...&lt;/div>
+    &lt;div gridlex="col-6">...&lt;/div>
+    &lt;div gridlex="col-4">...&lt;/div>
+    &lt;div gridlex="col-8">...&lt;/div>
+    &lt;div gridlex="col-3">...&lt;/div>
+    &lt;div gridlex="col-9">...&lt;/div>
+    &lt;div gridlex="col-1">...&lt;/div>
+    &lt;div gridlex="col-11">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>... and nesting in the grid:</h2>
+        <div gridlex="grid">
+            <div gridlex="col-6_sm-12"><p class="demo-explain">Just an "empty" col-6:</p></div>
+            <div gridlex="col-6_sm-12"><p class="demo-explain">Each column can become a grid too (<code>.col-6.grid</code>)</p></div>
+            <div gridlex="col-6_sm-12">
+                <div class="demo">
+                    <p>col-6</p>
+                </div>
+            </div>
+            <div gridlex="col-6_sm-12 grid">
+                <div gridlex="col-4">
+                    <div class="demo">
+                        <p>col-4</p>
+                    </div>
+                </div>
+                <div gridlex="col-8 grid">
+                    <div gridlex="col-6">
+                        <div class="demo">
+                            <p>col-6</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-6">
+                        <div class="demo">
+                            <p>col-6</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-4">
+                        <div class="demo">
+                            <p>col-4</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-4">
+                        <div class="demo">
+                            <p>col-4</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-4">
+                        <div class="demo">
+                            <p>col-4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col-6">
+        col-6
+    &lt;/div>
+    &lt;div gridlex="col-6 grid">
+        &lt;div gridlex="col-4">
+            col-4
+        &lt;/div>
+        &lt;div gridlex="col-8 grid">
+            &lt;div gridlex="col-6">
+                col-6
+            &lt;/div>
+            &lt;div gridlex="col-6">
+                col-6
+            &lt;/div>
+            &lt;div gridlex="col-4
+                col-4
+            &lt;/div>
+            &lt;div gridlex="col-4">
+                col-4
+            &lt;/div>
+            &lt;div gridlex="col-4">
+                col-4
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+    </section>
+
+    <section>
+        <h2>Horizontal alignment</h2>
+        <div gridlex="grid-3">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>(default)</p>
+                </div>
+            </div>
+        </div>
+        <div gridlex="grid-3-center">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>.grid-center</p>
+                </div>
+            </div>
+        </div>
+        <div gridlex="grid-3-right">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>.grid-right</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-3">
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div>
+&lt;div gridlex="grid-3-center">
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div>
+&lt;div gridlex="grid-3-right">
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>Vertical alignment on the grid: top</h2>
+        <div gridlex="grid">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>(default)</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>Vertical alignment on the grid: middle</h2>
+        <div gridlex="grid-middle">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>.grid-middle</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-middle">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>Vertical alignment on the grid: bottom</h2>
+        <div gridlex="grid-bottom">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>.grid-bottom</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-bottom">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h2>Vertical alignment on the column: grid-middle & mixed columns</h2>
+        <div gridlex="grid-4-middle">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>default (middle)</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam architecto aut, commodi deserunt dicta eligendi error incidunt inventore maiores mollitia officiis placeat quibusdam tempora unde veritatis vero voluptas. Ab consectetur delectus nam. Ab animi aspernatur, deserunt eos et, inventore iure laboriosam laborum minus nam nihil quae tempore tenetur ullam.</p>
+                </div>
+            </div>
+            <div gridlex="col-bottom">
+                <div class="demo">
+                    <p>col-bottom</p>
+                </div>
+            </div>
+            <div gridlex="col-top">
+                <div class="demo">
+                    <p>col-top</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-4-middle">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col-bottom">...&lt;/div>
+    &lt;div gridlex="col-top">...&lt;/div>
+&lt;/div></code></pre>
+
+    </section>
+
+    <section>
+        <h2>Reverse, order and other things</h2>
+
+        <h3>Normal flow</h3>
+        <div gridlex="grid-5">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>A</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>B</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>C</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>D</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>E</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col">A&lt;/div>
+    &lt;div gridlex="col">B&lt;/div>
+    &lt;div gridlex="col">C&lt;/div>
+    &lt;div gridlex="col">D&lt;/div>
+    &lt;div gridlex="col">E&lt;/div>
+&lt;/div></code></pre>
+
+        <h3>Reverse flow</h3>
+        <div gridlex="grid-5-reverse">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>A</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>B</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>C</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>D</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>E</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-reverse">
+    &lt;div gridlex="col">A&lt;/div>
+    &lt;div gridlex="col">B&lt;/div>
+    &lt;div gridlex="col">C&lt;/div>
+    &lt;div gridlex="col">D&lt;/div>
+    &lt;div gridlex="col">E&lt;/div>
+&lt;/div></code></pre>
+
+        <h3>Normal flow with ordering (first / last)</h3>
+        <div gridlex="grid-5">
+            <div gridlex="col-last">
+                <div class="demo">
+                    <p>A (last)</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>B</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>C</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>D</p>
+                </div>
+            </div>
+            <div gridlex="col-first">
+                <div class="demo">
+                    <p>E (first)</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col-last">A&lt;/div>
+    &lt;div gridlex="col">B&lt;/div>
+    &lt;div gridlex="col">C&lt;/div>
+    &lt;div gridlex="col">D&lt;/div>
+    &lt;div gridlex="col-first">E&lt;/div>
+&lt;/div></code></pre>
+
+        <h3>No gutter? Equal-height?</h3>
+        <div gridlex="grid-noGutter-equalHeight withBorder">
+            <div gridlex="col">
+                <div class="demo">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas laboriosam inventore minima facere possimus quisquam.</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-noGutter-equalHeight">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h3>To remove all vertical margins?</h3>
+        <div gridlex="grid-6-noGutter-noBottom">
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict1.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict2.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict3.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict4.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict5.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict6.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict6.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict5.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict4.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict3.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict2.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <img src="demo/pict/pict1.jpg" width="220" height="220" alt="">
+                </div>
+            </div>
+        </div>
+        <h3>Header elements without spaces?</h3>
+        <div gridlex="grid-noGutter-noBottom">
+            <div gridlex="col-3">
+                <div class="demo">
+                    <p>col-3</p>
+                </div>
+            </div>
+            <div gridlex="col">
+                <div class="demo">
+                    <p>col-auto</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-noGutter-noBottom">
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+    &lt;div gridlex="col">...&lt;/div>
+&lt;/div></code></pre>
+    </section>
+
+    <section>
+        <h2>Distribution</h2>
+        <h3>Horizontal distribution (grid-spaceBetween)</h3>
+        <p>If you add <code>spaceBetween</code> class, the distribution will have no margin around first and last elements :</p>
+        <div gridlex="grid-spaceBetween">
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-spaceBetween">
+    &lt;div gridlex="col-2">...&lt;/div>
+    &lt;div gridlex="col-2">...&lt;/div>
+    &lt;div gridlex="col-2">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h3>Horizontal distribution (spaceAround)</h3>
+        <p>If you add <code>grid-spaceAround</code> class, the distribution will have margins around first and last elements :</p>
+        <div gridlex="grid-spaceAround">
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-spaceAround">
+    &lt;div gridlex="col-2">...&lt;/div>
+    &lt;div gridlex="col-2">...&lt;/div>
+    &lt;div gridlex="col-2">...&lt;/div>
+&lt;/div></code></pre>
+
+        <h3>Horizontal distribution (width grid-center)</h3>
+        <div gridlex="grid-center">
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid-center">
+    &lt;div gridlex="col-2">...&lt;/div>
+    &lt;div gridlex="col-2">...&lt;/div>
+    &lt;div gridlex="col-2">...&lt;/div>
+&lt;/div></code></pre>
+
+
+        <div gridlex="grid-2_md-1">
+            <div gridlex="col">
+                <h3>Columns</h3>
+                <div gridlex="grid-column">
+                    <div gridlex="col-4">
+                        <div class="demo">
+                            <p>A</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-2">
+                        <div class="demo">
+                            <p>B</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-6">
+                        <div class="demo">
+                            <p>C</p>
+                        </div>
+                    </div>
+                </div>
+<pre><code>&lt;div gridlex="grid-column">
+    &lt;div gridlex="col-4">A&lt;/div>
+    &lt;div gridlex="col-2">B&lt;/div>
+    &lt;div gridlex="col-6">C&lt;/div>
+&lt;/div></code></pre>
+            </div>
+            <div gridlex="col">
+                <h3>Columns-reverse</h3>
+                <div gridlex="grid-column-reverse">
+                    <div gridlex="col-4">
+                        <div class="demo">
+                            <p>A</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-2">
+                        <div class="demo">
+                            <p>B</p>
+                        </div>
+                    </div>
+                    <div gridlex="col-6">
+                        <div class="demo">
+                            <p>C</p>
+                        </div>
+                    </div>
+                </div>
+<pre><code>&lt;div gridlex="grid-column-reverse">
+    &lt;div gridlex="col-4">A&lt;/div>
+    &lt;div gridlex="col-2">B&lt;/div>
+    &lt;div gridlex="col-6">C&lt;/div>
+&lt;/div></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Offset: push a col from left or from right</h2>
+        <div gridlex="grid">
+            <div gridlex="col-6" data-push-left="off-6">
+                <div class="demo">
+                    <p>col-6 data-push-left="off-6"</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col-6" data-push-left="off-6">col-6 data-push-left="off-6"&lt;/div>
+&lt;/div></code></pre>
+        <div gridlex="grid">
+            <div gridlex="col-4">
+                <div class="demo">
+                    <p>col-4</p>
+                </div>
+            </div>
+            <div gridlex="col-4" data-push-left="off-4">
+                <div class="demo">
+                    <p>col-4 data-push-left="off-4"</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col-4">col-4&lt;/div>
+    &lt;div gridlex="col-4" data-push-left="off-4>col-4 data-push-left="off-4"&lt;/div>
+&lt;/div></code></pre>
+        <div gridlex="grid">
+            <div gridlex="col-2_xs-6" data-push-left="off-2_xs-6">
+                <div class="demo">
+                    <p>col-2 data-push-left-2</p>
+                </div>
+            </div>
+            <div gridlex="col-2_xs-6" data-push-left="off-2_xs-6">
+                <div class="demo">
+                    <p>col-2 data-push-left="off-2"</p>
+                </div>
+            </div>
+            <div gridlex="col-2_xs-6" data-push-left="off-2_xs-6">
+                <div class="demo">
+                    <p>col-2 data-push-left="off-2"</p>
+                </div>
+            </div>
+            <div gridlex="col-2" data-push-right="off-2">
+                <div class="demo">
+                    <p>col-2 data-push-right="off-2"</p>
+                </div>
+            </div>
+            <div gridlex="col-2" data-push-right="off-2">
+                <div class="demo">
+                    <p>col-2 data-push-right="off-2"</p>
+                </div>
+            </div>
+            <div gridlex="col-2" data-push-right="off-2">
+                <div class="demo">
+                    <p>col-2 data-push-right="off-2"</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+            <div gridlex="col-6" data-push-left="off-1" data-push-right="off-1">
+                <div class="demo">
+                    <p>col-6 data-push-left="off-1" data-push-right="off-1"</p>
+                </div>
+            </div>
+            <div gridlex="col-2">
+                <div class="demo">
+                    <p>col-2</p>
+                </div>
+            </div>
+        </div>
+<pre><code>&lt;div gridlex="grid">
+    &lt;div gridlex="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
+    &lt;div gridlex="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
+    &lt;div gridlex="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
+
+    &lt;div gridlex="col-2" data-push-right="off-2">col-2 data-push-right="off-2"&lt;/div>
+    &lt;div gridlex="col-2" data-push-right="off-2">col-2 data-push-right="off-2"&lt;/div>
+    &lt;div gridlex="col-2" data-push-right="off-2">col-2 data-push-right="off-2"&lt;/div>
+
+    &lt;div gridlex="col-2"&lt;/div>
+    &lt;div gridlex="col-6" data-push-left="off-1" data-push-right="off-1">col-6 data-push-left="1" data-push-right="1"&lt;/div>
+    &lt;div gridlex="col-2"&lt;/div>
+&lt;/div></code></pre>
+    </section>
+
+
+    <section class="doc">
+        <h1 id="documentation">Documentation: helpers</h1>
+        <h2>Grid &amp; associated classes</h2>
+        <pre class="doc"><code>.grid
+  -* (1 to 12)
+    _xs-* (1 to 12)
+    _sm-* (1 to 12)
+    _md-* (1 to 12)
+    _lg-* (1 to 12)
+
+  -center
+  -right
+  -middle
+  -bottom
+  -spaceBetween
+  -spaceAround
+
+  -reverse
+  -column
+  -column-reverse
+
+  -noGutter
+  -equalHeight
+  -noBottom
+  -noWrap</code></pre>
+
+        <h2>Columns &amp; associated classes: </h2>
+        <pre class="doc"><code>.col
+  -* (1 to 12)
+  _xs-* (0 to 12)
+  _sm-* (0 to 12)
+  _md-* (0 to 12)
+  _lg-* (0 to 12)
+    e.g. &lt;div gridlex="col-12_lg-8_md-6_sm-3_xs-1">...&lt;/div>
+
+  .col-first
+  .col-last</code></pre>
+
+        <h2>Offsets: with data-push-left="" and data-push-right="" attributes</h2>
+<pre class="doc"><code>off-* (0 to 11)
+  _xs-* (0 to 11)
+  _sm-* (0 to 11)
+  _md-* (0 to 11)
+  _lg-* (0 to 11)
+
+  -0: reboot the offset (can be usefull in responsive mode with key-suffixes)</code></pre>
+
+        <h2>Gridlex and media-queries</h2>
+        <h3>Because of responsive, you need sometimes to change the size of columns: with this keys as classes you can control your layout by media-queries.</h3>
+        <h3>Columns can be hidden at breakpoints using <code>_*-0</code> (e.g. <code>col-4_md-6_sm-0</code>)</h3>
+        <div class="bs-callout">
+            <table>
+                <thead>
+                <tr>
+                    <th>CSS Media Query</th>
+                    <th>Applies</th>
+                    <th>Usage</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>@media screen and (max-width: 35.5em)</code></td>
+                    <td>Max 568px</td>
+                    <td><code><b>_xs</b>-*</code></td>
+                </tr>
+                <tr>
+                    <td><code>@media screen and (max-width: 48em)</code></td>
+                    <td>Max 768px</td>
+                    <td><code><b>_sm</b>-*</code></td>
+                </tr>
+                <tr>
+                    <td><code>@media screen and (max-width: 64em)</code></td>
+                    <td>Max 1024px</td>
+                    <td><code><b>_md</b>-*</code></td>
+                </tr>
+                <tr>
+                    <td><code>@media screen and (max-width: 80em)</code></td>
+                    <td>Max 1280px</td>
+                    <td><code><b>_lg</b>-*</code></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="caniuse">
+        <h2>When "Can I use" Gridlex?</h2>
+        <p>Gridlex use <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to add vendors prefixes needed.</p>
+        <p class="ciu_embed" data-feature="flexbox" data-periods="future_1,current,past_1,past_2">
+            <a href="http://caniuse.com/#feat=flexbox">Can I Use flexbox?</a>
+            Data on support for the flexbox feature across the major browsers from caniuse.com.
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <p>Gridlex is made by <a href="https://twitter.com/webdevlint">@webdevlint</a></p>
+    <p>With awesome contributors :
+        <a href="https://github.com/vlsoprun">@vlsoprun</a> -
+        <a href="https://github.com/sconstantinides">@sconstantinides</a> -
+        <a href="https://github.com/TheKidCoder">@TheKidCoder</a> -
+        <a href="https://github.com/bryanwillis">@bryanwillis</a> -
+        <a href="https://github.com/ixrock">@ixrock</a></p>
+</footer>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://caniuse.bitsofco.de/caniuse-embed.min.js"></script>
+</body>
+</html>

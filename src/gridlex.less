@@ -5,23 +5,23 @@
 
 @import "gridlex-vars";
 
-[class*="@{gl-gridName}"]{
+[@{gl-attributeName}*="@{gl-gridName}"]{
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   margin: 0 (-@gl-gutter/2);
 }
-.@{gl-colName},
-[class*="@{gl-colName}-"]{
+[@{gl-attributeName}^="@{gl-colName}"],
+[@{gl-attributeName}*="@{gl-colName}-"]{
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 (@gl-gutter/2) @gl-col-bottom;
 }
-.@{gl-colName}{
+[@{gl-attributeName}^="@{gl-colName}"]{
   flex: 1 1 0%;
 }
-.@{gl-gridName}.@{gl-colName},
-.@{gl-gridName}[class*="@{gl-colName}-"]{
+[@{gl-attributeName}^="@{gl-gridName}"][@{gl-attributeName}^="@{gl-colName}"],
+[@{gl-attributeName}^="@{gl-gridName}"][@{gl-attributeName}*="@{gl-colName}-"]{
   margin: 0;
   padding: 0;
 }
@@ -30,64 +30,64 @@
     HELPERS SUFFIXES
 *************************/
 // FOR GRID
-[class*="@{gl-gridName}-"]{
+[@{gl-attributeName}*="@{gl-gridName}-"]{
 // No spacing between cols : noGutter
-  &[class*="-noGutter"]{
+  &[@{gl-attributeName}*="-noGutter"]{
     margin: 0;
-    > [class*="@{gl-colName}"]{
+    > [@{gl-attributeName}*="@{gl-colName}"]{
       padding: 0;
     }
   }
   
 // No Wrapping
-  &[class*="-noWrap"]{
+  &[@{gl-attributeName}*="-noWrap"]{
     flex-wrap: nowrap;
   }
 
 // Horizontal alignment
-  &[class*="-center"]{
+  &[@{gl-attributeName}*="-center"]{
     justify-content: center;
   }
-  &[class*="-right"]{
+  &[@{gl-attributeName}*="-right"]{
     justify-content: flex-end;
     align-self: flex-end;
     margin-left: auto;
   }
 // Vertical alignment
-  &[class*="-top"]{
+  &[@{gl-attributeName}*="-top"]{
     align-items: flex-start;
   }
-  &[class*="-middle"]{
+  &[@{gl-attributeName}*="-middle"]{
     align-items: center;
   }
-  &[class*="-bottom"]{
+  &[@{gl-attributeName}*="-bottom"]{
     align-items: flex-end;
   }
 
 // Orders
-  &[class*="-reverse"]{
+  &[@{gl-attributeName}*="-reverse"]{
     flex-direction: row-reverse;
   }
-  &[class*="-column"] {
+  &[@{gl-attributeName}*="-column"] {
     flex-direction: column;
-    > [class*="@{gl-colName}-"] {
+    > [@{gl-attributeName}*="@{gl-colName}-"] {
       flex-basis: auto;
     }
   }
-  &[class*="-column-reverse"]{
+  &[@{gl-attributeName}*="-column-reverse"]{
     flex-direction: column-reverse;
   }
 
 // Spaces between and around cols
-  &[class*="-spaceBetween"]{
+  &[@{gl-attributeName}*="-spaceBetween"]{
     justify-content: space-between;
   }
-  &[class*="-spaceAround"]{
+  &[@{gl-attributeName}*="-spaceAround"]{
     justify-content: space-around;
   }
 
 // Equal heights columns
-  &[class*="-equalHeight"] > [class*="@{gl-colName}"]{
+  &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}*="@{gl-colName}"]{
     display: flex;
     flex-wrap: wrap;
     > *{
@@ -95,26 +95,26 @@
     }
   }
 // Removes the padding-bottom
-  &[class*="-noBottom"] > [class*="@{gl-colName}"]{
+  &[@{gl-attributeName}*="-noBottom"] > [@{gl-attributeName}*="@{gl-colName}"]{
     padding-bottom: 0;
   }
 }
 
 // FOR COL
-[class*="@{gl-colName}-"]{
-  &[class*="-top"]{
+[@{gl-attributeName}*="@{gl-colName}-"]{
+  &[@{gl-attributeName}*="-top"]{
     align-self: flex-start;
   }
-  &[class*="-middle"]{
+  &[@{gl-attributeName}*="-middle"]{
     align-self: center;
   }
-  &[class*="-bottom"]{
+  &[@{gl-attributeName}*="-bottom"]{
     align-self: flex-end;
   }
-  &[class*="-first"]{
+  &[@{gl-attributeName}*="-first"]{
     order: -1;
   }
-  &[class*="-last"]{
+  &[@{gl-attributeName}*="-last"]{
     order: 1;
   }
 }
@@ -163,67 +163,67 @@
 /************************
     HIDING COLS
 *************************/
-[class*="@{gl-colName}-"]:not([class*="@{gl-colName}-0"]) {
+[@{gl-attributeName}*="@{gl-colName}-"]:not([@{gl-attributeName}*="@{gl-colName}-0"]) {
   display: block;
 }
-[class*="@{gl-gridName}"][class*="@{gl-colName}-"]:not([class*="@{gl-colName}-0"]) {
+[@{gl-attributeName}*="@{gl-gridName}"][@{gl-attributeName}*="@{gl-colName}-"]:not([@{gl-attributeName}*="@{gl-colName}-0"]) {
   display: flex;
 }
-[class*="@{gl-colName}-"][class*="@{gl-colName}-0"] {
+[@{gl-attributeName}*="@{gl-colName}-"][@{gl-attributeName}*="@{gl-colName}-0"] {
   display: none;
 }
 @media @gl-lg{
-  [class*="@{gl-gridName}"] {
-    > :not([class*="_lg-0"]){
+  [@{gl-attributeName}*="@{gl-gridName}"] {
+    > :not([@{gl-attributeName}*="_lg-0"]){
       display: block;
     }
-    &:not([class*="_lg-0"]) {
+    &:not([@{gl-attributeName}*="_lg-0"]) {
       display: flex;
     }
-    >[class*="_lg-0"],
-    &[class*="-equalHeight"] > [class*="_lg-0"]{
+    >[@{gl-attributeName}*="_lg-0"],
+    &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}*="_lg-0"]{
       display: none;
     }
   }
 }
 @media @gl-md{
-  [class*="@{gl-gridName}"] {
-    > :not([class*="_md-0"]){
+  [@{gl-attributeName}*="@{gl-gridName}"] {
+    > :not([@{gl-attributeName}*="_md-0"]){
       display: block;
     }
-    &:not([class*="_md-0"]) {
+    &:not([@{gl-attributeName}*="_md-0"]) {
       display: flex;
     }
-    >[class*="_md-0"],
-    &[class*="-equalHeight"] > [class*="_md-0"]{
+    >[@{gl-attributeName}*="_md-0"],
+    &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}*="_md-0"]{
       display: none;
     }
   }
 }
 @media @gl-sm{
-  [class*="@{gl-gridName}"] {
-    > :not([class*="_sm-0"]){
+  [@{gl-attributeName}*="@{gl-gridName}"] {
+    > :not([@{gl-attributeName}*="_sm-0"]){
       display: block;
     }
-    &:not([class*="_sm-0"]) {
+    &:not([@{gl-attributeName}*="_sm-0"]) {
       display: flex;
     }
-    >[class*="_sm-0"],
-    &[class*="-equalHeight"] > [class*="_sm-0"]{
+    >[@{gl-attributeName}*="_sm-0"],
+    &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}*="_sm-0"]{
       display: none;
     }
   }
 }
 @media @gl-xs{
-  [class*="@{gl-gridName}"] {
-    > :not([class*="_xs-0"]){
+  [@{gl-attributeName}*="@{gl-gridName}"] {
+    > :not([@{gl-attributeName}*="_xs-0"]){
       display: block;
     }
-    &:not([class*="_xs-0"]) {
+    &:not([@{gl-attributeName}*="_xs-0"]) {
       display: flex;
     }
-    >[class*="_xs-0"],
-    &[class*="-equalHeight"] > [class*="_xs-0"]{
+    >[@{gl-attributeName}*="_xs-0"],
+    &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}*="_xs-0"]{
       display: none;
     }
   }
