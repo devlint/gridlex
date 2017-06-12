@@ -14,13 +14,13 @@
   margin: 0 (-@gl-gutter/2);
 }
 [@{gl-attributeName}~="@{gl-colName}"],
-[@{gl-attributeName}*="@{gl-colName}-"],
-[@{gl-attributeName}*="@{gl-colName}_"]{
+[@{gl-attributeName}*="@{gl-colName}-"]{
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 (@gl-gutter/2) @gl-gutter-vertical;
 }
-[@{gl-attributeName}~="@{gl-colName}"]{
+[@{gl-attributeName}~="@{gl-colName}"],
+[@{gl-attributeName}*="@{gl-colName}_"]{
   flex: 1 1 0%;
 }
 [@{gl-attributeName}~="@{gl-gridName}"][@{gl-attributeName}~="@{gl-colName}"],

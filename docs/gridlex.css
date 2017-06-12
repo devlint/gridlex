@@ -12,13 +12,13 @@
   margin: 0 -0.5rem;
 }
 [class~="col"],
-[class*="col-"],
-[class*="col_"] {
+[class*="col-"] {
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 0.5rem 1rem;
 }
-[class~="col"] {
+[class~="col"],
+[class*="col_"] {
   flex: 1 1 0%;
 }
 [class~="grid"][class~="col"],
