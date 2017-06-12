@@ -35,18 +35,69 @@ $glp_col-11-12: (100%/11);
 // Function to generate the grid by number
 @mixin makeGridByNumber($grid)
 {
-  [#{$gl-attributeName}*="#{$grid}-1"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-1"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-12; max-width: $glp_col-12; }
-  [#{$gl-attributeName}*="#{$grid}-2"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-2"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-6; max-width: $glp_col-6; }
-  [#{$gl-attributeName}*="#{$grid}-3"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-3"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-4; max-width: $glp_col-4; }
-  [#{$gl-attributeName}*="#{$grid}-4"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-4"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-3; max-width: $glp_col-3; }
-  [#{$gl-attributeName}*="#{$grid}-5"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-5"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-5-12; max-width: $glp_col-5-12; }
-  [#{$gl-attributeName}*="#{$grid}-6"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-6"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-2; max-width: $glp_col-2; }
-  [#{$gl-attributeName}*="#{$grid}-7"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-7"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-7-12; max-width: $glp_col-7-12; }
-  [#{$gl-attributeName}*="#{$grid}-8"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-8"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-8-12; max-width: $glp_col-8-12; }
-  [#{$gl-attributeName}*="#{$grid}-9"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-9"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-9-12; max-width: $glp_col-9-12; }
-  [#{$gl-attributeName}*="#{$grid}-10"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-10"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-10-12; max-width: $glp_col-10-12; }
-  [#{$gl-attributeName}*="#{$grid}-11"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-11"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-11-12; max-width: $glp_col-11-12; }
-  [#{$gl-attributeName}*="#{$grid}-12"] > [#{$gl-attributeName}^="#{$gl-colName}"], [#{$gl-attributeName}*="#{$grid}-12"] > [#{$gl-attributeName}*='[#{$gl-attributeName}^="#{$gl-colName}"]-']{ flex-basis: $glp_col-1; max-width: $glp_col-1; }
+  [#{$gl-attributeName}*="#{$grid}-1"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-1"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-12;
+    max-width: $glp_col-12;
+  }
+
+  [#{$gl-attributeName}*="#{$grid}-2"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-2"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-6;
+    max-width: $glp_col-6;
+  }
+
+  [#{$gl-attributeName}*="#{$grid}-3"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-3"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-4;
+    max-width: $glp_col-4;
+  }
+
+  [#{$gl-attributeName}*="#{$grid}-4"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-4"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-3;
+    max-width: $glp_col-3;
+  }
+  [#{$gl-attributeName}*="#{$grid}-5"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-5"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-5-12;
+    max-width: $glp_col-5-12;
+  }
+  [#{$gl-attributeName}*="#{$grid}-6"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-6"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-2;
+    max-width: $glp_col-2;
+  }
+  [#{$gl-attributeName}*="#{$grid}-7"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-7"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-7-12;
+    max-width: $glp_col-7-12;
+  }
+  [#{$gl-attributeName}*="#{$grid}-8"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-8"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-8-12;
+    max-width: $glp_col-8-12;
+  }
+  [#{$gl-attributeName}*="#{$grid}-9"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-9"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-9-12;
+    max-width: $glp_col-9-12;
+  }
+  [#{$gl-attributeName}*="#{$grid}-10"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-10"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-10-12;
+    max-width: $glp_col-10-12;
+  }
+  [#{$gl-attributeName}*="#{$grid}-11"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-11"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-11-12;
+    max-width: $glp_col-11-12;
+  }
+  [#{$gl-attributeName}*="#{$grid}-12"] > [#{$gl-attributeName}~="#{$gl-colName}"],
+  [#{$gl-attributeName}*="#{$grid}-12"] > [#{$gl-attributeName}*='[#{$gl-attributeName}~="#{$gl-colName}"]-'] {
+    flex-basis: $glp_col-1;
+    max-width: $glp_col-1;
+  }
 }
 
 // Function to generate the grid by columns
