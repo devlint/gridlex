@@ -5,7 +5,8 @@ $gl-gridName:   grid !default;
 $gl-colName:   col !default;
 $gl-attributeName: class !default;
 $gl-gutter:    1rem !default; // Total
-$gl-col-bottom: $gl-gutter !default;
+$gl-gutter-vertical:    1rem !default;
+/* /!\ */ $gl-col-bottom: $gl-gutter-vertical !default; // Deprecated
 
 $gl-xs:        "screen and (max-width: 35.5em)" !default; // up to 568px
 $gl-sm:        "screen and (max-width: 48em)" !default; // max 768px

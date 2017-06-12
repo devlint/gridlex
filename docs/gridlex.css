@@ -2,6 +2,7 @@
     GRIDLEX
     Just a Flexbox Grid System
 ========================================================================== */
+/* /!\ */
 [class~="grid"],
 [class*="grid-"],
 [class*="grid_"] {
@@ -74,14 +75,20 @@
 [class*="grid-"][class*="-spaceAround"] {
   justify-content: space-around;
 }
-[class*="grid-"][class*="-equalHeight"] > [class~="col"] {
+[class*="grid-"][class*="-equalHeight"] > [class~="col"],
+[class*="grid-"][class*="-equalHeight"] > [class*="col-"],
+[class*="grid-"][class*="-equalHeight"] > [class*="col_"] {
   display: flex;
   flex-wrap: wrap;
 }
-[class*="grid-"][class*="-equalHeight"] > [class~="col"] > * {
+[class*="grid-"][class*="-equalHeight"] > [class~="col"] > *,
+[class*="grid-"][class*="-equalHeight"] > [class*="col-"] > *,
+[class*="grid-"][class*="-equalHeight"] > [class*="col_"] > * {
   flex: 1 0 100%;
 }
-[class*="grid-"][class*="-noBottom"] > [class~="col"] {
+[class*="grid-"][class*="-noBottom"] > [class~="col"],
+[class*="grid-"][class*="-noBottom"] > [class*="col-"],
+[class*="grid-"][class*="-noBottom"] > [class*="col_"] {
   padding-bottom: 0;
 }
 [class*="col-"][class*="-top"] {

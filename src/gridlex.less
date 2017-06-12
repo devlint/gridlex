@@ -18,7 +18,7 @@
 [@{gl-attributeName}*="@{gl-colName}_"]{
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding: 0 (@gl-gutter/2) @gl-col-bottom;
+  padding: 0 (@gl-gutter/2) @gl-gutter-vertical;
 }
 [@{gl-attributeName}~="@{gl-colName}"]{
   flex: 1 1 0%;
@@ -92,7 +92,9 @@
   }
 
 // Equal heights columns
-  &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}~="@{gl-colName}"]{
+  &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}~="@{gl-colName}"],
+  &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}*="@{gl-colName}-"],
+  &[@{gl-attributeName}*="-equalHeight"] > [@{gl-attributeName}*="@{gl-colName}_"]{
     display: flex;
     flex-wrap: wrap;
     > *{
@@ -100,7 +102,9 @@
     }
   }
 // Removes the padding-bottom
-  &[@{gl-attributeName}*="-noBottom"] > [@{gl-attributeName}~="@{gl-colName}"]{
+  &[@{gl-attributeName}*="-noBottom"] > [@{gl-attributeName}~="@{gl-colName}"],
+  &[@{gl-attributeName}*="-noBottom"] > [@{gl-attributeName}*="@{gl-colName}-"],
+  &[@{gl-attributeName}*="-noBottom"] > [@{gl-attributeName}*="@{gl-colName}_"]{
     padding-bottom: 0;
   }
 }
