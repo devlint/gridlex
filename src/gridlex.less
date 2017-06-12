@@ -38,7 +38,8 @@
 // No spacing between cols : noGutter
   &[@{gl-attributeName}*="-noGutter"]{
     margin: 0;
-    > [@{gl-attributeName}~="@{gl-colName}"]{
+    > [@{gl-attributeName}~="@{gl-colName}"],
+    > [@{gl-attributeName}*="@{gl-colName}-"]{
       padding: 0;
     }
   }

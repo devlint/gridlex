@@ -32,7 +32,8 @@
 [class*="grid-"][class*="-noGutter"] {
   margin: 0;
 }
-[class*="grid-"][class*="-noGutter"] > [class~="col"] {
+[class*="grid-"][class*="-noGutter"] > [class~="col"],
+[class*="grid-"][class*="-noGutter"] > [class*="col-"] {
   padding: 0;
 }
 [class*="grid-"][class*="-noWrap"] {
