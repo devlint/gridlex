@@ -3,14 +3,16 @@
     Just a Flexbox Grid System
 ========================================================================== */
 [class~="grid"],
-[class*="grid-"] {
+[class*="grid-"],
+[class*="grid_"] {
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   margin: 0 -0.5rem;
 }
 [class~="col"],
-[class*="col-"] {
+[class*="col-"],
+[class*="col_"] {
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 0.5rem 1rem;
@@ -19,7 +21,8 @@
   flex: 1 1 0%;
 }
 [class~="grid"][class~="col"],
-[class~="grid"][class*="col-"] {
+[class~="grid"][class*="col-"],
+[class~="grid"][class*="col_"] {
   margin: 0;
   padding: 0;
 }

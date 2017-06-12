@@ -6,14 +6,16 @@
 @import "gridlex-vars";
 
 [#{$gl-attributeName}~="#{$gl-gridName}"],
-[#{$gl-attributeName}*="#{$gl-gridName}-"]{
+[#{$gl-attributeName}*="#{$gl-gridName}-"],
+[#{$gl-attributeName}*="#{$gl-gridName}_"]{
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   margin: 0 (-$gl-gutter/2);
 }
 [#{$gl-attributeName}~="#{$gl-colName}"],
-[#{$gl-attributeName}*="#{gl-colName}-"]{
+[#{$gl-attributeName}*="#{gl-colName}-"],
+[#{$gl-attributeName}*="#{gl-colName}_"]{
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 ($gl-gutter/2) $gl-col-bottom;
@@ -22,7 +24,8 @@
   flex: 1 1 0%;
 }
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}~="#{$gl-colName}"],
-[#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{gl-colName}-"]{
+[#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{gl-colName}-"],
+[#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{gl-colName}_"]{
   margin: 0;
   padding: 0;
 }
