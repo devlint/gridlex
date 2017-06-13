@@ -976,7 +976,7 @@ OR
     &lt;div class="col">E&lt;/div>
 &lt;/div></code></pre>
 
-        <h3>Normal flow with ordering (first / last)</h3>
+        <h3>Normal flow with ordering (first / last) (can be based on MQ keys)</h3>
         <div class="grid-5">
             <div class="col-last">
                 <div class="demo">
@@ -988,9 +988,9 @@ OR
                     <p>B</p>
                 </div>
             </div>
-            <div class="col">
+            <div class="col_md-first">
                 <div class="demo">
-                    <p>C</p>
+                    <p>C(_md-first)</p>
                 </div>
             </div>
             <div class="col">
@@ -1388,8 +1388,8 @@ OR
   _lg-* (0 to 12)
     e.g. &lt;div class="col-12_lg-8_md-6_sm-3_xs-1">...&lt;/div>
 
-  .col-first
-  .col-last</code></pre>
+  .col-first (or with key-suffixes _md-first...)
+  .col-last (or with key-suffixes _md-last...)</code></pre>
 
         <h2>Offsets: with data-push-left="" and data-push-right="" attributes</h2>
 <pre class="doc"><code>off-* (0 to 11)
