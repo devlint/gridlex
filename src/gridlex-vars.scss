@@ -120,6 +120,19 @@ $glp_col-11-12: (100%/11);
     }
 }
 
+// Function to generate the -first & -last base on mq keys (as _lg-first)
+@mixin makeFirstLast($mq)
+{
+  [#{$gl-attributeName}*='#{$gl-gridName}'] {
+    [#{$gl-attributeName}*="#{$mq}-first"]{
+      order: -1;
+    }
+    [#{$gl-attributeName}*="#{$mq}-last"]{
+      order: 1;
+    }
+  }
+}
+
 // Function to generate the offset
 @mixin makeOff($off)
 {

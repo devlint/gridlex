@@ -4,7 +4,7 @@
 ========================================================================== */
 
 @import "gridlex-vars";
-
+// GRID
 [#{$gl-attributeName}~="#{$gl-gridName}"],
 [#{$gl-attributeName}*="#{$gl-gridName}-"],
 [#{$gl-attributeName}*="#{$gl-gridName}_"]{
@@ -13,16 +13,23 @@
   flex-flow: row wrap;
   margin: 0 (-$gl-gutter/2);
 }
+// COLS
 [#{$gl-attributeName}~="#{$gl-colName}"],
-[#{$gl-attributeName}*="#{$gl-colName}-"]{
+[#{$gl-attributeName}*="#{$gl-colName}-"],
+[#{$gl-attributeName}*="#{$gl-colName}_"]{
   box-sizing: border-box;
-  flex: 0 0 auto;
   padding: 0 ($gl-gutter/2) $gl-gutter-vertical;
 }
+// JUST "COL"
+[#{$gl-attributeName}~="#{$gl-colName}"]{
+  flex: 0 0 auto;
+}
+// JUST "COL-" & "COL_"
 [#{$gl-attributeName}~="#{$gl-colName}"],
 [#{$gl-attributeName}*="#{$gl-colName}_"]{
   flex: 1 1 0%;
 }
+// COL & GRID
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}~="#{$gl-colName}"],
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{$gl-colName}-"],
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{$gl-colName}_"]{
@@ -48,22 +55,25 @@
   &[#{$gl-attributeName}*="-noWrap"]{
     flex-wrap: nowrap;
   }
-// Horizontal alignment
+// Horizontal alignment on center
   &[#{$gl-attributeName}*="-center"]{
     justify-content: center;
   }
+// Horizontal alignment on right
   &[#{$gl-attributeName}*="-right"]{
     justify-content: flex-end;
     align-self: flex-end;
     margin-left: auto;
   }
-// Vertical alignment
+// Vertical alignment on top
   &[#{$gl-attributeName}*="-top"]{
     align-items: flex-start;
   }
+// Vertical alignment on middle
   &[#{$gl-attributeName}*="-middle"]{
     align-items: center;
   }
+// Vertical alignment on bottom
   &[#{$gl-attributeName}*="-bottom"]{
     align-items: flex-end;
   }
@@ -154,18 +164,22 @@
 @media #{$gl-lg}{
   @include makeCol(_lg);
   @include makeOff(_lg);
+  @include makeFirstLast(_lg);
 }
 @media #{$gl-md}{
   @include makeCol(_md);
   @include makeOff(_md);
+  @include makeFirstLast(_md);
 }
 @media #{$gl-sm}{
   @include makeCol(_sm);
   @include makeOff(_sm);
+  @include makeFirstLast(_sm);
 }
 @media #{$gl-xs}{
   @include makeCol(_xs);
   @include makeOff(_xs);
+  @include makeFirstLast(_xs);
 }
 
 /************************
