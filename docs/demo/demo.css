@@ -4,6 +4,33 @@
 /* /!\ */
 /* Demo specific css
    ========================================================================== */
+body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+*{ box-sizing: border-box; }
+*::after,*::before{ box-sizing: border-box; }
+h1{ font-size: 2rem; }
+h2{ font-size: 1.4rem; color: #8cc84b; }
+h3{ font-size: 1.1rem; }
+p { font-size: 0.9rem; }
+ul{ padding:0; list-style-position: inside; }
+li{ font-size: 0.9rem; margin: 0; }
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #8cc84b;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  color: #8cc84b;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 .demoPage {
   max-width: 80em;
   margin: 0 auto;
@@ -18,10 +45,10 @@
   margin-top: 3em;
 }
 .demoPage a {
-  color: steelblue;
+  color: #8cc84b;
 }
 .header {
-  background: steelblue;
+  background: #8cc84b;
   position: relative;
   margin-bottom: 50px;
   color: white;
@@ -64,15 +91,15 @@
   margin-right: 5px;
   height: 40px;
   width: 42px;
-  border: 1px solid steelblue;
+  border: 1px solid #8cc84b;
   background-color: white;
-  background-image: linear-gradient(to top, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px), linear-gradient(to left, steelblue 2px, transparent 2px);
+  background-image: linear-gradient(to top, #8cc84b 2px, transparent 2px), linear-gradient(to left, #8cc84b 2px, transparent 2px), linear-gradient(to left, #8cc84b 2px, transparent 2px);
   background-size: 100% 50%, 50% 50%, 100%, 100%;
   background-position: 0 0, 0 100%, 0 0;
   background-repeat: repeat-y, repeat-x;
 }
 .header p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   margin: 0 auto;
 }
 .github-button iframe {
@@ -85,7 +112,7 @@ section {
 section:before {
   content: '';
   display: inline-flex;
-  border: 1px solid steelblue;
+  border: 1px solid #8cc84b;
   width: 100%;
   align-items: stretch;
   position: absolute;
@@ -100,19 +127,19 @@ section:after {
   width: 42px;
   border: 7px solid white;
   border-left-width: 9px;
-  background-color: steelblue;
+  background-color: #8cc84b;
   background-image: linear-gradient(to top, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px), linear-gradient(to left, white 2px, transparent 2px);
   background-size: 100% 50%, 50% 50%, 100%, 100%;
   background-position: 0 0, 0 100%, 0 0;
   background-repeat: repeat-y, repeat-x;
 }
 footer {
-  background: steelblue;
+  background: #8cc84b;
   padding: 1em 0;
   text-align: center;
 }
 footer p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   margin: 0 auto;
 }
 footer a {
@@ -139,7 +166,7 @@ pre {
 .bs-callout {
   max-width: 100%;
   overflow-x: auto;
-  border-color: #2ecc71;
+  border-color: #8cc84b;
 }
 pre {
   overflow-x: auto;
@@ -148,7 +175,7 @@ pre {
   word-wrap: normal;
 }
 pre.doc {
-  border-color: #2ecc71;
+  border-color: #8cc84b;
 }
 /**/
 .demo {

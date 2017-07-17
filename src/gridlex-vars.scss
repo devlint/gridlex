@@ -4,14 +4,16 @@
 $gl-gridName:   grid !default;
 $gl-colName:   col !default;
 $gl-attributeName: class !default;
-$gl-gutter:    1rem !default; // Total
+$gl-gutter:    1rem !default; // Total left + right
 $gl-gutter-vertical:    1rem !default;
-/* /!\ */ $gl-col-bottom: $gl-gutter-vertical !default; // Deprecated
 
-$gl-xs:        "screen and (max-width: 35.5em)" !default; // up to 568px
-$gl-sm:        "screen and (max-width: 48em)" !default; // max 768px
-$gl-md:        "screen and (max-width: 64em)" !default; // max 1024px
-$gl-lg:        "screen and (max-width: 80em)" !default; // max 1280px
+$gl-mq-list: (
+  lg: "screen and (max-width: 80em)", // max 1280px
+  md: "screen and (max-width: 64em)", // max 1024px
+  sm: "screen and (max-width: 48em)", // max 768px
+  xs: "screen and (max-width: 35.5em)" // up to 568px
+) !default;
+
 
 $glp_col-1: (100%/12);
 $glp_col-2: ($glp_col-1*2);
@@ -105,18 +107,18 @@ $glp_col-11-12: (100%/11);
 @mixin makeCol($col)
 {
     [#{$gl-attributeName}*='#{$gl-gridName}'] {
-        > [#{$gl-attributeName}*="#{$col}-1"]{ flex-basis: $glp_col-1;max-width: $glp_col-1; }
-        > [#{$gl-attributeName}*="#{$col}-2"]{ flex-basis: $glp_col-2;max-width: $glp_col-2; }
-        > [#{$gl-attributeName}*="#{$col}-3"]{ flex-basis: $glp_col-3;max-width: $glp_col-3; }
-        > [#{$gl-attributeName}*="#{$col}-4"]{ flex-basis: $glp_col-4;max-width: $glp_col-4;}
-        > [#{$gl-attributeName}*="#{$col}-5"]{ flex-basis: $glp_col-5;max-width: $glp_col-5;}
-        > [#{$gl-attributeName}*="#{$col}-6"]{ flex-basis: $glp_col-6;max-width: $glp_col-6;}
-        > [#{$gl-attributeName}*="#{$col}-7"]{ flex-basis: $glp_col-7;max-width: $glp_col-7;}
-        > [#{$gl-attributeName}*="#{$col}-8"]{ flex-basis: $glp_col-8;max-width: $glp_col-8;}
-        > [#{$gl-attributeName}*="#{$col}-9"]{ flex-basis: $glp_col-9;max-width: $glp_col-9;}
-        > [#{$gl-attributeName}*="#{$col}-10"]{ flex-basis: $glp_col-10;max-width: $glp_col-10;}
-        > [#{$gl-attributeName}*="#{$col}-11"]{ flex-basis: $glp_col-11;max-width: $glp_col-11;}
-        > [#{$gl-attributeName}*="#{$col}-12"]{ flex-basis: $glp_col-12;max-width: $glp_col-12;}
+        > [#{$gl-attributeName}*="#{$col}-1"]{ flex-basis: $glp_col-1; max-width: $glp_col-1; }
+        > [#{$gl-attributeName}*="#{$col}-2"]{ flex-basis: $glp_col-2; max-width: $glp_col-2;  }
+        > [#{$gl-attributeName}*="#{$col}-3"]{ flex-basis: $glp_col-3; max-width: $glp_col-3;  }
+        > [#{$gl-attributeName}*="#{$col}-4"]{ flex-basis: $glp_col-4; max-width: $glp_col-4; }
+        > [#{$gl-attributeName}*="#{$col}-5"]{ flex-basis: $glp_col-5; max-width: $glp_col-5; }
+        > [#{$gl-attributeName}*="#{$col}-6"]{ flex-basis: $glp_col-6; max-width: $glp_col-6; }
+        > [#{$gl-attributeName}*="#{$col}-7"]{ flex-basis: $glp_col-7; max-width: $glp_col-7; }
+        > [#{$gl-attributeName}*="#{$col}-8"]{ flex-basis: $glp_col-8; max-width: $glp_col-8; }
+        > [#{$gl-attributeName}*="#{$col}-9"]{ flex-basis: $glp_col-9; max-width: $glp_col-9; }
+        > [#{$gl-attributeName}*="#{$col}-10"]{ flex-basis: $glp_col-10; max-width: $glp_col-10; }
+        > [#{$gl-attributeName}*="#{$col}-11"]{ flex-basis: $glp_col-11; max-width: $glp_col-11; }
+        > [#{$gl-attributeName}*="#{$col}-12"]{ flex-basis: $glp_col-12; max-width: $glp_col-12; }
     }
 }
 
