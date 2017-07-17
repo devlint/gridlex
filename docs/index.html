@@ -1412,7 +1412,7 @@
         <h1 id="sass-documentation">Documentation: Sass variables</h1>
         <h2>Variables</h2>
         <div class="bs-callout">
-            <p>So that <strong>Gridlex</strong> fits into your workflow, you can import gridlex-vars.scss & gridlex.scss and override the variables:</p>
+            <p>So that <strong>Gridlex</strong> fits into your workflow, you can import it and override the next variables:</p>
             <table>
                 <thead>
                 <tr>
@@ -1453,18 +1453,17 @@ xs: "screen and (max-width: 35.5em)" // up to 568px
                 </tbody>
             </table>
         </div>
-        <pre><code>
+<!--        <pre><code>
 @import "~gridlex";
 // I only want one mediaqueries, with `large` key:
 $gl-mq-list: (
   large: "screen and (max-width: 80em)"
 ) !default;
-        </code></pre>
+        </code></pre>-->
     </section>
 
     <section id="caniuse">
         <h2>When "Can I use" Gridlex?</h2>
-        <p>Gridlex use <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to add vendors prefixes needed.</p>
         <p class="ciu_embed" data-feature="flexbox" data-periods="future_1,current,past_1,past_2">
             <a href="http://caniuse.com/#feat=flexbox">Can I Use flexbox?</a>
             Data on support for the flexbox feature across the major browsers from caniuse.com.
