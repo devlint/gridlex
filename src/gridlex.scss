@@ -1,6 +1,6 @@
 /* ==========================================================================
     GRIDLEX
-    Just a Flexbox Grid System
+    Just a Flexbox Grid System - v. 2.4
 ========================================================================== */
 
 @import "gridlex-vars";
@@ -19,20 +19,28 @@
 [#{$gl-attributeName}*="#{$gl-colName}_"]{
   box-sizing: border-box;
   padding: 0 ($gl-gutter/2) $gl-gutter-vertical;
+  max-width: 100%;
 }
-// JUST "COL"
-[#{$gl-attributeName}~="#{$gl-colName}"]{
-  flex: 0 0 auto;
-}
-// JUST "COL-" & "COL_"
+// JUST "COL" & "COL_"
 [#{$gl-attributeName}~="#{$gl-colName}"],
 [#{$gl-attributeName}*="#{$gl-colName}_"]{
   flex: 1 1 0%;
 }
+// JUST "COL-"
+[#{$gl-attributeName}*="#{$gl-colName}-"]{
+  flex: none;
+}
+
 // COL & GRID
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}~="#{$gl-colName}"],
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{$gl-colName}-"],
-[#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{$gl-colName}_"]{
+[#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{$gl-colName}_"],
+[#{$gl-attributeName}*="#{$gl-gridName}-"][#{$gl-attributeName}~="#{$gl-colName}"],
+[#{$gl-attributeName}*="#{$gl-gridName}-"][#{$gl-attributeName}*="#{$gl-colName}-"],
+[#{$gl-attributeName}*="#{$gl-gridName}-"][#{$gl-attributeName}*="#{$gl-colName}_"],
+[#{$gl-attributeName}*="#{$gl-gridName}_"][#{$gl-attributeName}~="#{$gl-colName}"],
+[#{$gl-attributeName}*="#{$gl-gridName}_"][#{$gl-attributeName}*="#{$gl-colName}-"],
+[#{$gl-attributeName}*="#{$gl-gridName}_"][#{$gl-attributeName}*="#{$gl-colName}_"]{
   margin: 0;
   padding: 0;
 }
@@ -136,23 +144,14 @@
     order: 1;
   }
 }
-
 /************************
     GRID BY NUMBER
 *************************/
 @include makeGridByNumber(#{$gl-gridName});
-
-@media #{$gl-lg}{
-  @include makeGridByNumber(_lg);
-}
-@media #{$gl-md}{
-  @include makeGridByNumber(_md);
-}
-@media #{$gl-sm}{
-  @include makeGridByNumber(_sm);
-}
-@media #{$gl-xs}{
-  @include makeGridByNumber(_xs);
+@each $mq-key, $mq-value in $gl-mq-list {
+  @media #{$mq-value} {
+    @include makeGridByNumber(_#{$mq-key});
+  }
 }
 
 /************************
@@ -161,31 +160,22 @@
 @include makeCol(#{$gl-colName});
 @include makeOff(off);
 
-@media #{$gl-lg}{
-  @include makeCol(_lg);
-  @include makeOff(_lg);
-  @include makeFirstLast(_lg);
+
+@each $mq-key, $mq-value in $gl-mq-list {
+  @media #{$mq-value} {
+    @include makeCol(_#{$mq-key});
+    @include makeOff(_#{$mq-key});
+    @include makeFirstLast(_#{$mq-key});
+  }
 }
-@media #{$gl-md}{
-  @include makeCol(_md);
-  @include makeOff(_md);
-  @include makeFirstLast(_md);
-}
-@media #{$gl-sm}{
-  @include makeCol(_sm);
-  @include makeOff(_sm);
-  @include makeFirstLast(_sm);
-}
-@media #{$gl-xs}{
-  @include makeCol(_xs);
-  @include makeOff(_xs);
-  @include makeFirstLast(_xs);
-}
+
+
 
 /************************
     HIDING COLS
 *************************/
-[#{$gl-attributeName}*="#{$gl-colName}-"]:not([#{$gl-attributeName}*="#{$gl-colName}-0"]) {
+
+[#{$gl-attributeName}*="#{$gl-colName}-"]:not([#{$gl-attributeName}*="#{$gl-gridName}"]):not([#{$gl-attributeName}*="#{$gl-colName}-0"]) {
   display: block;
 }
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{$gl-colName}-"]:not([#{$gl-attributeName}*="#{$gl-colName}-0"]) {
@@ -194,59 +184,20 @@
 [#{$gl-attributeName}*="#{$gl-colName}-"][#{$gl-attributeName}*="#{$gl-colName}-0"] {
   display: none;
 }
-@media #{$gl-lg}{
-  [#{$gl-attributeName}~="#{$gl-gridName}"] {
-    > :not([#{$gl-attributeName}*="_lg-0"]){
-      display: block;
-    }
-    &:not([#{$gl-attributeName}*="_lg-0"]) {
-      display: flex;
-    }
-    >[#{$gl-attributeName}*="_lg-0"],
-    &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="_lg-0"]{
-      display: none;
-    }
-  }
-}
-@media #{$gl-md}{
-  [#{$gl-attributeName}~="#{$gl-gridName}"] {
-    > :not([#{$gl-attributeName}*="_md-0"]){
-      display: block;
-    }
-    &:not([#{$gl-attributeName}*="_md-0"]) {
-      display: flex;
-    }
-    >[#{$gl-attributeName}*="_md-0"],
-    &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="_md-0"]{
-      display: none;
-    }
-  }
-}
-@media #{$gl-sm}{
-  [#{$gl-attributeName}~="#{$gl-gridName}"] {
-    > :not([#{$gl-attributeName}*="_sm-0"]){
-      display: block;
-    }
-    &:not([#{$gl-attributeName}*="_sm-0"]) {
-      display: flex;
-    }
-    >[#{$gl-attributeName}*="_sm-0"],
-    &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="_sm-0"]{
-      display: none;
-    }
-  }
-}
-@media #{$gl-xs}{
-  [#{$gl-attributeName}~="#{$gl-gridName}"] {
-    > :not([#{$gl-attributeName}*="_xs-0"]){
-      display: block;
-    }
-    &:not([#{$gl-attributeName}*="_xs-0"]) {
-      display: flex;
-    }
-    >[#{$gl-attributeName}*="_xs-0"],
-    &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="_xs-0"]{
-      display: none;
+
+@each $mq-key, $mq-value in $gl-mq-list {
+  @media #{$mq-value} {//_#{$mq-key}
+    [#{$gl-attributeName}*="#{$gl-gridName}"] {
+      > :not([#{$gl-attributeName}*="_#{$mq-key}-0"]){
+        display: block;
+      }
+      &:not([#{$gl-attributeName}*="_#{$mq-key}-0"]) {
+        display: flex;
+      }
+      >[#{$gl-attributeName}*="_#{$mq-key}-0"],
+      &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="_#{$mq-key}-0"]{
+        display: none;
+      }
     }
   }
 }

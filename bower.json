@@ -1,6 +1,6 @@
 {
   "name": "gridlex",
-  "version": "2.3.7",
+  "version": "2.4",
   "description": "Just a Flexbox Grid System",
   "repository": {
     "type": "git",
@@ -10,10 +10,10 @@
   "keywords": [
     "grid",
     "flexbox",
-    "less"
+    "sass"
   ],
   "main": [
-    "src/gridlex.less",
+    "src/gridlex.scss",
     "docs/gridlex.css",
     "docs/gridlex.min.css"
   ],
