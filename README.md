@@ -2,7 +2,7 @@
 ## Just a Flexbox Grid System
 
 [![Join the chat at https://gitter.im/devlint/gridlex](https://badges.gitter.im/devlint/gridlex.svg)](https://gitter.im/devlint/gridlex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-v. 2.3.7
+v. 2.4
 
 
 Based on Flexbox (CSS Flexible Box Layout Module), Gridlex is a very simple css grid system to quickly create modern layouts and submodules.
@@ -16,7 +16,7 @@ The concept is simple: you need to wrap your `.col` in a `.grid`.
 - Top, bottom, or middle. For the grid. And for the columns.
 - Grids can be nested. Always. Directly in a column.
 
-### Less, Sass, CSS?
+### Sass, CSS?
 
 **I just wanna use it in my page!**
 
@@ -24,20 +24,53 @@ To use Gridlex out of the box, call the gridlex.min.css file in your project :
 
 Via cdnjs:
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.3.7/gridlex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4/gridlex.min.css">
 ```
 
-Via jsdelivr:
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gridlex/2.3.7/gridlex.min.css">
-```
 **I want to include it in my source files!**
 
-Because I'm working with Less, Gridlex comes first in Less (with less-compilation Grunt task).
-
-But there is the same version in Sass in the `src` folder.
-
-Include gridlex/src/gridlex.less or gridlex/src/gridlex.scss
+Just include gridlex/src/gridlex.less or gridlex/src/gridlex.scss 
+and 
+update the $gl- vars:
+<table>
+    <thead>
+    <tr>
+        <th>Variable names</th>
+        <th>Default value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><code>$gl-gridName:</code></td>
+        <td><code>grid</code></td>
+    </tr>
+    <tr>
+        <td><code>$gl-colName:</code></td>
+        <td><code>col</code></td>
+    </tr>
+    <tr>
+        <td><code>$gl-attributeName:</code></td>
+        <td><code>class</code></td>
+    </tr>
+    <tr>
+        <td><code>$gl-gutter:</code></td>
+        <td><code>1rem</code></td>
+    </tr>
+    <tr>
+        <td><code>$gl-gutter-vertical:</code></td>
+        <td><code>1rem</code></td>
+    </tr>
+    <tr>
+        <td><code>$gl-mq-list:</code></td>
+        <td><pre><code>(
+lg: "screen and (max-width: 80em)", // max 1280px
+md: "screen and (max-width: 64em)", // max 1024px
+sm: "screen and (max-width: 48em)", // max 768px
+xs: "screen and (max-width: 35.5em)" // up to 568px
+)</code></pre></td>
+    </tr>
+    </tbody>
+</table>
 
 ### Install via Npm
 npm install gridlex --save
