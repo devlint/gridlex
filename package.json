@@ -20,7 +20,8 @@
   },
   "license": "MIT",
   "main": "src/gridlex.scss",
-  "style": "src/gridlex.scss",
+  "sass": "src/gridlex.scss",
+  "style": "docs/gridlex.css",
   "scripts": {
     "sass": "node-sass src/gridlex.scss --sourceMap docs/ -o docs/ && postcss docs/gridlex.css > docs/gridlex.min.css"
   },
