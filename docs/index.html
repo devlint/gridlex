@@ -722,6 +722,19 @@
         &lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
+
+        <h2>Columns can be hidden at breakpoints:</h2>
+        <div class="grid">
+            <div class="col-12_lg-0_md-0_sm-0_xs-0"><div class="demo"><p>This column is hidden up to _lg</p></div></div>
+            <div class="col-12_md-0_sm-0_xs-0"><div class="demo"><p>This column is hidden up to _md</p></div></div>
+            <div class="col-12_sm-0_xs-0"><div class="demo"><p>This column is hidden up to _sm</p></div></div>
+            <div class="col-12_xs-0"><div class="demo"><p>This column is hidden up to _xs</p></div></div>
+            <div class="col-0_lg-0_md-0_sm-0_xs-12"><div class="demo"><p>This one is visible only for _xs breakpoint</p></div></div>
+        </div>
+<pre><code>&lt;div class="col-12_lg-0">&lt;/div>
+&lt;div class="col-12_md-0">&lt;/div>
+&lt;div class="col-12_sm-0">&lt;/div>
+&lt;div class="col-12_xs-0">&lt;/div></code></pre>
     </section>
 
     <section>
