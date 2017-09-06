@@ -1,6 +1,6 @@
 /* ==========================================================================
     GRIDLEX
-    Just a Flexbox Grid System - v. 2.4.0
+    Just a Flexbox Grid System - v. 2.4.1
 ========================================================================== */
 
 @import "gridlex-vars";
@@ -112,10 +112,9 @@
   &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}~="#{$gl-colName}"],
   &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="#{$gl-colName}-"],
   &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="#{$gl-colName}_"]{
-    display: flex;
-    flex-wrap: wrap;
+    align-self: stretch;
     > *{
-      flex: 1 0 100%;
+      height: 100%;
     }
   }
 // Removes the padding-bottom
@@ -175,27 +174,29 @@
     HIDING COLS
 *************************/
 
-[#{$gl-attributeName}*="#{$gl-colName}-"]:not([#{$gl-attributeName}*="#{$gl-gridName}"]):not([#{$gl-attributeName}*="#{$gl-colName}-0"]) {
+/*[#{$gl-attributeName}*="#{$gl-colName}-"]:not([#{$gl-attributeName}*="#{$gl-gridName}"]):not([#{$gl-attributeName}*="#{$gl-colName}-0"]) {
   display: block;
 }
 [#{$gl-attributeName}~="#{$gl-gridName}"][#{$gl-attributeName}*="#{$gl-colName}-"]:not([#{$gl-attributeName}*="#{$gl-colName}-0"]) {
   display: flex;
-}
+}*/
 [#{$gl-attributeName}*="#{$gl-colName}-"][#{$gl-attributeName}*="#{$gl-colName}-0"] {
   display: none;
 }
 
 @each $mq-key, $mq-value in $gl-mq-list {
   @media #{$mq-value} {//_#{$mq-key}
-    [#{$gl-attributeName}*="#{$gl-gridName}"] {
+    [#{$gl-attributeName}~="#{$gl-gridName}"],
+    [#{$gl-attributeName}*="#{$gl-gridName}-"],
+    [#{$gl-attributeName}*="#{$gl-gridName}_"]{
       > :not([#{$gl-attributeName}*="_#{$mq-key}-0"]){
         display: block;
-      }
+      }/*
       &:not([#{$gl-attributeName}*="_#{$mq-key}-0"]) {
         display: flex;
-      }
-      >[#{$gl-attributeName}*="_#{$mq-key}-0"],
-      &[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="_#{$mq-key}-0"]{
+      }*/
+      >[#{$gl-attributeName}*="_#{$mq-key}-0"]{
+      //&[#{$gl-attributeName}*="-equalHeight"] > [#{$gl-attributeName}*="_#{$mq-key}-0"]{
         display: none;
       }
     }

@@ -69,8 +69,8 @@ li{ font-size: 0.9rem; margin: 0; }
   right: 0;
   z-index: -1;
   bottom: 0;
-  transform: skewY(4deg);
-  transform-origin: 0%;
+  transform: skewY(3deg);
+  transform-origin: 0;
 }
 .header h1 {
   display: inline-flex;
