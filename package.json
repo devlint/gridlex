@@ -19,13 +19,11 @@
     "url": "git@github.com:devlint/gridlex.git"
   },
   "license": "MIT",
-  "main": "dist/gridlex.min.css",
+  "main": "src/gridlex.scss",
   "sass": "src/gridlex.scss",
   "style": "docs/gridlex.css",
   "scripts": {
-    "version": "npm run dist && git add -A .",
-    "dist": "node-sass src/gridlex.scss --sourceMap dist/ -o dist/ && postcss dist/gridlex.css > dist/gridlex.min.css",
-    "docs": "cp -R dist/ docs"
+    "sass": "node-sass src/gridlex.scss --sourceMap docs/ -o docs/ && postcss docs/gridlex.css > docs/gridlex.min.css"
   },
   "devDependencies": {
     "cssnano": "^3.10.0",
