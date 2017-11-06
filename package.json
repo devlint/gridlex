@@ -13,18 +13,24 @@
   "url": "https://github.com/devlint/gridlex",
   "homepage": "http://gridlex.devlint.fr",
   "author": "https://github.com/devlint",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:devlint/gridlex.git"
   },
   "license": "MIT",
-  "main": "src/gridlex.scss",
+
+
+  "main": "dist/gridlex.min.css",
   "sass": "src/gridlex.scss",
   "style": "docs/gridlex.css",
   "scripts": {
-    "sass": "node-sass src/gridlex.scss --sourceMap docs/ -o docs/ && postcss docs/gridlex.css > docs/gridlex.min.css"
+    "version": "npm run dist && git add -A .",
+    "dist": "node-sass src/gridlex.scss --sourceMap dist/ -o dist/ && postcss dist/gridlex.css > dist/gridlex.min.css && npm run docs",
+    "docs": "cp -R dist/ docs"
   },
+
+
   "devDependencies": {
     "cssnano": "^3.10.0",
     "node-sass": "^4.5.3",
