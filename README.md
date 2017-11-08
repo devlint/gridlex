@@ -2,7 +2,7 @@
 ## Just a Flexbox Grid System
 
 [![Join the chat at https://gitter.im/devlint/gridlex](https://badges.gitter.im/devlint/gridlex.svg)](https://gitter.im/devlint/gridlex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-v. 2.4.3
+v. 2.5.0
 
 
 Based on Flexbox (CSS Flexible Box Layout Module), Gridlex is a very simple css grid system to quickly create modern layouts and submodules.
@@ -24,7 +24,7 @@ To use Gridlex out of the box, call the gridlex.min.css file in your project :
 
 Via cdnjs:
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.3/gridlex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.5.0/gridlex.min.css">
 ```
 
 **I want to include it in my source files!**
@@ -66,7 +66,7 @@ update the $gl- vars:
 lg: "screen and (max-width: 80em)", // max 1280px
 md: "screen and (max-width: 64em)", // max 1024px
 sm: "screen and (max-width: 48em)", // max 768px
-xs: "screen and (max-width: 35.5em)" // up to 568px
+xs: "screen and (max-width: 36rem)" // up to 576px
 )</code></pre></td>
     </tr>
     </tbody>
@@ -116,8 +116,8 @@ Columns can be hidden at breakpoints using `_*-0` (e.g. `col-4_md-6_sm-0`)
 </thead>
 <tbody>
 	<tr>
-		<td><code>@media screen and (max-width: 35.5em)</code></td>
-		<td>Max 568px</td>
+		<td><code>@media screen and (max-width: 36rem)</code></td>
+		<td>Max 576px</td>
 		<td><code><b>_xs</b>-*</code></td>
 	</tr>
 	<tr>

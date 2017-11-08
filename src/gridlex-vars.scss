@@ -11,14 +11,14 @@ $gl-mq-list: (
         lg: "screen and (max-width: 80em)", // max 1280px
         md: "screen and (max-width: 64em)", // max 1024px
         sm: "screen and (max-width: 48em)", // max 768px
-        xs: "screen and (max-width: 35.5em)" // up to 568px
+        xs: "screen and (max-width: 36em)" // up to 576px
 ) !default;
 
 $gl-mq-list-min-max: (
   lg: "screen and (min-width: (64em+0.063em)) and (max-width: 80em)",
   md: "screen and (min-width: (48em+0.063em)) and (max-width: 64em)",
-  sm: "screen and (min-width: (35.5em+0.063em)) and (max-width: 48em)",
-  xs: "screen and (max-width: 35.5em)" // up to 568px
+  sm: "screen and (min-width: (36rem+0.063em)) and (max-width: 48em)",
+  xs: "screen and (max-width: 36rem)" // up to 576px
 ) !default;
 
 

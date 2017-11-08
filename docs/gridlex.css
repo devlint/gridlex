@@ -1,6 +1,6 @@
 /* ==========================================================================
     GRIDLEX
-    Just a Flexbox Grid System - v. 2.4.3
+    Just a Flexbox Grid System - v. 2.5.0
 ========================================================================== */
 [class~="grid"],
 [class*="grid-"],
@@ -368,7 +368,7 @@
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 36em) {
   [class*="_xs-1"] > [class~="col"],
   [class*="_xs-1"] > [class*="col-"],
   [class*="_xs-1"] > [class*="col_"] {
@@ -1122,7 +1122,7 @@
   [class*="grid_"] [class*="_sm-last"] {
     order: 1; } }
 
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 36em) {
   [class~="grid"] > [class*="_xs-1"],
   [class*="grid-"] > [class*="_xs-1"],
   [class*="grid_"] > [class*="_xs-1"] {
@@ -1303,7 +1303,7 @@
   [class*="sm-hidden"] {
     display: none; } }
 
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 36em) {
   [class*="xs-hidden"] {
     display: none; } }
 
