@@ -722,6 +722,18 @@
         &lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
+
+        <h2>Columns can be hidden at breakpoints:</h2>
+        <div gridlex="grid">
+            <div gridlex="col-12 lg-hidden"><div class="demo"><p>This column is hidden up to _lg breakpoint</p></div></div>
+            <div gridlex="col-12 md-hidden"><div class="demo"><p>This column is hidden up to _md breakpoint</p></div></div>
+            <div gridlex="col-12 sm-hidden"><div class="demo"><p>This column is hidden up to _sm breakpoint</p></div></div>
+            <div gridlex="col-12 xs-hidden"><div class="demo"><p>This column is hidden up to _xs breakpoint</p></div></div>
+        </div>
+        <pre><code>&lt;div gridlex=col-12 lg-hidden">&lt;/div>
+&lt;div gridlex=col-12 md-hidden">&lt;/div>
+&lt;div gridlex=col-12 sm-hidden">&lt;/div>
+&lt;div gridlex=col-12 xs-hidden">&lt;/div></code></pre>
     </section>
 
     <section>
@@ -1342,10 +1354,10 @@
         <h2>Columns &amp; associated classes: </h2>
         <pre class="doc"><code>.col
   -* (1 to 12)
-  _xs-* (0 to 12)
-  _sm-* (0 to 12)
-  _md-* (0 to 12)
-  _lg-* (0 to 12)
+  _xs-* (1 to 12)
+  _sm-* (1 to 12)
+  _md-* (1 to 12)
+  _lg-* (1 to 12)
     e.g. &lt;div gridlex="col-12_lg-8_md-6_sm-3_xs-1">...&lt;/div>
 
   .col-first (or with key-suffixes _md-first...)
@@ -1362,7 +1374,7 @@
 
         <h2>Gridlex and media-queries</h2>
         <h3>Because of responsive, you need sometimes to change the size of columns: with these keys as classes you can control your layout by media-queries.</h3>
-        <h3>Columns can be hidden at breakpoints using <code>_*-0</code> (e.g. <code>col-4_md-6_sm-0</code>)</h3>
+        <h3>Columns can be hidden at breakpoints using <code> *-hidden</code> (e.g. <code>col-4_md-6 sm-hidden</code>)</h3>
         <div class="bs-callout">
             <table>
                 <thead>
