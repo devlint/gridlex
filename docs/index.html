@@ -29,7 +29,7 @@
 <header class="header">
     <div><a href="index.html">
         <h1>Gridlex</h1>
-        <p>Just a Flexbox Grid System <br>(v2.5.0)</p>
+        <p>Just a Flexbox Grid System <br>(v2.6.0)</p>
     </a></div>
 </header>
 <div class="demoPage">
@@ -73,7 +73,7 @@
                 <p><strong>Gridlex</strong> is ready to use "out of the box" in CSS, with all the vendor prefixes
                     needed:</p>
                 <pre class="doc"><code>&lt;link rel="stylesheet" href="<a
-                        href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.5.0/gridlex.min.css">https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.5.0/gridlex.min.css</a>"></code></pre>
+                        href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.0/gridlex.min.css">https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.0/gridlex.min.css</a>"></code></pre>
                 <p>See <a href="#documentation">CSS documentation</a></p>
             </div>
             <div class="col-12">
@@ -1797,22 +1797,22 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><code>@media screen and (max-width: 36rem)</code></td>
+                    <td><code>@media (max-width: 36em)</code></td>
                     <td>Max 576px</td>
                     <td><code><b>_xs</b>-*</code></td>
                 </tr>
                 <tr>
-                    <td><code>@media screen and (max-width: 48em)</code></td>
+                    <td><code>@media (max-width: 48em)</code></td>
                     <td>Max 768px</td>
                     <td><code><b>_sm</b>-*</code></td>
                 </tr>
                 <tr>
-                    <td><code>@media screen and (max-width: 64em)</code></td>
+                    <td><code>@media (max-width: 64em)</code></td>
                     <td>Max 1024px</td>
                     <td><code><b>_md</b>-*</code></td>
                 </tr>
                 <tr>
-                    <td><code>@media screen and (max-width: 80em)</code></td>
+                    <td><code>@media (max-width: 80em)</code></td>
                     <td>Max 1280px</td>
                     <td><code><b>_lg</b>-*</code></td>
                 </tr>
@@ -1857,23 +1857,16 @@
                 <tr>
                     <td><code>$gl-mq-list:</code></td>
                     <td><pre><code>(
-lg: "screen and (max-width: 80em)", // max 1280px
-md: "screen and (max-width: 64em)", // max 1024px
-sm: "screen and (max-width: 48em)", // max 768px
-xs: "screen and (max-width: 36rem)" // up to 576px
+  lg: 80em,
+  md: 64em,
+  sm: 48em,
+  xs: 36em
 )</code></pre>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        <!--        <pre><code>
-        @import "~gridlex";
-        // I only want one mediaqueries, with `large` key:
-        $gl-mq-list: (
-          large: "screen and (max-width: 80em)"
-        ) !default;
-                </code></pre>-->
     </section>
 
     <section id="caniuse">

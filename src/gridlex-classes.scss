@@ -1,9 +1,6 @@
-/* ==========================================================================
-    GRIDLEX
-    Just a Flexbox Grid System - v. 2.5.0
-========================================================================== */
-
-@import "gridlex-vars";
+//************************
+//    CLASSES
+//************************
 // GRID
 [#{$gl-attributeName}~="#{$gl-gridName}"],
 [#{$gl-attributeName}*="#{$gl-gridName}-"],
@@ -148,7 +145,8 @@
 *************************/
 @include makeGridByNumber(#{$gl-gridName});
 @each $mq-key, $mq-value in $gl-mq-list {
-  @media #{$mq-value} {
+  @include bp(#{$mq-key}) {
+  //@media #{$mq-value} {
     @include makeGridByNumber(_#{$mq-key});
   }
 }
@@ -161,7 +159,7 @@
 
 
 @each $mq-key, $mq-value in $gl-mq-list {
-  @media #{$mq-value} {
+  @include bp(#{$mq-key}) {
     @include makeCol(_#{$mq-key});
     @include makeOff(_#{$mq-key});
     @include makeFirstLast(_#{$mq-key});
@@ -173,8 +171,8 @@
 /************************
     HIDING COLS
 *************************/
-@each $mq-key, $mq-value in $gl-mq-list{
-  @media #{$mq-value} {
+@each $mq-key, $mq-value in $gl-mq-list {
+  @include bp(#{$mq-key}) {
     [#{$gl-attributeName}*="#{$mq-key}-hidden"] {
       display: none;
     }
