@@ -8,17 +8,17 @@ $gl-gutter:    1rem !default; // Total left + right
 $gl-gutter-vertical:    1rem !default;
 
 $gl-mq-list: (
-        lg: "screen and (max-width: 80em)", // max 1280px
-        md: "screen and (max-width: 64em)", // max 1024px
-        sm: "screen and (max-width: 48em)", // max 768px
-        xs: "screen and (max-width: 36em)" // up to 576px
+        lg: "screen and (max-width: #{$gl-bp-lg})", // max 1280px
+        md: "screen and (max-width: #{$gl-bp-md})", // max 1024px
+        sm: "screen and (max-width: #{$gl-bp-sm})", // max 768px
+        xs: "screen and (max-width: #{$gl-bp-xs})" // up to 576px
 ) !default;
 
 $gl-mq-list-min-max: (
-  lg: "screen and (min-width: (64em+0.063em)) and (max-width: 80em)",
-  md: "screen and (min-width: (48em+0.063em)) and (max-width: 64em)",
-  sm: "screen and (min-width: (36rem+0.063em)) and (max-width: 48em)",
-  xs: "screen and (max-width: 36rem)" // up to 576px
+  lg: "screen and (min-width: (#{$gl-bp-md}+#{$gl-bp-incre})) and (max-width: #{$gl-bp-lg})",
+  md: "screen and (min-width: (#{$gl-bp-sm}+#{$gl-bp-incre})) and (max-width: #{$gl-bp-md})",
+  sm: "screen and (min-width: (#{$gl-bp-xs}+#{$gl-bp-incre})) and (max-width: #{$gl-bp-sm})",
+  xs: "screen and (max-width: #{$gl-bp-xs})" // up to 576px
 ) !default;
 
 
