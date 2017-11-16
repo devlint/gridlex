@@ -173,7 +173,7 @@
 /************************
     HIDING COLS
 *************************/
-@each $mq-key, $mq-value in $gl-mq-list/*-min-max*/ {
+@each $mq-key, $mq-value in $gl-mq-list{
   @media #{$mq-value} {
     [#{$gl-attributeName}*="#{$mq-key}-hidden"] {
       display: none;
