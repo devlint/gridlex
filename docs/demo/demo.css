@@ -183,6 +183,9 @@ pre.doc {
   background: rgba(147, 128, 108, 0.2);
   text-align: center;
 }
+.demo-left {
+  text-align: left;
+}
 .demo p {
   margin: 0;
   padding: 1rem;
@@ -196,7 +199,8 @@ pre.doc {
   margin: 0;
   padding: 0;
 }
-.demo img {
+.demo img,
+.demo-card img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -211,6 +215,30 @@ pre.doc {
 .withBorder .demo {
   border: 1px solid rgba(147, 128, 108, 0.5);
 }
+.demo-card{
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: #4a4a4a;
+}
+.demo-card p{
+  margin: 1rem;
+}
+.demo-card-footer{
+  border-top: 1px solid #dbdbdb;
+}
+.demo-card-footer .col{
+  text-align: center;
+}
+.demo-card-footer .col:not(:last-child){
+  border-right: 1px solid #dbdbdb;
+}
+.demo-card-footer a{
+  display: block;
+  padding: .5rem;
+  text-decoration: none;
+}
+
+
 /* Tooltip */
 section:nth-child(n+3) [class*="grid-"],
 section:nth-child(n+3) [class*="col-"] {

@@ -14,14 +14,6 @@ $gl-mq-list: (
         xs: "screen and (max-width: 36em)" // up to 576px
 ) !default;
 
-$gl-mq-list-min-max: (
-  lg: "screen and (min-width: (64em+0.063em)) and (max-width: 80em)",
-  md: "screen and (min-width: (48em+0.063em)) and (max-width: 64em)",
-  sm: "screen and (min-width: (36rem+0.063em)) and (max-width: 48em)",
-  xs: "screen and (max-width: 36rem)" // up to 576px
-) !default;
-
-
 $glp_col-1: (100%/12);
 $glp_col-2: ($glp_col-1*2);
 $glp_col-3: ($glp_col-1*3);
