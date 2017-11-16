@@ -37,12 +37,20 @@
         <div class="grid">
             <div class="col-6_xs-12">
                 <h2>Simple. Robust. Responsive. Flexible. Built with Sass.</h2>
-                <p>Based on <a href="http://dev.w3.org/csswg/css-flexbox/">Flexbox</a> (<em>CSS Flexible Box Layout Module</em>), <strong>Gridlex</strong> is a very simple css grid system to quickly create modern layouts and submodules.</p>
+                <p>Based on <a href="http://dev.w3.org/csswg/css-flexbox/">Flexbox</a> (<em>CSS Flexible Box Layout
+                    Module</em>), <strong>Gridlex</strong> is a very simple css grid system to quickly create modern
+                    layouts and submodules.</p>
             </div>
             <div class="col-5_xs-12-bottom github-button" data-push-left="off-1_xs-0">
-                <a class="github-button" href="https://github.com/devlint/gridlex" data-size="large" data-count-href="/devlint/gridlex/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star devlint/gridlex on GitHub">View Project Source</a>
-                <a class="github-button" href="https://github.com/devlint/gridlex/fork" data-size="large" data-count-href="/devlint/gridlex/network" data-show-count="true" data-count-aria-label="# forks on GitHub" aria-label="Fork devlint/gridlex on GitHub">Fork Gridlex</a>
-                <a class="github-button" href="https://github.com/devlint/gridlex/archive/master.zip" data-size="large" aria-label="Download devlint/gridlex on GitHub">Download (zip)</a>
+                <a class="github-button" href="https://github.com/devlint/gridlex" data-size="large"
+                   data-count-href="/devlint/gridlex/stargazers" data-show-count="true"
+                   data-count-aria-label="# stargazers on GitHub" aria-label="Star devlint/gridlex on GitHub">View
+                    Project Source</a> <a class="github-button" href="https://github.com/devlint/gridlex/fork"
+                                          data-size="large" data-count-href="/devlint/gridlex/network"
+                                          data-show-count="true" data-count-aria-label="# forks on GitHub"
+                                          aria-label="Fork devlint/gridlex on GitHub">Fork Gridlex</a> <a
+                    class="github-button" href="https://github.com/devlint/gridlex/archive/master.zip" data-size="large"
+                    aria-label="Download devlint/gridlex on GitHub">Download (zip)</a>
             </div>
 
             <div class="col-12">
@@ -62,8 +70,10 @@
             </div>
             <div class="col-12">
                 <h3>How to use Gridlex (in CSS)?</h3>
-                <p><strong>Gridlex</strong> is ready to use "out of the box" in CSS, with all the vendor prefixes needed:</p>
-                <pre class="doc"><code>&lt;link rel="stylesheet" href="<a href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.5.0/gridlex.min.css">https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.5.0/gridlex.min.css</a>"></code></pre>
+                <p><strong>Gridlex</strong> is ready to use "out of the box" in CSS, with all the vendor prefixes
+                    needed:</p>
+                <pre class="doc"><code>&lt;link rel="stylesheet" href="<a
+                        href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.5.0/gridlex.min.css">https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.5.0/gridlex.min.css</a>"></code></pre>
                 <p>See <a href="#documentation">CSS documentation</a></p>
             </div>
             <div class="col-12">
@@ -88,110 +98,267 @@
 
         <h1>3 ways to use Gridlex</h1>
         <h2>1. The basic. Just add a class <code>.grid-*</code> (from -1 to -12)</h2>
-        <p><strong>This feature is so simple, but we find it very very rarely in a robust and flexible grid!</strong> <br>
-            Why should we be required to put sizing classes on every single cell when they all have the same width? </p>
-            <p>In this ways, you will always have the specified number of columns in a row:</p>
+        <p><strong>This feature is so simple, but we find it very very rarely in a robust and flexible grid!</strong>
+            <br> Why should we be required to put sizing classes on every single cell when they all have the same width?
+        </p>
+        <p>In this ways, you will always have the specified number of columns in a row:</p>
         <div class="grid-1">
-            <div class="col"><div class="demo"><p>grid-1</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-1</p></div>
+            </div>
         </div>
         <div class="grid-2">
-            <div class="col"><div class="demo"><p>grid-2</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-2</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-3_xs-1">
-            <div class="col"><div class="demo"><p>grid-3</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-3</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-4_xs-2">
-            <div class="col"><div class="demo"><p>grid-4</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-4</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-5_xs-2">
-            <div class="col"><div class="demo"><p>grid-5</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-5</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-6_sm-3">
-            <div class="col"><div class="demo"><p>grid-6</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-6</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-7_md-3">
-            <div class="col"><div class="demo"><p>grid-7</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-7</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-8_md-4">
-            <div class="col"><div class="demo"><p>grid-8</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-8</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-9_lg-3">
-            <div class="col"><div class="demo"><p>grid-9</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-9</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-10_md-5_sm-2">
-            <div class="col"><div class="demo"><p>grid-10</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-10</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-11_md-5_sm-2">
-            <div class="col"><div class="demo"><p>grid-11</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-11</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <div class="grid-12_lg-8_md-6_sm-4_xs-2">
-            <div class="col"><div class="demo"><p>grid-12</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
-            <div class="col"><div class="demo"><p>&nbsp;</p></div></div>
+            <div class="col">
+                <div class="demo"><p>grid-12</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
+            <div class="col">
+                <div class="demo"><p>&nbsp;</p></div>
+            </div>
         </div>
         <p><em>But what happens if we have more than 3 columns in a <code>.grid-3</code> ?</em><br>This:</p>
 
@@ -247,7 +414,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-3_xs-1">
+        <pre><code>&lt;div class="grid-3_xs-1">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -378,7 +545,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col-12">...&lt;/div> &lt;!-- first row: one column -->
     &lt;div class="col-6">...&lt;/div> &lt;!-- second row: three columns (6+3+3) -->
     &lt;div class="col-3">...&lt;/div>
@@ -386,7 +553,8 @@
 &lt;/div></code></pre>
 
         <h2>3. The automatic. Just add number of cells you want in the grid (<code>.grid > .col</code>):</h2>
-        <p>Auto width columns, no size on cells ! <br> That's a pretty cool feature of flex: the number determines the width (size = grid/cells children).</p>
+        <p>Auto width columns, no size on cells ! <br> That's a pretty cool feature of flex: the number determines the
+            width (size = grid/cells children).</p>
         <p><em>Tip: Keep in mind that in this way, your grid will only be a row!</em></p>
 
         <p>So here we have a grid with one column...</p>
@@ -469,7 +637,7 @@
             </div>
         </div>
 
-<pre><code>&lt;div class="grid"> &lt;!-- Four &lt;div class="col"> for 4 columns in the grid --&gt;
+        <pre><code>&lt;div class="grid"> &lt;!-- Four &lt;div class="col"> for 4 columns in the grid --&gt;
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -549,7 +717,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-6_sm-2">
+        <pre><code>&lt;div class="grid-6_sm-2">
     &lt;!-- first row -->
     &lt;div class="col-8_sm-12">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -586,7 +754,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col-2_sm-12">...&lt;/div>
     &lt;div class="col-6_sm-12">...&lt;/div>
@@ -639,7 +807,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-noGutter">
+        <pre><code>&lt;div class="grid-noGutter">
     &lt;div class="col-12">...&lt;/div>
     &lt;div class="col-6">...&lt;/div>
     &lt;div class="col-6">...&lt;/div>
@@ -654,7 +822,8 @@
         <h2>... and nesting in the grid:</h2>
         <div class="grid">
             <div class="col-6_sm-12"><p class="demo-explain">Just an "empty" col-6:</p></div>
-            <div class="col-6_sm-12"><p class="demo-explain">Each column can become a grid too (<code>.col-6.grid</code>)</p></div>
+            <div class="col-6_sm-12"><p class="demo-explain">Each column can become a grid too (<code>.col-6.grid</code>)
+            </p></div>
             <div class="col-6_sm-12">
                 <div class="demo">
                     <p>col-6</p>
@@ -695,7 +864,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col-6">
         col-6
     &lt;/div>
@@ -723,14 +892,245 @@
     &lt;/div>
 &lt;/div></code></pre>
 
+        <h2 id="complex-grid">We can also compose a complex grid:</h2>
+
+        <div class="grid-2_md-1-equalHeight">
+            <div class="col grid-column-equalHeight">
+                <div class="col grid-equalHeight">
+                    <div class="col grid-column-equalHeight">
+                        <div class="col">
+                            <div class="demo demo-left">
+                                <p><strong>Top box</strong><br>
+                                    Lorem ipsum </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="demo demo-left">
+                                <p><strong>Middle box</strong><br>
+                                    Lorem ipsum </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="demo demo-left">
+                                <p><strong>Bottom box</strong><br>
+                                    Lorem ipsum </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="demo demo-left">
+                            <p><strong>Center box</strong><br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                                pulvinar felis blandit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="demo demo-left">
+                        <p><strong>Wide box</strong><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                            pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                            facilisis. </p></div>
+                </div>
+            </div>
+            <div class="col_md-12_md-first">
+                <div class="demo demo-left">
+                    <p><strong>Tall box</strong><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                        pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+                        Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut
+                        quam.<br><br>
+                        Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
+                        Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin
+                        felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit
+                        amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat
+                        tortor.<br><br>
+                        Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor
+                        consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
+                        ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper
+                        leo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="grid-3">
+            <div class="col">
+                <div class="grid-noGutter-column demo-card">
+                    <div class="col">
+                        <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?fit=crop&fm=jpg&h=375&w=500" alt="Placeholder image">
+                    </div>
+                    <div class="col grid-column">
+                        <div class="col grid">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores dolorem doloremque eligendi fugiat odio quia repellat ut vel. Accusantium at iusto mollitia quas tempora. </p>
+                        </div>
+                        <div class="col grid-noGutter demo-card-footer">
+                            <div class="col"><a href="#">Link</a></div>
+                            <div class="col"><a href="#">Link</a></div>
+                            <div class="col"><a href="#">Link</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="grid-noGutter-column demo-card">
+                    <div class="col">
+                        <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?fit=crop&fm=jpg&h=375&w=500" alt="Placeholder image">
+                    </div>
+                    <div class="col grid-column">
+                        <div class="col grid">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores dolorem doloremque eligendi fugiat odio quia repellat ut vel. Accusantium at iusto mollitia quas tempora. </p>
+                        </div>
+                    </div>
+                    <div class="col grid-noGutter demo-card-footer">
+                        <div class="col"><a href="#">Link</a></div>
+                        <div class="col"><a href="#">Link</a></div>
+                        <div class="col"><a href="#">Link</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="grid-noGutter-column demo-card">
+                    <div class="col">
+                        <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?fit=crop&fm=jpg&h=375&w=500" alt="Placeholder image">
+                    </div>
+                    <div class="col grid-column">
+                        <div class="col grid">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores dolorem doloremque eligendi fugiat odio quia repellat ut vel. Accusantium at iusto mollitia quas tempora. </p>
+                        </div>
+                    </div>
+                    <div class="col grid-noGutter demo-card-footer">
+                        <div class="col"><a href="#">Link</a></div>
+                        <div class="col"><a href="#">Link</a></div>
+                        <div class="col"><a href="#">Link</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <div class="grid-equalHeight">
+            <div class="col-2">
+                <div class="demo demo-left">
+                    <p><strong>Side box</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="demo demo-left">
+                    <p><strong>Main box</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque cum dignissimos dolorem doloribus hic libero non placeat possimus quisquam quod recusandae, repellat reprehenderit sit sunt, voluptatibus. Cum eveniet facere nemo obcaecati quaerat sed!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-equalHeight_md-1">
+            <div class="col-5_md-12_md-first">
+                <div class="demo demo-left">
+                    <p><strong>Tall box</strong><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                        pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+                        Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut
+                        quam.<br><br>
+                        Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
+                        Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin
+                        felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit
+                        amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat
+                        tortor.
+                    </p>
+                </div>
+            </div>
+            <div class="col grid-column-equalHeight">
+                <div class="col grid-equalHeight">
+                    <div class="col-9">
+                        <div class="demo demo-left">
+                            <p><strong>Wide box</strong><br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                                pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                                facilisis. </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="demo demo-left">
+                            <p><strong>Small box</strong><br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col grid-equalHeight">
+                    <div class="col grid-column-equalHeight">
+                        <div class="col">
+                            <div class="demo demo-left">
+                                <p><strong>Top box</strong><br>
+                                    Lorem ipsum </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="demo demo-left">
+                                <p><strong>Bottom box</strong><br>
+                                    Lorem ipsum </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="demo demo-left">
+                            <p><strong>Center box</strong><br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                                pulvinar felis blandit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-equalHeight">
+            <div class="col">
+                <div class="demo demo-left">
+                    <p><strong>Main box</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus distinctio laboriosam porro qui quidem sint.</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="demo demo-left">
+                    <p><strong>Side box</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores est hic omnis quis unde, voluptatem!</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-equalHeight">
+            <div class="col-2">
+                <div class="demo demo-left">
+                    <p><strong>Left</strong><br>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="demo demo-left">
+                    <p><strong>Center</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque eum id illo inventore iusto minus nobis qui, totam voluptatibus?</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="demo demo-left">
+                    <p><strong>Left</strong><br>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-center">
+            <div class="col-7">
+                <div class="demo">
+                    <p><strong>Center</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+                </div>
+            </div>
+        </div>
+
         <h2>Columns can be hidden at breakpoints:</h2>
         <div class="grid">
-            <div class="col-12 lg-hidden"><div class="demo"><p>This column is hidden up to _lg breakpoint</p></div></div>
-            <div class="col-12 md-hidden"><div class="demo"><p>This column is hidden up to _md breakpoint</p></div></div>
-            <div class="col-12 sm-hidden"><div class="demo"><p>This column is hidden up to _sm breakpoint</p></div></div>
-            <div class="col-12 xs-hidden"><div class="demo"><p>This column is hidden up to _xs breakpoint</p></div></div>
+            <div class="col-12 lg-hidden">
+                <div class="demo"><p>This column is hidden up to _lg breakpoint</p></div>
+            </div>
+            <div class="col-12 md-hidden">
+                <div class="demo"><p>This column is hidden up to _md breakpoint</p></div>
+            </div>
+            <div class="col-12 sm-hidden">
+                <div class="demo"><p>This column is hidden up to _sm breakpoint</p></div>
+            </div>
+            <div class="col-12 xs-hidden">
+                <div class="demo"><p>This column is hidden up to _xs breakpoint</p></div>
+            </div>
         </div>
-<pre><code>&lt;div class="col-12 lg-hidden">&lt;/div>
+        <pre><code>&lt;div class="col-12 lg-hidden">&lt;/div>
 &lt;div class="col-12 md-hidden">&lt;/div>
 &lt;div class="col-12 sm-hidden">&lt;/div>
 &lt;div class="col-12 xs-hidden">&lt;/div></code></pre>
@@ -759,7 +1159,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-3">
+        <pre><code>&lt;div class="grid-3">
     &lt;div class="col">...&lt;/div>
 &lt;/div>
 &lt;div class="grid-3-center">
@@ -778,7 +1178,8 @@
             </div>
             <div class="col">
                 <div class="demo">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit
+                        placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
                 </div>
             </div>
             <div class="col">
@@ -787,7 +1188,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -802,7 +1203,8 @@
             </div>
             <div class="col">
                 <div class="demo">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit
+                        placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
                 </div>
             </div>
             <div class="col">
@@ -811,7 +1213,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-middle">
+        <pre><code>&lt;div class="grid-middle">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -826,7 +1228,8 @@
             </div>
             <div class="col">
                 <div class="demo">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolorum eius esse id labore odit
+                        placeat tempora! Alias aliquam aut eaque nulla repudiandae, temporibus voluptatum.</p>
                 </div>
             </div>
             <div class="col">
@@ -835,7 +1238,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-bottom">
+        <pre><code>&lt;div class="grid-bottom">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -850,7 +1253,10 @@
             </div>
             <div class="col">
                 <div class="demo">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam architecto aut, commodi deserunt dicta eligendi error incidunt inventore maiores mollitia officiis placeat quibusdam tempora unde veritatis vero voluptas. Ab consectetur delectus nam. Ab animi aspernatur, deserunt eos et, inventore iure laboriosam laborum minus nam nihil quae tempore tenetur ullam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam architecto aut, commodi
+                        deserunt dicta eligendi error incidunt inventore maiores mollitia officiis placeat quibusdam
+                        tempora unde veritatis vero voluptas. Ab consectetur delectus nam. Ab animi aspernatur, deserunt
+                        eos et, inventore iure laboriosam laborum minus nam nihil quae tempore tenetur ullam.</p>
                 </div>
             </div>
             <div class="col-bottom">
@@ -864,7 +1270,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-4-middle">
+        <pre><code>&lt;div class="grid-4-middle">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col-bottom">...&lt;/div>
@@ -904,7 +1310,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col">A&lt;/div>
     &lt;div class="col">B&lt;/div>
     &lt;div class="col">C&lt;/div>
@@ -940,7 +1346,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-reverse">
+        <pre><code>&lt;div class="grid-reverse">
     &lt;div class="col">A&lt;/div>
     &lt;div class="col">B&lt;/div>
     &lt;div class="col">C&lt;/div>
@@ -976,7 +1382,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col-last">A (last)&lt;/div>
     &lt;div class="col">B&lt;/div>
     &lt;div class="col_md-first">C (first only on _md)&lt;/div>
@@ -993,7 +1399,8 @@
             </div>
             <div class="col">
                 <div class="demo">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas laboriosam inventore minima facere possimus quisquam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas laboriosam inventore minima facere
+                        possimus quisquam.</p>
                 </div>
             </div>
             <div class="col">
@@ -1007,7 +1414,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-noGutter-equalHeight">
+        <pre><code>&lt;div class="grid-noGutter-equalHeight">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -1095,7 +1502,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-noGutter-noBottom">
+        <pre><code>&lt;div class="grid-noGutter-noBottom">
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
     &lt;div class="col">...&lt;/div>
@@ -1106,7 +1513,8 @@
     <section>
         <h2>Distribution</h2>
         <h3>Horizontal distribution (grid-spaceBetween)</h3>
-        <p>If you add <code>spaceBetween</code> class, the distribution will have no margin around first and last elements :</p>
+        <p>If you add <code>spaceBetween</code> class, the distribution will have no margin around first and last
+            elements :</p>
         <div class="grid-spaceBetween">
             <div class="col-2">
                 <div class="demo">
@@ -1124,14 +1532,15 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-spaceBetween">
+        <pre><code>&lt;div class="grid-spaceBetween">
     &lt;div class="col-2">...&lt;/div>
     &lt;div class="col-2">...&lt;/div>
     &lt;div class="col-2">...&lt;/div>
 &lt;/div></code></pre>
 
         <h3>Horizontal distribution (spaceAround)</h3>
-        <p>If you add <code>grid-spaceAround</code> class, the distribution will have margins around first and last elements :</p>
+        <p>If you add <code>grid-spaceAround</code> class, the distribution will have margins around first and last
+            elements :</p>
         <div class="grid-spaceAround">
             <div class="col-2">
                 <div class="demo">
@@ -1149,7 +1558,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-spaceAround">
+        <pre><code>&lt;div class="grid-spaceAround">
     &lt;div class="col-2">...&lt;/div>
     &lt;div class="col-2">...&lt;/div>
     &lt;div class="col-2">...&lt;/div>
@@ -1173,7 +1582,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid-center">
+        <pre><code>&lt;div class="grid-center">
     &lt;div class="col-2">...&lt;/div>
     &lt;div class="col-2">...&lt;/div>
     &lt;div class="col-2">...&lt;/div>
@@ -1200,7 +1609,7 @@
                         </div>
                     </div>
                 </div>
-<pre><code>&lt;div class="grid-column">
+                <pre><code>&lt;div class="grid-column">
     &lt;div class="col-4">A&lt;/div>
     &lt;div class="col-2">B&lt;/div>
     &lt;div class="col-6">C&lt;/div>
@@ -1225,7 +1634,7 @@
                         </div>
                     </div>
                 </div>
-<pre><code>&lt;div class="grid-column-reverse">
+                <pre><code>&lt;div class="grid-column-reverse">
     &lt;div class="col-4">A&lt;/div>
     &lt;div class="col-2">B&lt;/div>
     &lt;div class="col-6">C&lt;/div>
@@ -1243,7 +1652,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col-6" data-push-left="off-6">col-6 data-push-left="off-6"&lt;/div>
 &lt;/div></code></pre>
         <div class="grid">
@@ -1258,7 +1667,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col-4">col-4&lt;/div>
     &lt;div class="col-4" data-push-left="off-4>col-4 data-push-left="off-4"&lt;/div>
 &lt;/div></code></pre>
@@ -1309,7 +1718,7 @@
                 </div>
             </div>
         </div>
-<pre><code>&lt;div class="grid">
+        <pre><code>&lt;div class="grid">
     &lt;div class="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
     &lt;div class="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
     &lt;div class="col-2" data-push-left="off-2">col-2 data-push-left="off-2"&lt;/div>
@@ -1364,7 +1773,7 @@
   .col-last (or with key-suffixes _md-last...)</code></pre>
 
         <h2>Offsets: with data-push-left="" and data-push-right="" attributes</h2>
-<pre class="doc"><code>off-* (0 to 11)
+        <pre class="doc"><code>off-* (0 to 11)
   _xs-* (0 to 11)
   _sm-* (0 to 11)
   _md-* (0 to 11)
@@ -1373,8 +1782,10 @@
   -0: reboot the offset (can be usefull in responsive mode with key-suffixes)</code></pre>
 
         <h2>Gridlex and media-queries</h2>
-        <h3>Because of responsive, you need sometimes to change the size of columns: with these keys as classes you can control your layout by media-queries.</h3>
-        <h3>Columns can be hidden at breakpoints using <code> *-hidden</code> (e.g. <code>col-4_md-6 sm-hidden</code>)</h3>
+        <h3>Because of responsive, you need sometimes to change the size of columns: with these keys as classes you can
+            control your layout by media-queries.</h3>
+        <h3>Columns can be hidden at breakpoints using <code> *-hidden</code> (e.g. <code>col-4_md-6 sm-hidden</code>)
+        </h3>
         <div class="bs-callout">
             <table>
                 <thead>
@@ -1413,7 +1824,8 @@
         <h1 id="sass-documentation">Documentation: Sass variables</h1>
         <h2>Variables</h2>
         <div class="bs-callout">
-            <p>So that <strong>Gridlex</strong> fits into your workflow, you can import it and override the next variables:</p>
+            <p>So that <strong>Gridlex</strong> fits into your workflow, you can import it and override the next
+                variables:</p>
             <table>
                 <thead>
                 <tr>
@@ -1449,38 +1861,36 @@ lg: "screen and (max-width: 80em)", // max 1280px
 md: "screen and (max-width: 64em)", // max 1024px
 sm: "screen and (max-width: 48em)", // max 768px
 xs: "screen and (max-width: 36rem)" // up to 576px
-)</code></pre></td>
+)</code></pre>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-<!--        <pre><code>
-@import "~gridlex";
-// I only want one mediaqueries, with `large` key:
-$gl-mq-list: (
-  large: "screen and (max-width: 80em)"
-) !default;
-        </code></pre>-->
+        <!--        <pre><code>
+        @import "~gridlex";
+        // I only want one mediaqueries, with `large` key:
+        $gl-mq-list: (
+          large: "screen and (max-width: 80em)"
+        ) !default;
+                </code></pre>-->
     </section>
 
     <section id="caniuse">
         <h2>When "Can I use" Gridlex?</h2>
         <p class="ciu_embed" data-feature="flexbox" data-periods="future_1,current,past_1,past_2">
-            <a href="http://caniuse.com/#feat=flexbox">Can I Use flexbox?</a>
-            Data on support for the flexbox feature across the major browsers from caniuse.com.
-        </p>
+            <a href="http://caniuse.com/#feat=flexbox">Can I Use flexbox?</a> Data on support for the flexbox feature
+            across the major browsers from caniuse.com. </p>
     </section>
 
 </div>
 
 <footer>
     <p>Gridlex is made by <a href="https://twitter.com/webdevlint">@webdevlint</a></p>
-    <p>With awesome contributors :
-        <a href="https://github.com/vlsoprun">@vlsoprun</a> -
-        <a href="https://github.com/sconstantinides">@sconstantinides</a> -
-        <a href="https://github.com/TheKidCoder">@TheKidCoder</a> -
-        <a href="https://github.com/bryanwillis">@bryanwillis</a> -
-        <a href="https://github.com/ixrock">@ixrock</a></p>
+    <p>With awesome contributors : <a href="https://github.com/vlsoprun">@vlsoprun</a> - <a
+            href="https://github.com/sconstantinides">@sconstantinides</a> - <a href="https://github.com/TheKidCoder">@TheKidCoder</a>
+        - <a href="https://github.com/bryanwillis">@bryanwillis</a> - <a href="https://github.com/ixrock">@ixrock</a>
+    </p>
 </footer>
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 <script async defer src="https://caniuse.bitsofco.de/caniuse-embed.min.js"></script>

@@ -14,14 +14,6 @@ $gl-mq-list: (
         xs: "screen and (max-width: #{$gl-bp-xs})" // up to 576px
 ) !default;
 
-$gl-mq-list-min-max: (
-  lg: "screen and (min-width: (#{$gl-bp-md}+#{$gl-bp-incre})) and (max-width: #{$gl-bp-lg})",
-  md: "screen and (min-width: (#{$gl-bp-sm}+#{$gl-bp-incre})) and (max-width: #{$gl-bp-md})",
-  sm: "screen and (min-width: (#{$gl-bp-xs}+#{$gl-bp-incre})) and (max-width: #{$gl-bp-sm})",
-  xs: "screen and (max-width: #{$gl-bp-xs})" // up to 576px
-) !default;
-
-
 $glp_col-1: (100%/12);
 $glp_col-2: ($glp_col-1*2);
 $glp_col-3: ($glp_col-1*3);
