@@ -8,10 +8,10 @@ $gl-gutter:    1rem !default; // Total left + right
 $gl-gutter-vertical:    1rem !default;
 
 $gl-mq-list: (
-        lg: "screen and (max-width: 80em)", // max 1280px
-        md: "screen and (max-width: 64em)", // max 1024px
-        sm: "screen and (max-width: 48em)", // max 768px
-        xs: "screen and (max-width: 36em)" // up to 576px
+        lg: "screen and (max-width: #{$gl-bp-lg})", // max 1280px
+        md: "screen and (max-width: #{$gl-bp-md})", // max 1024px
+        sm: "screen and (max-width: #{$gl-bp-sm})", // max 768px
+        xs: "screen and (max-width: #{$gl-bp-xs})" // up to 576px
 ) !default;
 
 $glp_col-1: (100%/12);
