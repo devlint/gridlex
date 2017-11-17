@@ -63,11 +63,11 @@ update the $gl- vars:
     <tr>
         <td><code>$gl-mq-list:</code></td>
         <td><pre><code>(
-lg: "screen and (max-width: 80em)", // max 1280px
-md: "screen and (max-width: 64em)", // max 1024px
-sm: "screen and (max-width: 48em)", // max 768px
-xs: "screen and (max-width: 36rem)" // up to 576px
-)</code></pre></td>
+         lg: 80em, // max 1280px
+         md: 64em, // max 1024px
+         sm: 48em, // max 768px
+         xs: 36em // up to 576px
+ )</code></pre></td>
     </tr>
     </tbody>
 </table>
