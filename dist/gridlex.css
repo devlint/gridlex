@@ -185,7 +185,7 @@
   flex-basis: 8.33333%;
   max-width: 8.33333%; }
 
-@media (max-width: 80em) {
+@media (min-width: 80em) {
   [class*="_lg-1"] > [class~="col"],
   [class*="_lg-1"] > [class*="col-"],
   [class*="_lg-1"] > [class*="col_"] {
@@ -246,7 +246,7 @@
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media (max-width: 64em) {
+@media (min-width: 64em) {
   [class*="_md-1"] > [class~="col"],
   [class*="_md-1"] > [class*="col-"],
   [class*="_md-1"] > [class*="col_"] {
@@ -307,7 +307,7 @@
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media (max-width: 48em) {
+@media (min-width: 48em) {
   [class*="_sm-1"] > [class~="col"],
   [class*="_sm-1"] > [class*="col-"],
   [class*="_sm-1"] > [class*="col_"] {
@@ -368,7 +368,7 @@
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media (max-width: 36em) {
+@media (min-width: 36em) {
   [class*="_xs-1"] > [class~="col"],
   [class*="_xs-1"] > [class*="col-"],
   [class*="_xs-1"] > [class*="col_"] {
@@ -624,7 +624,7 @@
 [class*="grid_"] > [data-push-right*="off-11"] {
   margin-right: 91.66667%; }
 
-@media (max-width: 80em) {
+@media (min-width: 80em) {
   [class~="grid"] > [class*="_lg-1"],
   [class*="grid-"] > [class*="_lg-1"],
   [class*="grid_"] > [class*="_lg-1"] {
@@ -790,7 +790,7 @@
   [class*="grid_"] [class*="_lg-last"] {
     order: 1; } }
 
-@media (max-width: 64em) {
+@media (min-width: 64em) {
   [class~="grid"] > [class*="_md-1"],
   [class*="grid-"] > [class*="_md-1"],
   [class*="grid_"] > [class*="_md-1"] {
@@ -956,7 +956,7 @@
   [class*="grid_"] [class*="_md-last"] {
     order: 1; } }
 
-@media (max-width: 48em) {
+@media (min-width: 48em) {
   [class~="grid"] > [class*="_sm-1"],
   [class*="grid-"] > [class*="_sm-1"],
   [class*="grid_"] > [class*="_sm-1"] {
@@ -1122,7 +1122,7 @@
   [class*="grid_"] [class*="_sm-last"] {
     order: 1; } }
 
-@media (max-width: 36em) {
+@media (min-width: 36em) {
   [class~="grid"] > [class*="_xs-1"],
   [class*="grid-"] > [class*="_xs-1"],
   [class*="grid_"] > [class*="_xs-1"] {
@@ -1291,19 +1291,19 @@
 /************************
     HIDING COLS
 *************************/
-@media (max-width: 80em) {
+@media (min-width: 80em) {
   [class*="lg-hidden"] {
     display: none; } }
 
-@media (max-width: 64em) {
+@media (min-width: 64em) {
   [class*="md-hidden"] {
     display: none; } }
 
-@media (max-width: 48em) {
+@media (min-width: 48em) {
   [class*="sm-hidden"] {
     display: none; } }
 
-@media (max-width: 36em) {
+@media (min-width: 36em) {
   [class*="xs-hidden"] {
     display: none; } }
 

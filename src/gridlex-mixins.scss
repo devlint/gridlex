@@ -2,7 +2,7 @@
 @mixin bp($breakpoint) {
   $query: map-get($gl-mq-list, $breakpoint);
   @if $query != null {
-    @media ("max-width": #{nth($query, 1)}) {
+    @media ($gl-mq-width: #{nth($query, 1)}) {
       @content;
     }
   }

@@ -61,6 +61,10 @@ update the $gl- vars:
         <td><code>1rem</code></td>
     </tr>
     <tr>
+        <td><code>$gl-mq-width:</code></td>
+        <td><code>'max-width'</code></td>
+    </tr>
+    <tr>
         <td><code>$gl-mq-list:</code></td>
         <td><pre><code>(
          lg: 80em, // max 1280px
