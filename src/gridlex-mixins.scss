@@ -30,9 +30,9 @@
   [#{$gl-attributeName}*="#{$gl-gridName}-"],
   [#{$gl-attributeName}*="#{$gl-gridName}_"] {
     
-  @for $i from 1 through $gl-colCount {
-    > [#{$gl-attributeName}*="#{$col}-#{$i}"]{ flex-basis: map-get($gl-colPortions, $i); max-width: map-get($gl-colPortions, $i); }
-  }
+    @for $i from 1 through $gl-colCount {
+      > [#{$gl-attributeName}*="#{$col}-#{$i}"]{ flex-basis: map-get($gl-colPortions, $i); max-width: map-get($gl-colPortions, $i); }
+    }
   }
 }
 
@@ -59,6 +59,13 @@
   [#{$gl-attributeName}*="#{$gl-gridName}_"] {
     @for $i from 0 through $gl-colCount - 1 {
       > [data-push-left*="#{$off}-#{$i}"]{ margin-left: map-get($gl-colPortions, $i); }
+    }
+  }
+
+  [#{$gl-attributeName}~="#{$gl-gridName}"],
+  [#{$gl-attributeName}*="#{$gl-gridName}-"],
+  [#{$gl-attributeName}*="#{$gl-gridName}_"] {
+    @for $i from 0 through $gl-colCount - 1 {
       > [data-push-right*="#{$off}-#{$i}"]{ margin-right: map-get($gl-colPortions, $i); }
     }
   }
