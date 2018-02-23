@@ -41,6 +41,10 @@ update the $gl- vars:
     </thead>
     <tbody>
     <tr>
+        <td><code>$gl-colCount:</code></td>
+        <td><code>12</code></td>
+    </tr>
+    <tr>
         <td><code>$gl-gridName:</code></td>
         <td><code>grid</code></td>
     </tr>
