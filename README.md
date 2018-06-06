@@ -27,7 +27,7 @@ Via CDN:
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
 ```
 or
-```
+```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridlex@2.7.1/dist/gridlex.min.css" integrity="sha256-z8OrWCce0gDjwavCHKqxiPIo74u8go25fRiqW6jefXk=" crossorigin="anonymous">
 ```
 [![](https://data.jsdelivr.com/v1/package/npm/gridlex/badge)](https://www.jsdelivr.com/package/npm/gridlex)
