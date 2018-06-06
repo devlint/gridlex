@@ -22,10 +22,15 @@ The concept is simple: you need to wrap your `.col` in a `.grid`.
 
 To use Gridlex out of the box, call the gridlex.min.css file in your project :
 
-Via cdnjs:
+Via CDN:
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
 ```
+or
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridlex@2.7.1/dist/gridlex.min.css" integrity="sha256-z8OrWCce0gDjwavCHKqxiPIo74u8go25fRiqW6jefXk=" crossorigin="anonymous">
+```
+[![](https://data.jsdelivr.com/v1/package/npm/gridlex/badge)](https://www.jsdelivr.com/package/npm/gridlex)
 
 **I want to include it in my source files!**
 
